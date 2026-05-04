@@ -1,0 +1,560 @@
+{
+  "categories": [
+    {
+      "id": "greetings",
+      "title": "Greetings & Introductions",
+      "description": "Learn how to greet people and introduce yourself",
+      "conversations": [
+        {
+          "id": "basic-greeting",
+          "title": "Basic Greeting",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "Hello! How's it going?",
+              "dzardzongke": "Dangsang yoe te? / Denchak yoe te? / Kham zanga yoe te?"
+            },
+            {
+              "speaker": "B",
+              "english": "It's going, thanks. And you? How are you?",
+              "dzardzongke": "Dangsang yoe o. Orang gendre duk o?"
+            },
+            {
+              "speaker": "A",
+              "english": "I'm good, thanks. What's your name?",
+              "dzardzongke": "Dangsang yoe o. Orang ki min la gen ná o?"
+            },
+            {
+              "speaker": "B",
+              "english": "They call me Joseph. And you?",
+              "dzardzongke": "Ngi min la Kemi ná nak. Dene orang ki min la?"
+            },
+            {
+              "speaker": "A",
+              "english": "My name is Max.",
+              "dzardzongke": "Palgen ná nak."
+            },
+            {
+              "speaker": "B",
+              "english": "I'm happy to meet you.",
+              "dzardzongke": "Orang la ngo sheri kyita jung."
+            },
+            {
+              "speaker": "A",
+              "english": "Same. Goodbye!",
+              "dzardzongke": "Nga la yang kyita jusong. Denchak o!"
+            },
+            {
+              "speaker": "B",
+              "english": "Goodbye!",
+              "dzardzongke": "Denchak o!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "age-birthday",
+      "title": "Age & Birthday",
+      "description": "Learn how to talk about age and birthdays",
+      "conversations": [
+        {
+          "id": "birthday-age",
+          "title": "Birthday Wishes",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "Happy birthday Kemi! How old are you turning?",
+              "dzardzongke": "Thrungkar la trashi delek, Kemi! Da orang lo tsam lepsong?"
+            },
+            {
+              "speaker": "B",
+              "english": "I'm turning 44. How old are you?",
+              "dzardzongke": "Da nyima lokti nga lo zhipcu shapzhi (44) lewanak. Dene orang lo gatsoe?"
+            },
+            {
+              "speaker": "A",
+              "english": "I'm 55 years old",
+              "dzardzongke": "Nga ngápcu nyenga lepsong."
+            },
+            {
+              "speaker": "B",
+              "english": "You're real old! I'm younger than you.",
+              "dzardzongke": "Da orang tsheme kha geruk. Nga orang ne gazhen lo cunga/ngozhoen duk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "title": "Family & Relationships",
+      "description": "Learn how to talk about family members",
+      "conversations": [
+        {
+          "id": "family-members",
+          "title": "Family Members",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "Who's that man?",
+              "dzardzongke": "Kho su nak?"
+            },
+            {
+              "speaker": "B",
+              "english": "That's my brother.",
+              "dzardzongke": "Kho ngi ájo nak."
+            },
+            {
+              "speaker": "A",
+              "english": "What's his name?",
+              "dzardzongke": "Kho min la gen ná o?"
+            },
+            {
+              "speaker": "B",
+              "english": "His name is Robert, but his nickname is Ti-Rob.",
+              "dzardzongke": "ájo ki min la Tenzin ná nak."
+            },
+            {
+              "speaker": "A",
+              "english": "How many brothers do you have?",
+              "dzardzongke": "Khyoe la puen gatsoe yoeta?"
+            },
+            {
+              "speaker": "B",
+              "english": "I have one brother and two sisters. My brothers don't live here anymore.",
+              "dzardzongke": "Nga la ájo cik dang numu nyí yoe. Ngi numuyak danda duru me detanak."
+            },
+            {
+              "speaker": "A",
+              "english": "So that woman is your sister?",
+              "dzardzongke": "Ondi bumo su ná o?"
+            },
+            {
+              "speaker": "B",
+              "english": "No that's my cousin.",
+              "dzardzongke": "Mo ngi áni ki bumo nak."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Home & Living Spaces",
+      "description": "Learn how to talk about your home",
+      "conversations": [
+        {
+          "id": "house-rooms",
+          "title": "House and Rooms",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "How many rooms are there in your house?",
+              "dzardzongke": "Khyoe khangpa la kotra gatsoe yoeta?"
+            },
+            {
+              "speaker": "B",
+              "english": "There are two bedrooms, a prayer room, a storage room and a kitchen.",
+              "dzardzongke": "Nyalkhang nyí, choekhang cik, dziwuk cik, thapkhang cik yoe."
+            },
+            {
+              "speaker": "A",
+              "english": "Oh your house is quite big!",
+              "dzardzongke": "Oh khangpa arong che yoeta!"
+            },
+            {
+              "speaker": "A",
+              "english": "My house is quite small.",
+              "dzardzongke": "Ngi khangpa tsheme cunga!"
+            },
+            {
+              "speaker": "B",
+              "english": "How many rooms do you have?",
+              "dzardzongke": "Dene zhingkha mangloe yoeta?"
+            },
+            {
+              "speaker": "A",
+              "english": "I have 12 rooms.",
+              "dzardzongke": "Zhingkha cunyí tsam yoe."
+            },
+            {
+              "speaker": "B",
+              "english": "I don't have 5 rooms.",
+              "dzardzongke": "Nga la zhingkha ngá mana me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather",
+      "title": "Weather & Outdoor Activities",
+      "description": "Learn how to talk about weather and outdoor activities",
+      "conversations": [
+        {
+          "id": "weather-park",
+          "title": "Weather and Park",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "How's the weather?",
+              "dzardzongke": "Da dering nám gendre duk o?"
+            },
+            {
+              "speaker": "B",
+              "english": "It's quite cloudy; there's a lot of clouds.",
+              "dzardzongke": "Dang dering mukpa che khorduk."
+            },
+            {
+              "speaker": "A",
+              "english": "Is it cold?",
+              "dzardzongke": "Nám dranga duk e?"
+            },
+            {
+              "speaker": "B",
+              "english": "No, the weather is good. Do you want to go to the park?",
+              "dzardzongke": "Nám dranga minduk. Pangka la khyam tu droku ne?"
+            },
+            {
+              "speaker": "A",
+              "english": "Maybe. Does it seem like it will rain?",
+              "dzardzongke": "Tashok. Nám gyapngo e?"
+            },
+            {
+              "speaker": "B",
+              "english": "I don't know, I don't think so. Do you think you'll melt if you're wet?",
+              "dzardzongke": "Di ta cha ma ju. Nám gyap me ong. Khyoe nám bang na zhuengo e?"
+            },
+            {
+              "speaker": "A",
+              "english": "No, cher, but I don't want to get my new boots dirty!",
+              "dzardzongke": "Manak. Nge poble sampa ko loenpa bange me thetak."
+            },
+            {
+              "speaker": "B",
+              "english": "Well, why did you buy the boots if they can't walk in mud?",
+              "dzardzongke": "Poble ajakpa mete?"
+            },
+            {
+              "speaker": "A",
+              "english": "Let me get my umbrella.",
+              "dzardzongke": "Mi zhema tsa ne cik yar o."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "school",
+      "title": "Daily Routines & School",
+      "description": "Learn how to talk about daily routines and school",
+      "conversations": [
+        {
+          "id": "school-schedule",
+          "title": "School Schedule",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "What time do y'all go to school?",
+              "dzardzongke": "Khyoe iskul chutshoe gatsoe la droyoeta?"
+            },
+            {
+              "speaker": "B",
+              "english": "We go to school at eight o'clock every morning.",
+              "dzardzongke": "Egi ngátok chutshoe gyepa la iskul droiyoe."
+            },
+            {
+              "speaker": "A",
+              "english": "That's early! I used to go to school at nine o'clock. And when do you come home?",
+              "dzardzongke": "Tsheme ngá droik! Egi bela la chutshoe guwa lo droiyoe. Dene chutri nám jungi o?"
+            },
+            {
+              "speaker": "B",
+              "english": "We leave school at three o'clock, we wait for the bus, and we come back home at half past three.",
+              "dzardzongke": "Egi chutri chutshoe sumpa la jungenak. Dene bus la guganak. Dene khangpa la pherang zhiwa la jorik."
+            },
+            {
+              "speaker": "A",
+              "english": "I used to come home at five o'clock.",
+              "dzardzongke": "Egi bela la chutshoe ngápa la khangpa la lewanak."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leisure",
+      "title": "Leisure Activities & Hobbies",
+      "description": "Learn how to talk about leisure activities and hobbies",
+      "conversations": [
+        {
+          "id": "free-time",
+          "title": "Free Time Activities",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "John, what do you like to do when you don't work?",
+              "dzardzongke": "Khyoe leka metarang gen jinyen thetiyoe?"
+            },
+            {
+              "speaker": "B",
+              "english": "I like to drink beer and take the air on the porch.",
+              "dzardzongke": "Leka metarang, chang thuri nyalti denyen thetik."
+            },
+            {
+              "speaker": "A",
+              "english": "That sounds good. Do you listen to music?",
+              "dzardzongke": "Tsheme kyita nak. Khyoe lu ra nyeniyoete?"
+            },
+            {
+              "speaker": "B",
+              "english": "Yes, I like that too. Sometimes I listen to music while I'm sitting on the porch.",
+              "dzardzongke": "Nyeniyoe. Duka cik, khangpe dong la detarang lu nyeniyoe."
+            },
+            {
+              "speaker": "A",
+              "english": "I like to fish when I have time.",
+              "dzardzongke": "Nga leka metarang, nya zin du dronyen thetiyoe."
+            },
+            {
+              "speaker": "B",
+              "english": "Where do you go fishing?",
+              "dzardzongke": "Nya zin du garu droiyoeta?"
+            },
+            {
+              "speaker": "A",
+              "english": "I go to Phortsang to fish.",
+              "dzardzongke": "Nga nya zin du Phortsang la droiyoe."
+            },
+            {
+              "speaker": "B",
+              "english": "Next time you go fishing, bring it to me!",
+              "dzardzongke": "Sham la khyoe nya zin du droarang nga la titi khyele o."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "title": "Clothing & Weather",
+      "description": "Learn how to talk about clothing and weather",
+      "conversations": [
+        {
+          "id": "clothing-weather",
+          "title": "Clothing for Weather",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "What do you wear when it's cold outside?",
+              "dzardzongke": "Khyoe khyakarang golak gen goeniyoeta?"
+            },
+            {
+              "speaker": "B",
+              "english": "I wear a hat, jacket, pants, and a pair of boots.",
+              "dzardzongke": "Nga zhamo, jacket, kenam dromu, poble drowa goeniyoe."
+            },
+            {
+              "speaker": "A",
+              "english": "And when the weather is nice?",
+              "dzardzongke": "Dene nám dromo yoetarang?"
+            },
+            {
+              "speaker": "B",
+              "english": "Then, I take all that off and put on short pants, a t-shirt, and my sandals.",
+              "dzardzongke": "Di golakyak pueti halfpant totsi cappal goeniyoe."
+            },
+            {
+              "speaker": "A",
+              "english": "I don't like to wear sandals because my feet get dirty.",
+              "dzardzongke": "Nga cappal goenyen me thetak, gen jiri ná na kangpa la dampak ongik."
+            },
+            {
+              "speaker": "B",
+              "english": "Well then don't walk in the mud my friend.",
+              "dzardzongke": "Dene dampak la ma gyuk!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "title": "Health & Wellness",
+      "description": "Learn how to talk about health and wellness",
+      "conversations": [
+        {
+          "id": "feeling-sick",
+          "title": "Feeling Sick",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "What's up?",
+              "dzardzongke": "Dangsang yoete?"
+            },
+            {
+              "speaker": "B",
+              "english": "I don't feel too good.",
+              "dzardzongke": "Arme kyita minduk."
+            },
+            {
+              "speaker": "A",
+              "english": "What's hurting?",
+              "dzardzongke": "Gen jusong?"
+            },
+            {
+              "speaker": "B",
+              "english": "My stomach hurts; I have a stomach ache.",
+              "dzardzongke": "Ngi phowa suk gyawik."
+            },
+            {
+              "speaker": "A",
+              "english": "What did you eat yesterday?",
+              "dzardzongke": "Dang gen zewa?"
+            },
+            {
+              "speaker": "B",
+              "english": "I don't know… around fifteen pounds of crawfish?",
+              "dzardzongke": "Dang sha loenpa tsheme manga zewen."
+            },
+            {
+              "speaker": "A",
+              "english": "Get well soon!",
+              "dzardzongke": "Gyokwa drakye ki moenlam gyawo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "directions",
+      "title": "Directions & Navigation",
+      "description": "Learn how to give and ask for directions",
+      "conversations": [
+        {
+          "id": "lost-directions",
+          "title": "Lost and Directions",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "Where are you going?",
+              "dzardzongke": "Ájo ga la phepku jita?"
+            },
+            {
+              "speaker": "B",
+              "english": "I'm going to the grocery store, but I'm lost.",
+              "dzardzongke": "Nga pasal la droku jitiyoe, lam dzolsong."
+            },
+            {
+              "speaker": "A",
+              "english": "To get to the grocery store, continue two miles and then turn left when you see the big cedar. Follow that road until the grocery store. Tell Mister Charlot hello from his friend Freddy.",
+              "dzardzongke": "Dene shari karma cutse gyukti dro na dongpo che cik la lepkenak dene ondi dongpo che ni lakpa yoenchok la khorti lamka gyukti song. Dene lamka la pasal ko la lepkenak. Dene pasal ko lep na pasal dakpo ko la ngi driik o sung. Dakpo ko ngi rok Palgen nak."
+            },
+            {
+              "speaker": "B",
+              "english": "Thanks a lot!",
+              "dzardzongke": "orche"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "festivals",
+      "title": "Cultural Events & Festivals",
+      "description": "Learn how to talk about cultural events and festivals",
+      "conversations": [
+        {
+          "id": "festival-activities",
+          "title": "Festival Activities",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "What do they usually do during the festival?",
+              "dzardzongke": "Orang yártung la gen gen jitiyoeta?"
+            },
+            {
+              "speaker": "B",
+              "english": "They kill some pigs, and they'd make all kinds of stuff with it. Boudin, andouille, all kinds of stuff like that.",
+              "dzardzongke": "Yák dikpa jitanak. Dene gyuma gyanganak, dene yák sha ki momo zoewanak."
+            },
+            {
+              "speaker": "A",
+              "english": "That's all?",
+              "dzardzongke": "Zhemba gen gen jitinak o?"
+            },
+            {
+              "speaker": "B",
+              "english": "Yes, and sometimes there's music.",
+              "dzardzongke": "Lú nyenanak. Zhapdro tapanak. Chang arak thunganak. Cholu gyawanak tas gyawanak. Bumoyak doendrok gyawanak. Tsheme nyam tanganak."
+            },
+            {
+              "speaker": "A",
+              "english": "Do they kill cattle too?",
+              "dzardzongke": "Orang balang seteyoete?"
+            },
+            {
+              "speaker": "B",
+              "english": "Yes, but not at the same time.",
+              "dzardzongke": "Egi balang me setanak."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food & Preferences",
+      "description": "Learn how to talk about food preferences",
+      "conversations": [
+        {
+          "id": "spicy-food",
+          "title": "Spicy Food",
+          "exchanges": [
+            {
+              "speaker": "A",
+              "english": "Do you like your food well seasoned?",
+              "dzardzongke": "Khyoe la mén ná lúk lúkwa zama theta yoete?"
+            },
+            {
+              "speaker": "B",
+              "english": "Yes, put a lot of pepper and spice in there.",
+              "dzardzongke": "Theta yoe. Nge zama la mén ná tsheme manga lúkiyoe."
+            },
+            {
+              "speaker": "A",
+              "english": "You've never eaten in Louisiana.",
+              "dzardzongke": "Khyoe ngóen la Dzar tu zama za nyunge?"
+            },
+            {
+              "speaker": "B",
+              "english": "No, why?",
+              "dzardzongke": "Za ma nyung. Gen jiri?"
+            },
+            {
+              "speaker": "A",
+              "english": "Nothing. Here's your gumbo.",
+              "dzardzongke": "Yoepa yoeri yom martsa pakti zo."
+            },
+            {
+              "speaker": "B",
+              "english": "KO! It's fire!",
+              "dzardzongke": "Oh ta tsheme khatsha duk!"
+            },
+            {
+              "speaker": "A",
+              "english": "I tried to tell you…",
+              "dzardzongke": "Ngi khyoe la ngóen la tsoewe newen..."
+            },
+            {
+              "speaker": "B",
+              "english": "Water! Quick!",
+              "dzardzongke": "Chu nóng lolu lolu!"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

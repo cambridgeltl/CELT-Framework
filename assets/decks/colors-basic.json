@@ -1,0 +1,71 @@
+{
+  "id": "colors-basic",
+  "title": "Colours",
+  "description": "Learn common colour names in Dzardzongke",
+  "cards": [
+    {
+      "id": "color-white",
+      "front": "White",
+      "back": "karu",
+      "notes": "There are multiple words for white in Dzardzongke",
+      "image": "",
+      "hasAudio": false
+    },
+    {
+      "id": "color-yellow",
+      "front": "Yellow",
+      "back": "seru",
+      "notes": "Yellow is 'seru' in Dzardzongke",
+      "image": "",
+      "hasAudio": false
+    },
+    {
+      "id": "color-black",
+      "front": "Black",
+      "back": "nakpu",
+      "notes": "Black is 'nakpu' in Dzardzongke",
+      "image": "",
+      "hasAudio": false
+    },
+    {
+      "id": "color-green",
+      "front": "Green",
+      "back": "jongkhu",
+      "notes": "Green is 'jongkhu' in Dzardzongke",
+      "image": "",
+      "hasAudio": false
+    },
+    {
+      "id": "color-brown",
+      "front": "Brown",
+      "back": "múkpu",
+      "notes": "Brown is 'múkpu' in Dzardzongke",
+      "image": "",
+      "hasAudio": false
+    },
+    {
+      "id": "color-blue",
+      "front": "Blue",
+      "back": "ngóenpo",
+      "notes": "Blue is 'ngóenpo' in Dzardzongke",
+      "image": "",
+      "hasAudio": false
+    },
+    {
+      "id": "color-red",
+      "front": "Red",
+      "back": "che",
+      "notes": "Red is 'che' in Dzardzongke",
+      "image": "",
+      "hasAudio": false
+    },
+    {
+      "id": "color-celebration",
+      "front": "🎉 Great Job! 🎉",
+      "back": "You've completed the colors deck!",
+      "notes": "Congratulations on learning the basic colors in Dzardzongke!",
+      "image": "",
+      "hasAudio": false
+    }
+  ]
+}
