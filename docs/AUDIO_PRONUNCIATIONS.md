@@ -1,6 +1,6 @@
 # Adding Audio Pronunciations to Dictionary Entries
 
-This guide explains how to add audio pronunciations to the Dzongkha dictionary entries.
+This guide explains how to add audio pronunciations to the Dzardzongke dictionary entries.
 
 ## Audio File Requirements
 
@@ -13,7 +13,7 @@ This guide explains how to add audio pronunciations to the Dzongkha dictionary e
 
 ### Step 1: Prepare Your Audio File
 
-1. Record or obtain an audio file of the Dzongkha word pronunciation
+1. Record or obtain an audio file of the Dzardzongke word pronunciation
 2. Convert it to MP3 format if necessary
 3. Name the file according to the convention (e.g., `go.mp3` for the word "go")
 4. For words with spaces, replace spaces with underscores (e.g., `go_tsukken.mp3`)

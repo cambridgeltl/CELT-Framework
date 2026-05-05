@@ -45,7 +45,7 @@ function dictionaryKeyFromPath(contextKey: string): string {
 }
 
 /**
- * Normalize a Dzongkha key for dictionary lookup
+ * Normalize a Dzardzongke key for dictionary lookup
  */
 export function normalizeDzKey(input: string): string {
   const lower = input.toLowerCase();
