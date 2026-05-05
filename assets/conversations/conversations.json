@@ -12,17 +12,17 @@
             {
               "speaker": "A",
               "english": "Hello! How's it going?",
-              "dzardzongke": "Dangsang yoe te? / Denchak yoe te? / Kham zanga yoe te?"
+              "dzardzongke": "Dang zang yoe te? / Den jak yoe te? / Kham zanga yoe te?"
             },
             {
               "speaker": "B",
               "english": "It's going, thanks. And you? How are you?",
-              "dzardzongke": "Dangsang yoe o. Orang gendre duk o?"
+              "dzardzongke": "Dang zang yoe o. Orang gendre duk o?"
             },
             {
               "speaker": "A",
               "english": "I'm good, thanks. What's your name?",
-              "dzardzongke": "Dangsang yoe o. Orang ki min la gen ná o?"
+              "dzardzongke": "Dang zang yoe o. Orang ki min la gen ná o?"
             },
             {
               "speaker": "B",
@@ -42,12 +42,12 @@
             {
               "speaker": "A",
               "english": "Same. Goodbye!",
-              "dzardzongke": "Nga la yang kyita jusong. Denchak o!"
+              "dzardzongke": "Nga la yang kyita jusong. Den jak o!"
             },
             {
               "speaker": "B",
               "english": "Goodbye!",
-              "dzardzongke": "Denchak o!"
+              "dzardzongke": "Den jak o!"
             }
           ]
         }
@@ -70,7 +70,7 @@
             {
               "speaker": "B",
               "english": "I'm turning 44. How old are you?",
-              "dzardzongke": "Da nyima lokti nga lo zhipcu shapzhi (44) lewanak. Dene orang lo gatsoe?"
+              "dzardzongke": "Da nyima lokti nga lo zhipcu shapzhi lewanak. Dene orang lo gatsoe?"
             },
             {
               "speaker": "A",
@@ -113,12 +113,12 @@
             {
               "speaker": "B",
               "english": "His name is Robert, but his nickname is Ti-Rob.",
-              "dzardzongke": "ájo ki min la Tenzin ná nak."
+              "dzardzongke": "Ájo ki min la Tenzin ná nak."
             },
             {
               "speaker": "A",
               "english": "How many brothers do you have?",
-              "dzardzongke": "Khyoe la puen gatsoe yoeta?"
+              "dzardzongke": "Khyoe la puen gatsoe yoe ta?"
             },
             {
               "speaker": "B",
@@ -128,7 +128,7 @@
             {
               "speaker": "A",
               "english": "So that woman is your sister?",
-              "dzardzongke": "Ondi bumo su ná o?"
+              "dzardzongke": "Ondi bumo su nak o?"
             },
             {
               "speaker": "B",
