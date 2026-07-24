@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/oyle/Documents/final_final_dzardzongke/langdatacreator-main/app/quiz/page.tsx"],"sourcesContent":["export default function QuizPage() {\r\n  return (\r\n    <div>\r\n      <h2 className=\"text-3xl font-bold text-[var(--color-text)] mb-8\">Quiz</h2>\r\n\r\n      <p className=\"text-[var(--color-text-muted)]\">\r\n        Quiz functionality coming soon.\r\n      </p>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;;0BACC,8OAAC;gBAAG,WAAU;0BAAmD;;;;;;0BAEjE,8OAAC;gBAAE,WAAU;0BAAiC;;;;;;;;;;;;AAKpD"}}]
+}

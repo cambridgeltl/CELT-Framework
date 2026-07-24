@@ -1,0 +1,8 @@
+{
+  "/conversations/page": "app/conversations/page.js",
+  "/culture/page": "app/culture/page.js",
+  "/decks/page": "app/decks/page.js",
+  "/dictionary/page": "app/dictionary/page.js",
+  "/page": "app/page.js",
+  "/quiz/page": "app/quiz/page.js"
+}

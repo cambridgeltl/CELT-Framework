@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /mnt/c/Users/oyle/Documents/final_final_dzardzongke/skeleton && node -e \"\n  const appName = require\\('./app-config.json'\\).appName;\n  const slug = appName.toLowerCase\\(\\).replace\\(/[^a-z0-9 -]/g, ''\\).replace\\(/ /g, '-'\\).replace\\(/-+/g, '-'\\);\n  const pkg = 'com.langapp.' + slug.replace\\(/-/g, '.'\\);\n  console.log\\('Name:', appName\\);\n  console.log\\('Slug:', slug\\);\n  console.log\\('Package:', pkg\\);\n\")",
+      "Bash(ls \"/mnt/c/Users/oyle/Downloads/skeleton_forlangapp-main\\(1\\)/skeleton_forlangapp-main/\")",
+      "Bash(ls \"/mnt/c/Users/oyle/Downloads/skeleton_forlangapp-main\\(1\\)/skeleton_forlangapp-main/eas.json\" 2>/dev/null && cat \"/mnt/c/Users/oyle/Downloads/skeleton_forlangapp-main\\(1\\)/skeleton_forlangapp-main/eas.json\" || echo \"No eas.json found\")",
+      "Bash(ls -la \"/mnt/c/Users/oyle/Downloads/skeleton_forlangapp-main\\(1\\)/skeleton_forlangapp-main/\" | head -40)",
+      "Bash(ls -la \"/mnt/c/Users/oyle/Downloads/skeleton_forlangapp-main\\(1\\)/skeleton_forlangapp-main/assets/\")"
+    ]
+  }
+}
