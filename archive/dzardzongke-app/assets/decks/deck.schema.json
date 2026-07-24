@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dzardzongke Deck",
+  "description": "A deck of flashcards for learning Dzardzongke language",
+  "type": "object",
+  "required": ["id", "title", "description", "cards"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the deck",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Display title of the deck"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the deck's content"
+    },
+    "cards": {
+      "type": "array",
+      "description": "List of flashcards in the deck",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "front", "back"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the card"
+          },
+          "front": {
+            "type": "string",
+            "description": "Dzardzongke text (question side)"
+          },
+          "back": {
+            "type": "string",
+            "description": "English translation (answer side)"
+          },
+          "hasAudio": {
+            "type": "boolean",
+            "description": "Whether the card has audio pronunciation",
+            "default": false
+          }
+        }
+      }
+    }
+  }
+}

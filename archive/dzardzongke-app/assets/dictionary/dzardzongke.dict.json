@@ -1,0 +1,6209 @@
+{
+  "entries": [
+    {
+      "dz": "a",
+      "en": "also",
+      "example": "",
+      "exampleEn": "",
+    },
+    {
+      "dz": "aca",
+      "en": "bad",
+      "example": "",
+      "exampleEn": "",
+    },
+    {
+      "dz": "ajakpa",
+      "en": "bad",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ájo",
+      "en": "brother",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ájo",
+      "en": "elder brother",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "áki",
+      "en": "father",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ale",
+      "en": "money",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ále",
+      "en": "money",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ámayak",
+      "en": "mothers",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ámchok yarken",
+      "en": "listen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "amkari",
+      "en": "vase",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ang",
+      "en": "even",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ang",
+      "en": "also",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ánga",
+      "en": "permission",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "angdak jisong",
+      "en": "to be tired",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ángken",
+      "en": "be out of breath",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "apken",
+      "en": "bark",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "arak",
+      "en": "liquor",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ari gyapken",
+      "en": "shout",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "arme",
+      "en": "very, quite a lot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "arme cik",
+      "en": "a lot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "aru",
+      "en": "here",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "áwu, áki",
+      "en": "father",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "aze",
+      "en": "fox",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bak",
+      "en": "dice",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bal",
+      "en": "wool",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "baltrin",
+      "en": "bucket",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bangma",
+      "en": "lees",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bapu",
+      "en": "hair",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bar",
+      "en": "to burn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bardo",
+      "en": "intermediate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "barma",
+      "en": "middle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bati",
+      "en": "light",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bazak",
+      "en": "sickle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bazhak",
+      "en": "harvesting sickle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "be",
+      "en": "cat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "beken",
+      "en": "hide",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "belun",
+      "en": "bladder",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bema",
+      "en": "sand",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "berka",
+      "en": "stick",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bijuli",
+      "en": "electricity",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bip",
+      "en": "calf",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bisa",
+      "en": "son",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "boe",
+      "en": "Tibet",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "boe",
+      "en": "to call",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "boeja",
+      "en": "Tibetan tea",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "boemen",
+      "en": "Tibetan medicine",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bolok",
+      "en": "next to",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bolok tu",
+      "en": "close to",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bomo",
+      "en": "daughter/sister",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bomo",
+      "en": "girl",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bor",
+      "en": "place, put",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bor",
+      "en": "to keep",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bor",
+      "en": "keep, put",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "botal",
+      "en": "bottle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "buetruk",
+      "en": "children",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "buk",
+      "en": "to pierce",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "butsi",
+      "en": "mouse",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cak",
+      "en": "iron",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cakma",
+      "en": "willow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "calak",
+      "en": "items",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cang",
+      "en": "to enjoy",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cenga",
+      "en": "15",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chak nor",
+      "en": "wealth",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chang",
+      "en": "beer",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chang",
+      "en": "beer, festival",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chang khowa",
+      "en": "first beer",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chara",
+      "en": "rain",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "che",
+      "en": "respectfully, your honour'",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "che",
+      "en": "respectful ending",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cheshok",
+      "en": "biggest",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chetse",
+      "en": "big-ish",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chi",
+      "en": "behind",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chigyal",
+      "en": "foreigner",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chinor",
+      "en": "livestock",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "choe",
+      "en": "literacy",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "choe",
+      "en": "books",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "choekyong",
+      "en": "protective divinity",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "choeme",
+      "en": "offer lamp",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "choepa",
+      "en": "offerings",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chok",
+      "en": "direction",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chorten",
+      "en": "stupa",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chu",
+      "en": "water",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chu chue",
+      "en": "to collect water",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chue",
+      "en": "to fetch",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chukpo",
+      "en": "spring",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chukpu",
+      "en": "rich",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "chungshok",
+      "en": "youngest",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "churak",
+      "en": "watermill",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cik",
+      "en": "a",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cik la",
+      "en": "once?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cik tshal",
+      "en": "once",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cik tu",
+      "en": "first",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cikar",
+      "en": "only",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cikhyap",
+      "en": "governor",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cikpa",
+      "en": "the same",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cikpa",
+      "en": "same",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cime",
+      "en": "little bit, small",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cime",
+      "en": "a little bit",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cing",
+      "en": "urine",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cini",
+      "en": "sugar",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ciya",
+      "en": "any",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cokdra",
+      "en": "like",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cudruk",
+      "en": "sixteen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cuk",
+      "en": "to put",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cuk",
+      "en": "put",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cuki gang la",
+      "en": "at the time of putting",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cuksum",
+      "en": "thirteen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cukti",
+      "en": "after putting",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cungwa",
+      "en": "small",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cup",
+      "en": "to put",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "da",
+      "en": "now",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "da drikken",
+      "en": "put arrow on bow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "da gyapken",
+      "en": "shoot arrow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "da zeken",
+      "en": "aim arrow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dakken",
+      "en": "lick",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dakpo",
+      "en": "ownership",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "damari",
+      "en": "drum",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dami",
+      "en": "tying",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dangbo",
+      "en": "long ago",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dap",
+      "en": "to measure",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dar",
+      "en": "silk",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dara",
+      "en": "buttermilk",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "darken",
+      "en": "shiver",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dawa",
+      "en": "month",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "de",
+      "en": "to stay, sit",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "de",
+      "en": "to sit",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dempa",
+      "en": "true",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "denchak",
+      "en": "stay (hon.m.)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dene",
+      "en": "then, after that",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dene",
+      "en": "then",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dering",
+      "en": "today",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dezhain",
+      "en": "design",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "di",
+      "en": "this",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "di chok la",
+      "en": "in this area",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "di la kata",
+      "en": "as for to this one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "di...di",
+      "en": "this (emphasis)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dik",
+      "en": "basin",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dikpa",
+      "en": "sin",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "diktshong",
+      "en": "sin trade",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dingkor gyapken",
+      "en": "bird cry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "do",
+      "en": "section",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "doe",
+      "en": "stay!",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dokdok",
+      "en": "lumpy",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dokur",
+      "en": "small basket",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dolo",
+      "en": "Dolpo",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dom",
+      "en": "bear",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dorang a",
+      "en": "furthermore",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drak",
+      "en": "strap",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "draken",
+      "en": "be similar",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dramnyen",
+      "en": "Tibetan lute",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drang",
+      "en": "every",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drang",
+      "en": "to count",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drang",
+      "en": "onomatopeic pumping action",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drangken",
+      "en": "get drunk",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dre",
+      "en": "mule",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dreken",
+      "en": "mix",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drelwa",
+      "en": "connection",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drenken",
+      "en": "imitate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dri",
+      "en": "to write",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drik",
+      "en": "to approve",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drik",
+      "en": "to be fine",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "driken",
+      "en": "script",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "driken",
+      "en": "write",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dro",
+      "en": "to go",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dro",
+      "en": "go",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drodoen",
+      "en": "living beings",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "droik",
+      "en": "he goes",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "droken",
+      "en": "going",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drokin",
+      "en": "as you walk along",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "droku",
+      "en": "I shall go",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dromo",
+      "en": "hot, warm",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drong",
+      "en": "pass away",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drongba",
+      "en": "household",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "droye",
+      "en": "going",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dru",
+      "en": "grain",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "druk",
+      "en": "six",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "druk durken",
+      "en": "thunder",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drungyik",
+      "en": "secretary",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drup",
+      "en": "to act, fulfill",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "drup",
+      "en": "accomplish",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dueken",
+      "en": "get back",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duepa",
+      "en": "smoke",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duk e",
+      "en": "are there?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duka duka",
+      "en": "sometimes",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duka duka",
+      "en": "from time to time",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "durken",
+      "en": "cook",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duru",
+      "en": "here",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duru",
+      "en": "here ('in this')",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duru",
+      "en": "in here",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "duwo",
+      "en": "is",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dwak gyapken",
+      "en": "shoot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzakken",
+      "en": "to leak",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dze",
+      "en": "to do",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzeken",
+      "en": "do (hon)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzeken chi la",
+      "en": "in order to do",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzeshok",
+      "en": "finest",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzetak",
+      "en": "activities",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzikyur",
+      "en": "shepherd's place",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dziu",
+      "en": "herder",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzo",
+      "en": "crossbreed between bull yak and female cow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzok jiken",
+      "en": "show something",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzolken",
+      "en": "be mistaken",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzomken",
+      "en": "gather",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzong",
+      "en": "fortress",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzuk",
+      "en": "insert",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzulken",
+      "en": "enter",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dzumtrul toenken",
+      "en": "use magic",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "e",
+      "en": "Y/N polarity marker",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "egi",
+      "en": "we (incl)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "egi",
+      "en": "we",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "egi",
+      "en": "we (excl)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "egi yul",
+      "en": "our land",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "émchi",
+      "en": "doctor",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "émci",
+      "en": "doctor",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "en jiri = oendi jiri",
+      "en": "thus",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "enji",
+      "en": "therefore",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ga",
+      "en": "where",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ga",
+      "en": "happy",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ga gyapken",
+      "en": "saddle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ga ru",
+      "en": "where(ver)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ga sa ga la",
+      "en": "everywhere",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gakken",
+      "en": "be blocked",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "galken",
+      "en": "wade",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gam",
+      "en": "box",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gang la",
+      "en": "when, before",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gang la",
+      "en": "when, at the time of",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gang la",
+      "en": "at the time",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gangbu",
+      "en": "whole, all",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gangbu",
+      "en": "whole",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gangpu",
+      "en": "all",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gar",
+      "en": "to attach",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gar",
+      "en": "to weigh",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gar ceken",
+      "en": "dance",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gara",
+      "en": "artisan, blacksmith",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "garken",
+      "en": "weighing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "garu garu",
+      "en": "everywhere",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gashang kangken",
+      "en": "throw a party",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gazhen",
+      "en": "lot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gemo",
+      "en": "old women",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen",
+      "en": "what",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen jiri",
+      "en": "why?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen jiri ná na",
+      "en": "because",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen ma",
+      "en": "nothing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen nákure",
+      "en": "what should we call this?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen thoe thoewa",
+      "en": "what I heard",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zowa",
+      "en": "measure of 4.5l",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zowa",
+      "en": "1.53l",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zowa",
+      "en": "craftsman",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zo sa",
+      "en": "the place of making",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoe",
+      "en": "make",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoe zoewa rak",
+      "en": "it is a things made (in the south)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoeken",
+      "en": "to make",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoengo",
+      "en": "we will make",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoeruk",
+      "en": "have made",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoezoewa",
+      "en": "having been made",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoken",
+      "en": "making",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoken",
+      "en": "doing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zompa",
+      "en": "boot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zoptung",
+      "en": "food and drink",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zinken",
+      "en": "hold",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhue",
+      "en": "to receive, ask (hum)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhue",
+      "en": "to ask",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhuk",
+      "en": "afterwards",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhuk la",
+      "en": "later",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhukken (chi) la",
+      "en": "in order to enter",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhukti",
+      "en": "stay",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhungthral",
+      "en": "government tax",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhur",
+      "en": "to swing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zin",
+      "en": "to hold",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhema",
+      "en": "what else",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhepchi",
+      "en": "assistant",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhi",
+      "en": "four",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhima",
+      "en": "tasty",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhing",
+      "en": "field",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhingkhang",
+      "en": "house",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhingkhang",
+      "en": "fields and house",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhoen",
+      "en": "ride",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yúk",
+      "en": "throw",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yúkken",
+      "en": "throw away",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yul",
+      "en": "land",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yulka",
+      "en": "villages",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yus",
+      "en": "use",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "za",
+      "en": "stinging nettles",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "za",
+      "en": "eat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zang",
+      "en": "copper",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zertsoe",
+      "en": "blacksmith",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zewen",
+      "en": "I ate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhabru",
+      "en": "dancing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhakmo",
+      "en": "day",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhakpo",
+      "en": "day",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhap",
+      "en": "foot (hon)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhapten",
+      "en": "ritual",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "zhema",
+      "en": "others",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yoenten",
+      "en": "qualities",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yoesa",
+      "en": "the place where X is",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yokpa",
+      "en": "bobbin",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yom",
+      "en": "with",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yom yom",
+      "en": "together with",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yombu",
+      "en": "Kathmandu",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yopa",
+      "en": "food",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yowa",
+      "en": "food",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yárken",
+      "en": "lend",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yártung",
+      "en": "summer festival",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yeik",
+      "en": "itches",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yérka",
+      "en": "small bells",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yi cheken",
+      "en": "believe",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yiche",
+      "en": "trust",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yin gyu",
+      "en": "ought to be",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yin na ang",
+      "en": "nonetheless",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yinkyu",
+      "en": "in reality",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yipken",
+      "en": "hide",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yoe",
+      "en": "there is/are",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yoe",
+      "en": "there exists",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yoe na ang",
+      "en": "even if there is",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yoedro",
+      "en": "probably were",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yoeken",
+      "en": "bend",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yóeken",
+      "en": "stir",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsuenmo",
+      "en": "woman, wife (hon)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsuenmo",
+      "en": "queen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsuk",
+      "en": "to set up",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tum",
+      "en": "to wrap",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "úe",
+      "en": "far away",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ulsa",
+      "en": "threshing ground",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "up",
+      "en": "all",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "urtuk",
+      "en": "sling",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "úru",
+      "en": "there",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "wang",
+      "en": "initiation",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "wang",
+      "en": "power",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ya",
+      "en": "down",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ya jiken",
+      "en": "to be interested",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ya la ma la",
+      "en": "to and fro",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yák",
+      "en": "yak",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yáken",
+      "en": "itch",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yalken",
+      "en": "die",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yálken",
+      "en": "spend",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yang",
+      "en": "again",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yángken",
+      "en": "search",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yar",
+      "en": "upwards",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "yarka",
+      "en": "summer",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsoetsoewa",
+      "en": "boiled",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsokyi",
+      "en": "guard post",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsoptari",
+      "en": "resting place",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsowe",
+      "en": "right",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsowe",
+      "en": "itself",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsi",
+      "en": "press",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshukwa",
+      "en": "Tshuk people",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshe",
+      "en": "as many as",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsheme",
+      "en": "very",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshemeken",
+      "en": "very",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshemeken",
+      "en": "very greatly",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshemo",
+      "en": "night",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshewa",
+      "en": "day",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshiluk",
+      "en": "fat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshomyik",
+      "en": "writings",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshong",
+      "en": "trade",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshong",
+      "en": "to sell",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshongpen",
+      "en": "merchant",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshongpo",
+      "en": "merchang",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshop",
+      "en": "grandson",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsham la",
+      "en": "first",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshampa",
+      "en": "anchorite",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshap",
+      "en": "replacement",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsha",
+      "en": "salt",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tshal",
+      "en": "to look for",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsam",
+      "en": "channels",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsangma zoe",
+      "en": "to clean",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsawi láma",
+      "en": "root lama",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tse",
+      "en": "to play",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsea rang",
+      "en": "while playing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "truwu",
+      "en": "children",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "truwu",
+      "en": "child",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tsa",
+      "en": "location",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "trip",
+      "en": "eye of the spindle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "trip ko la",
+      "en": "in as for this one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tibril",
+      "en": "teapot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tiwe",
+      "en": "leech",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "toe",
+      "en": "Upper Mustang",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "toe",
+      "en": "western Tibet",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "toen",
+      "en": "show",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tong",
+      "en": "to see",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tongba",
+      "en": "empty",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tramme",
+      "en": "really fine",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "threki",
+      "en": "Nepali?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thrik",
+      "en": "instruction",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thue",
+      "en": "to collect",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thukpa",
+      "en": "up until",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thulu",
+      "en": "turnip",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thung",
+      "en": "to drink",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thup",
+      "en": "to be able to",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thup",
+      "en": "be able",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thakwa",
+      "en": "Thakali",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thar",
+      "en": "get across, complete",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tharchang",
+      "en": "retirement ceremony",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thebrang",
+      "en": "demon of thebrang class",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tho",
+      "en": "seen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thoe",
+      "en": "heard",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thoeken",
+      "en": "hear",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thoen",
+      "en": "come out",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thoenken",
+      "en": "reach",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thong",
+      "en": "to teach",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thong ma nyung",
+      "en": "I've never seen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thonga rang",
+      "en": "while seeing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thrang",
+      "en": "narrow path",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thranga",
+      "en": "rosary",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thranga",
+      "en": "mala, rosery",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thre",
+      "en": "meet",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "taken",
+      "en": "watch",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tamka",
+      "en": "drop, shot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tang",
+      "en": "to send",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tangken",
+      "en": "making",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tap",
+      "en": "to sow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tapca",
+      "en": "horse arranger",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tawanak",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "te",
+      "en": "to look",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ter",
+      "en": "to give",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ter",
+      "en": "give",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "terduk",
+      "en": "gave",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "terdzoe",
+      "en": "treasury",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "terku",
+      "en": "I shall give",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thak",
+      "en": "to grind, weave",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thak",
+      "en": "distance",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thak",
+      "en": "to weave",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "thaki",
+      "en": "weave",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "tak",
+      "en": "to attach",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ta",
+      "en": "horse",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sum",
+      "en": "three",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sum du",
+      "en": "third",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sumpo",
+      "en": "all three",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sunga",
+      "en": "say (hon)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sungik",
+      "en": "he says",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "suri",
+      "en": "having said",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ta",
+      "en": "to look",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ta",
+      "en": "to see",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "soendre",
+      "en": "witches",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sola",
+      "en": "charcoal",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sompu",
+      "en": "Thini",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "songgul",
+      "en": "earthquake",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sopta",
+      "en": "shape, form",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sori",
+      "en": "having gone",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shorken",
+      "en": "start",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sildril",
+      "en": "bell",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shiken",
+      "en": "go out",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shindre",
+      "en": "demon",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shing",
+      "en": "wood",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rupse",
+      "en": "all of them",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sa",
+      "en": "ground",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sak",
+      "en": "accumulate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sakduk",
+      "en": "has accumulated",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sampa",
+      "en": "new (ones)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sampa",
+      "en": "new",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sanggye",
+      "en": "buddha",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "se bunge",
+      "en": "grey and withered",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sekam",
+      "en": "chest",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "semcen",
+      "en": "animal",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sempa",
+      "en": "mind",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ser",
+      "en": "gold",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sertsa",
+      "en": "blacksmith",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sesewa",
+      "en": "killed person",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sha",
+      "en": "meat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shali",
+      "en": "jackals",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sham la",
+      "en": "later on",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shamshok",
+      "en": "last",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shari",
+      "en": "after rising",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shari",
+      "en": "directly, immediately",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sharmo",
+      "en": "female lover",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "sharu",
+      "en": "male lover",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "she",
+      "en": "to comb",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shes",
+      "en": "know",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "shi",
+      "en": "to die",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rongpa",
+      "en": "lowlander",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rongpa",
+      "en": "lowland person",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rongpi lap",
+      "en": "Nepali language",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rong",
+      "en": "lowlands",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rak",
+      "en": "brass",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rang rang",
+      "en": "respective",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ratshong",
+      "en": "goat trade",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "raza",
+      "en": "different, separate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "re",
+      "en": "cotton",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "re re",
+      "en": "each",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rendi",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rengka",
+      "en": "some",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rengka",
+      "en": "certain people",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ribong",
+      "en": "hare",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rika",
+      "en": "pasture lands",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ríkap",
+      "en": "dish",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "rikpa",
+      "en": "awareness",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ril",
+      "en": "to roll down",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ril",
+      "en": "to roll",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ringa",
+      "en": "long",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "poktse",
+      "en": "vessel",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pongkok",
+      "en": "penis, pinecone",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pu",
+      "en": "fur",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "puen",
+      "en": "relative, sibling",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "puen",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pul",
+      "en": "give (hum)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ra",
+      "en": "pl.topicaliser",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ra",
+      "en": "goat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ra",
+      "en": "plural for a small number of things",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phutsi",
+      "en": "mouse",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pingya",
+      "en": "relatives",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phang",
+      "en": "spindle (women use)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phe",
+      "en": "flower",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phen tokken",
+      "en": "to be useful",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phenthok",
+      "en": "benefit",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phep",
+      "en": "to go, come (m.hon.)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phepa",
+      "en": "gone",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phi",
+      "en": "outside",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phimi",
+      "en": "outside person",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phok khang",
+      "en": "outpost",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phokkenyak",
+      "en": "people who have been struck",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phowa",
+      "en": "belly",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "phu",
+      "en": "bladder",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ongik",
+      "en": "comes",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "orang",
+      "en": "you, we (incl)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "orang",
+      "en": "we",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "orche",
+      "en": "please",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ordra",
+      "en": "order",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ore",
+      "en": "there are",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ori",
+      "en": "having come",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pak",
+      "en": "sauce, wet food",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pakpor",
+      "en": "sauce cup",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pana batti",
+      "en": "light",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pans",
+      "en": "five",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "par tsok",
+      "en": "make blockprints",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pe",
+      "en": "to split",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "peken",
+      "en": "open",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "peten cha zhak na",
+      "en": "for example",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "pethi",
+      "en": "pathi, unit of measure of 4.3l",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "o(en)di",
+      "en": "this very one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "odi",
+      "en": "this",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "odi",
+      "en": "this one here",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "odi kalta",
+      "en": "as for this one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "odi N diweyak",
+      "en": "these N",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "odiru",
+      "en": "in that",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "oduru",
+      "en": "in this",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "oendi",
+      "en": "that, he",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "oendre jiri",
+      "en": "therefore",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "oenduru",
+      "en": "right here",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "oenjiri",
+      "en": "in this way",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ok la",
+      "en": "down(wards)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "okma",
+      "en": "below",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "oma",
+      "en": "milk",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "oma zurken medro",
+      "en": "might this not be for milking",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ona",
+      "en": "now then",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ondre jiri",
+      "en": "therefore",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ong",
+      "en": "to come",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyima",
+      "en": "sun",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyima drang",
+      "en": "every day",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyimo ko",
+      "en": "in the daytime",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyin cik",
+      "en": "one day",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyíngpa",
+      "en": "old",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyínpa",
+      "en": "old one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyishu",
+      "en": "20",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyishu",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyo",
+      "en": "to buy",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyoeri",
+      "en": "having bought",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyoeri",
+      "en": "having been bought",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyúng",
+      "en": "to get ill (hon.)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ó",
+      "en": "father",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngoengoewa",
+      "en": "fried",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngoenjoe",
+      "en": "introduction",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngúl",
+      "en": "silver",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nochongma",
+      "en": "young women",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "noenken",
+      "en": "be full",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nólcu",
+      "en": "nose ring",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "numo",
+      "en": "younger sister",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyá ru",
+      "en": "up",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyal",
+      "en": "to sleep",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyé",
+      "en": "pillow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyen la",
+      "en": "in the past",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyén la",
+      "en": "first of all",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyén la",
+      "en": "previously",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyenken",
+      "en": "listen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyi ru",
+      "en": "second",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nyikara",
+      "en": "both",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nepa",
+      "en": "patient",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "néri",
+      "en": "having said",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nerki",
+      "en": "nose",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nga",
+      "en": "I",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nga",
+      "en": "to harvest",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngá",
+      "en": "five",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngák",
+      "en": "mantra",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngák",
+      "en": "mantras",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngaken di",
+      "en": "the one used for harvesting",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngaltak",
+      "en": "sleeping place",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngáwa",
+      "en": "fifth",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nge",
+      "en": "harvest",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngema",
+      "en": "in the past",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngénshok",
+      "en": "earliest",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngi",
+      "en": "my",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngo",
+      "en": "face",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ngo she",
+      "en": "know a person",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ne yang",
+      "en": "even more than",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nen",
+      "en": "to take, seize, fetch",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "metok",
+      "en": "flower",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mewara",
+      "en": "sickle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mi",
+      "en": "man",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mi kha",
+      "en": "gossip",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mi re",
+      "en": "certain people",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mik",
+      "en": "eye",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mík",
+      "en": "eye",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mík zharken",
+      "en": "be blinded",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "míkcak",
+      "en": "horse shoe",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "míkchu tangken",
+      "en": "cry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mikken",
+      "en": "swallow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mimang",
+      "en": "people",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "min",
+      "en": "name",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mindro",
+      "en": "probably not",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "minduk",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "miri miri",
+      "en": "certain people",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "misi",
+      "en": "lifetime",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mithok",
+      "en": "generation",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "miu",
+      "en": "hole",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mono",
+      "en": "measure for grain",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "morkhu",
+      "en": "oil",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "muentsham",
+      "en": "dark retreat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mutri",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "na",
+      "en": "if",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ná",
+      "en": "to say",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ná",
+      "en": "say",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ná",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "na ang",
+      "en": "even though",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nak",
+      "en": "is, was",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nákarak",
+      "en": "one habitually calls this",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nákarak",
+      "en": "is called",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "naken",
+      "en": "named, called",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "náken",
+      "en": "named",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "náken",
+      "en": "is called",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nakpu",
+      "en": "black",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "naksa",
+      "en": "map",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "náku",
+      "en": "I will say",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nákure",
+      "en": "shall one say",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nam",
+      "en": "when",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nám",
+      "en": "sky",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nam yin na ang",
+      "en": "whenever (it might be)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "náma",
+      "en": "bride",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nang",
+      "en": "inside",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "náng",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nang la",
+      "en": "inside",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nangnor",
+      "en": "domestic property",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nangpar",
+      "en": "the next day",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "nangpar",
+      "en": "tomorrow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "natsha",
+      "en": "ilnesses",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ne",
+      "en": "from",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ne",
+      "en": "than",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ne",
+      "en": "barley",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me",
+      "en": "fire",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me",
+      "en": "south",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mé",
+      "en": "Lower Mustang",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me chok la",
+      "en": "down below (in Nepal)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me dro",
+      "en": "I shall not go",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me jita",
+      "en": "one does not use this",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me la hrakken",
+      "en": "burn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me la pulken",
+      "en": "give fire",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me ná e",
+      "en": "does one not say?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "me sheti",
+      "en": "not having known",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "medro",
+      "en": "probably are not",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "meken",
+      "en": "not being",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mekenak",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mekyok",
+      "en": "brazier",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "melong",
+      "en": "mirror",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "meme",
+      "en": "ancestor",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mén",
+      "en": "medicine",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mendrol",
+      "en": "kerosine lamp",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "merkung",
+      "en": "big fire",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "metala",
+      "en": "there not being",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "metarak",
+      "en": "there is not",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "meti gang la",
+      "en": "when there were not...",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lú",
+      "en": "song",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lue",
+      "en": "body",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lúk",
+      "en": "to boil",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lúk",
+      "en": "pour",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lúkkarak or lúkarak?",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lúkken",
+      "en": "to pour",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lúkyoen",
+      "en": "harm from serpent spirits",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lúm",
+      "en": "corn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lung",
+      "en": "oral teaching",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lung",
+      "en": "valley",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lung la shiken",
+      "en": "be hungry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lungpa",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ma",
+      "en": "up",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ma chake",
+      "en": "before being established",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ma tingken",
+      "en": "lay foundations",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mák",
+      "en": "war",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "makal",
+      "en": "brazier, vase",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "makpa",
+      "en": "son-in-law",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mal sa",
+      "en": "bed",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mana",
+      "en": "only if",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mana",
+      "en": "measure for grain",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "manak",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "manga",
+      "en": "many",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mangloe",
+      "en": "how many",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mangloe",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mangpo",
+      "en": "many",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mani",
+      "en": "prayer wheel",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mar",
+      "en": "butter",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "már",
+      "en": "butter",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "marsen",
+      "en": "buttered buckwheat stodge",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "martel",
+      "en": "earth oil",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mártsa",
+      "en": "chilli",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "martsha",
+      "en": "capital",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "mártsha",
+      "en": "chilli",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "máye",
+      "en": "corn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lawik",
+      "en": "she speaks",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "layok khaken",
+      "en": "feel guilty",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "leka",
+      "en": "work",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "leka ji jiwa",
+      "en": "work that's been done",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "leka jiku",
+      "en": "they will do work",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "leken",
+      "en": "push down",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lekor",
+      "en": "quern, handmill",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "len gyapken",
+      "en": "reply",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lenken",
+      "en": "take",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lep",
+      "en": "to arrive",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lepken",
+      "en": "arrive",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lhakken",
+      "en": "be leftover",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lhakyoen",
+      "en": "harm from gods",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lhebri",
+      "en": "(religious) painting",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lhumken",
+      "en": "fall",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "líp",
+      "en": "blanket of yak's hair",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lo",
+      "en": "it is said",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ló",
+      "en": "Lo",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ló gyapken",
+      "en": "cough",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ló khyilken",
+      "en": "trust someone",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "loeken",
+      "en": "accept",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "logyue",
+      "en": "history",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lók",
+      "en": "to read",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lok lok",
+      "en": "returning",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lokken",
+      "en": "send back",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lokken",
+      "en": "turn back",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lokti",
+      "en": "having returned",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lokye",
+      "en": "returning",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "longmo",
+      "en": "alm",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "longo",
+      "en": "years",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lopjong",
+      "en": "study",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "loptruk",
+      "en": "student",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyermen",
+      "en": "wife",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyesa",
+      "en": "birth place",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyesa",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyi",
+      "en": "dog",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyiduk",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyiken",
+      "en": "lend",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyilken",
+      "en": "stop",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyorken",
+      "en": "support",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyuk",
+      "en": "straight",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyukken",
+      "en": "break",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyungma",
+      "en": "chough",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "la",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "la",
+      "en": "pass",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "la",
+      "en": "regarding",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lak",
+      "en": "animals (not behaving)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "laka ni thrikken",
+      "en": "take by hand",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lakken",
+      "en": "do well",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lakpa",
+      "en": "hand",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lakpa dapken",
+      "en": "slap",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lakpa terken",
+      "en": "give a hand",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lakpa zeken",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lam",
+      "en": "road",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lam",
+      "en": "path",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lam",
+      "en": "dawn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lam zhukken",
+      "en": "follow the road",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lamken",
+      "en": "be active",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lamkok",
+      "en": "road",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lamsang",
+      "en": "immediately",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "langken",
+      "en": "beg",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "langken",
+      "en": "get up",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "langsa",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lap",
+      "en": "to learn, study",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lap",
+      "en": "to teach",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lap jiken",
+      "en": "discuss",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lapken",
+      "en": "learn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "lasong",
+      "en": "went",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kho gyapken",
+      "en": "turn something",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kho la gyelken",
+      "en": "fall on face",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kho la jiken",
+      "en": "turn back",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kho la nyalken",
+      "en": "lie flat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kho nyíwo",
+      "en": "both of them",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khoen",
+      "en": "to put on top of",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khokpa la sharken",
+      "en": "get an idea",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khokpa ru zinken",
+      "en": "remember",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khoktro jiken",
+      "en": "worry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kholken",
+      "en": "boil",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khong",
+      "en": "he",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khong khukken",
+      "en": "bring in money",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khongbe",
+      "en": "him",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khorken",
+      "en": "turn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khowa",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khukru",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khur",
+      "en": "to carry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khura",
+      "en": "bread",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khurken",
+      "en": "carry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khuruk",
+      "en": "load",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyaak",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyaik",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyakken",
+      "en": "freeze",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyam",
+      "en": "to walk (around)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyam",
+      "en": "to go around",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyamken",
+      "en": "walk around",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyang",
+      "en": "to hang",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyer",
+      "en": "to take, bring",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyer",
+      "en": "to carry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyerken",
+      "en": "carry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyoe",
+      "en": "story",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyoka",
+      "en": "husband",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khyoktong",
+      "en": "child",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ki",
+      "en": "agentive marker",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ki",
+      "en": "question marker",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ki kor",
+      "en": "about",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ki kor la",
+      "en": "concerning",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ki nang la",
+      "en": "inside",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kima la",
+      "en": "away",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ko",
+      "en": "as for",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ko",
+      "en": "as for this one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "koa nyéken",
+      "en": "tan leather",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "koenchok",
+      "en": "triple gem",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "koencok",
+      "en": "spiritual jewel",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kol",
+      "en": "boil",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kolak",
+      "en": "clothes",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kolken",
+      "en": "cook",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "koltrung",
+      "en": "bell",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "komken",
+      "en": "be thirsty",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "komte kyeken",
+      "en": "be dehydrated",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "koncok",
+      "en": "jewel",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kor",
+      "en": "round",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kor",
+      "en": "to turn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kora gyapken",
+      "en": "turn around",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "korken",
+      "en": "turn",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kowe",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kuepa",
+      "en": "string",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kuepa",
+      "en": "thread",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kukken",
+      "en": "bow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kumuk kueken",
+      "en": "steal",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kungken",
+      "en": "bury",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kuntsham",
+      "en": "body retreat",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kupa",
+      "en": "thread",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kurken",
+      "en": "send someone",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kuruk",
+      "en": "spindle (men use)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kuruk",
+      "en": "drop spindle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyakken",
+      "en": "lift",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyakpa tang",
+      "en": "to poo",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyal gyapken",
+      "en": "swim",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyalken",
+      "en": "deliver",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyeken",
+      "en": "be born",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kyepa",
+      "en": "waist",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kal",
+      "en": "to allocate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kalken",
+      "en": "load",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kalken",
+      "en": "to load",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kalta",
+      "en": "this one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kalta",
+      "en": "this particular one",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kam",
+      "en": "dry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kamken",
+      "en": "dry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kampu",
+      "en": "dry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kangken",
+      "en": "fill",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kangpa gyapken",
+      "en": "step on something",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kap",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kapken",
+      "en": "cover",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kar",
+      "en": "to separate out",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "karu",
+      "en": "white",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "karue",
+      "en": "white",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kawa ceken",
+      "en": "sacrifice oneself",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ke",
+      "en": "language",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ke gyapken",
+      "en": "cry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ke lapken",
+      "en": "learn language",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kedrak",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kedrak",
+      "en": "fame",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kela gyakken",
+      "en": "throw in jail",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "keri",
+      "en": "flask",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "keri",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kha dikken",
+      "en": "stutter",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kha geken",
+      "en": "get old",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kha gyapken",
+      "en": "cut",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kha gyeken",
+      "en": "separate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kha salken",
+      "en": "bring news",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kha thanken",
+      "en": "complain",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kha zhumken",
+      "en": "be jealous",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khal",
+      "en": "rotate (spindle)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khalken",
+      "en": "spin",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khanga ru",
+      "en": "at home",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khangba",
+      "en": "house",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khangpa",
+      "en": "house",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khap",
+      "en": "needle",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khas",
+      "en": "actually",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khata lapken",
+      "en": "give counsel",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khengken",
+      "en": "bring",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khenken",
+      "en": "know",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kherken",
+      "en": "take",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kherki",
+      "en": "mouth",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khewa",
+      "en": "skilled in",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khewa",
+      "en": "smart, competent",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khewa",
+      "en": "skilled",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "khewa",
+      "en": "knowledgeable",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kho",
+      "en": "he",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hrungkyop",
+      "en": "protection",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hurtak",
+      "en": "enthusiasm",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "íci",
+      "en": "elder sister",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "inci minci",
+      "en": "definitely",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "iwi",
+      "en": "great-aunt",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "íwi",
+      "en": "grandmother",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ja",
+      "en": "rainbow",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ja",
+      "en": "tea",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ja khyung",
+      "en": "garuda",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jagam",
+      "en": "tea box",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jal dar",
+      "en": "greeting scarf",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jali",
+      "en": "meet",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jar",
+      "en": "to stick",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jarken",
+      "en": "stick",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jartsa",
+      "en": "tea leaf/herbs",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jartsak",
+      "en": "tea strainer",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jemphe",
+      "en": "buckwheat flower",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jeti",
+      "en": "having forgotten",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jeti minduk",
+      "en": "having forgotten it, it doesn't exist (in my mind)",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ji",
+      "en": "to do",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ji na",
+      "en": "if one does",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jiji",
+      "en": "doing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jiken",
+      "en": "doing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jikken",
+      "en": "be afraid",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jindak",
+      "en": "patron",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jiri",
+      "en": "having done",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jitanak",
+      "en": "it was done",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jiti e",
+      "en": "do they do?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jitik",
+      "en": "they do",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jitiyoe",
+      "en": "I do",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jitiyoedro",
+      "en": "one probably does",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jo",
+      "en": "to practise",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "joenken",
+      "en": "be successful",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jomo",
+      "en": "nun",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ju",
+      "en": "arrive",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jung",
+      "en": "to happen",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jur",
+      "en": "get",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "juruk",
+      "en": "happeneed",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "juruk",
+      "en": "come about",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jusong",
+      "en": "originated",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "jusong",
+      "en": "has become > is",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "juwanak",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "kakken",
+      "en": "stop",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gorken",
+      "en": "last",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "guena",
+      "en": "expensive",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "guk jiken",
+      "en": "bow down",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gukken",
+      "en": "be back",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "guna",
+      "en": "expensive",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gungka",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gunka",
+      "en": "winter",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gunka",
+      "en": "in winter",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyak",
+      "en": "to pack",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyak",
+      "en": "to stuff",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyal thopken",
+      "en": "win",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyalkak zinken",
+      "en": "rule",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyalken",
+      "en": "win",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyalpo",
+      "en": "king",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyamtsho",
+      "en": "ocean",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyangken",
+      "en": "fill",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyap",
+      "en": "apply",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyap la",
+      "en": "behind",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyashok",
+      "en": "military",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyawik",
+      "en": "3sg apply",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyelken",
+      "en": "fall",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyenla thenken",
+      "en": "lift up",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyokwa",
+      "en": "quickly",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyu",
+      "en": "property",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyue",
+      "en": "lineage",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyuedzin",
+      "en": "line",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyuepa",
+      "en": "lineage",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyukken",
+      "en": "walk",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gyurken",
+      "en": "change",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ha goeken",
+      "en": "understand",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "ha leken",
+      "en": "be surprised",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hang jiken",
+      "en": "be visible",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hapta",
+      "en": "week",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "harken",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hoerkepa",
+      "en": "shameful",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hra",
+      "en": "hair",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hrip",
+      "en": "to hide",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hriptse",
+      "en": "in a moment",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hriu",
+      "en": "little child",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "hrol",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "go",
+      "en": "door",
+      "example": "",
+      "exampleEn": "",
+      "audio": "go.mp3"
+    },
+    {
+      "dz": "go drali",
+      "en": "rare",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "go renken",
+      "en": "ask for help",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "go tsukken",
+      "en": "start",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goe",
+      "en": "to have to, need",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goecen",
+      "en": "brocade",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goeik",
+      "en": "have to",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goeken",
+      "en": "get infected",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goenak",
+      "en": "wear",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goenken",
+      "en": "clothe",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goenken",
+      "en": "to wear",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goenpa",
+      "en": "temple",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goetro",
+      "en": "amusing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goewa la",
+      "en": "for having to",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goksa",
+      "en": "place",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gokto",
+      "en": "hook",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "golok",
+      "en": "nonsense",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "golok naken",
+      "en": "talk nonsense",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "goma",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gomcepa",
+      "en": "hermit",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gomcepa",
+      "en": "hermit lama",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gomken",
+      "en": "meditate",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gompa",
+      "en": "monastery",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gompa tsukken",
+      "en": "go on foot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gonga",
+      "en": "egg",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gonga kyeken",
+      "en": "lay eggs",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gongma",
+      "en": "earliest, first",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gongma",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gongpa tshumken",
+      "en": "get angry",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gashang kangken",
+      "en": "throw a party",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen jiri ná na",
+      "en": "because",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "garu garu",
+      "en": "everywhere",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen",
+      "en": "what",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gazhen",
+      "en": "lot",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "garken",
+      "en": "weighing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gar",
+      "en": "to weigh",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gar",
+      "en": "to attach",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gemo",
+      "en": "old women",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gara",
+      "en": "artisan, blacksmith",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen jiri",
+      "en": "why?",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gar ceken",
+      "en": "dance",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gen ma",
+      "en": "nothing",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gendre",
+      "en": "",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gene",
+      "en": "what does one call it",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gengya",
+      "en": "contract",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "genko",
+      "en": "which",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "gepo",
+      "en": "old men",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cappal",
+      "en": "sandal",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "choekhang",
+      "en": "prayer room",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "arong che",
+      "en": "quite big",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "calai",
+      "en": "run",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "cunga",
+      "en": "little",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dranga",
+      "en": "cold",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dangsang",
+      "en": "fine",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bang",
+      "en": "wet",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bela",
+      "en": "time",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "danda",
+      "en": "now",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "bus",
+      "en": "bus",
+      "example": "",
+      "exampleEn": ""
+    },
+    {
+      "dz": "dongpo",
+      "en": "tree",
+      "example": "",
+      "exampleEn": ""
+    }
+  ]
+}
