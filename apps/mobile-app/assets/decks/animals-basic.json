@@ -1,0 +1,95 @@
+{
+  "id": "animals-basic",
+  "title": "Animals",
+  "description": "Learn common animal names in Dzardzongke",
+  "cards": [
+    {
+      "id": "animal-dog",
+      "front": "White dog",
+      "back": "kyi karu cik",
+      "notes": "White dog\n\nkyi = dog\nkaru = white (color)\ncik = a/an (indefinite article)\n\nWord order in Dzardzongke: noun + adjective + article",
+      "image": "white-dog.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-frogs",
+      "front": "Two yellow frogs",
+      "back": "balwa seru nyí",
+      "notes": "Two yellow frogs\n\nbalwa = frog\nseru = yellow (color)\nnyí = two (number)\n\nWord order in Dzardzongke: noun + adjective + number",
+      "image": "two-frogs.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-birds",
+      "front": "Three black birds",
+      "back": "khorak nakpu sum",
+      "notes": "Three black birds\n\nkhorak = bird\nnakpu = black (color)\nsum = three (number)\n\nNote: Another word for bird is 'ja', which is used for white birds.",
+      "image": "black-birds.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-turtles",
+      "front": "Four green turtles",
+      "back": "ruebal jongkhu zhi",
+      "notes": "Four green turtles\n\nruebal = turtle\njongkhu = green (color)\nzhi = four (number)\n\nWord order in Dzardzongke: noun + adjective + number",
+      "image": "turtles.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-monkeys",
+      "front": "Five brown monkeys",
+      "back": "trip múkpu ngá",
+      "notes": "Five brown monkeys\n\ntrip = monkey\nmúkpu = brown (color)\nngá = five (number)\n\nWord order in Dzardzongke: noun + adjective + number",
+      "image": "monkeys.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-foxes",
+      "front": "Six black foxes",
+      "back": "aze kalak nakpu druk",
+      "notes": "Six black foxes\n\naze = fox\nkalak = type/kind\nnakpu = black (color)\ndruk = six (number)\n\nWord order in Dzardzongke: noun + type + adjective + number",
+      "image": "foxes.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-white-birds",
+      "front": "Seven white birds",
+      "back": "ja junga duen",
+      "notes": "Seven white birds\n\nja = bird (specifically used for white birds)\njunga = white (color)\nduen = seven (number)\n\nNote: 'khorak' is another word for bird, used for black birds.",
+      "image": "birds.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-fish",
+      "front": "Eight blue fish",
+      "back": "nyá ngóenpo gye",
+      "notes": "Eight blue fish\n\nnyá = fish\nngóenpo = blue (color)\ngye = eight (number)\n\nWord order in Dzardzongke: noun + adjective + number",
+      "image": "fish.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-butterflies",
+      "front": "Nine red butterflies",
+      "back": "phempalak che gu",
+      "notes": "Nine red butterflies\n\nphempalak = butterfly\nche = red (color)\ngu = nine (number)\n\nWord order in Dzardzongke: noun + adjective + number",
+      "image": "butterflies.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-bats",
+      "front": "Ten white bats",
+      "back": "phawang thaldok cu",
+      "notes": "Ten white bats\n\nphawang = bat\nthaldok = white (another word for white, different from karu/junga)\ncu = ten (number)\n\nNote: Dzardzongke has different words for white: karu, junga, and thaldok.",
+      "image": "bats.png",
+      "hasAudio": false
+    },
+    {
+      "id": "animal-celebration",
+      "front": "🎉 Wonderful! 🎉",
+      "back": "You've completed the animals deck!",
+      "notes": "Congratulations on learning all the animal names in Dzardzongke!\n\nYou've learned:\n- Animal names: kyi (dog), balwa (frog), khorak/ja (bird), ruebal (turtle), trip (monkey), aze (fox), nyá (fish), phempalak (butterfly), phawang (bat)\n- Colors: karu/junga/thaldok (white), seru (yellow), nakpu (black), jongkhu (green), múkpu (brown), ngóenpo (blue), che (red)\n- Numbers: cik (one), nyí (two), sum (three), zhi (four), ngá (five), druk (six), duen (seven), gye (eight), gu (nine), cu (ten)",
+      "image": "",
+      "hasAudio": false
+    }
+  ]
+}

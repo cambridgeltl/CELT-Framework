@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useLanguage } from '../stores/useLanguage';
+import { getAvailableLanguages, getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from '../components/AnimatedButton';
 
 const Settings: React.FC = () => {
   const navigation = useNavigation<any>();
+  const { selectedLanguage, setLanguage } = useLanguage();
+  const [showLanguagePicker, setShowLanguagePicker] = useState(false);
+  const languages = getAvailableLanguages();
 
   return (
     <ScrollView style={styles.scroll} contentContainerStyle={styles.container}>
       {/* Info card */}
       <View style={styles.card}>
         <Text style={styles.infoText}>
-          This app is configured for Dzardzongke language learning.
-        </Text>
-        <Text style={styles.noteText}>
-          Quechua content is preserved in the repository for future development.
+          Currently learning: {getLanguageDisplayName(selectedLanguage)}
         </Text>
       </View>
 
@@ -37,23 +39,47 @@ const Settings: React.FC = () => {
 
         <AnimatedButton
           style={styles.navRow}
-          onPress={() => {}}
+          onPress={() => setShowLanguagePicker((v) => !v)}
           hapticFeedback="light"
-          disabled
         >
           <View style={[styles.iconBadge, { backgroundColor: '#f0f9ff' }]}>
             <MaterialCommunityIcons name="translate" size={18} color="#0284c7" />
           </View>
           <View style={styles.navLabelContainer}>
             <Text style={styles.navLabel}>Language</Text>
-            <Text style={styles.navSubLabel}>Coming soon</Text>
+            <Text style={styles.navSubLabel}>{getLanguageDisplayName(selectedLanguage)}</Text>
           </View>
-          <MaterialCommunityIcons name="chevron-right" size={20} color="#94a3b8" />
+          <MaterialCommunityIcons
+            name={showLanguagePicker ? 'chevron-down' : 'chevron-right'}
+            size={20}
+            color="#94a3b8"
+          />
         </AnimatedButton>
+
+        {showLanguagePicker && (
+          <View style={styles.languageList}>
+            {languages.map((lang) => (
+              <AnimatedButton
+                key={lang}
+                style={styles.languageOption}
+                onPress={() => {
+                  setLanguage(lang);
+                  setShowLanguagePicker(false);
+                }}
+                hapticFeedback="light"
+              >
+                <Text style={styles.navLabel}>{getLanguageDisplayName(lang)}</Text>
+                {lang === selectedLanguage && (
+                  <MaterialCommunityIcons name="check" size={18} color="#6366f1" />
+                )}
+              </AnimatedButton>
+            ))}
+          </View>
+        )}
       </View>
 
       {/* App version */}
-      <Text style={styles.version}>Dzardzongke App v1.0.0</Text>
+      <Text style={styles.version}>App v1.0.0</Text>
     </ScrollView>
   );
 };
@@ -80,13 +106,6 @@ const styles = StyleSheet.create({
     color: '#374151',
     lineHeight: 22,
     textAlign: 'center',
-  },
-  noteText: {
-    fontSize: 13,
-    color: '#94a3b8',
-    marginTop: 8,
-    textAlign: 'center',
-    fontStyle: 'italic',
   },
   navRow: {
     flexDirection: 'row',
@@ -118,6 +137,18 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: '#f1f5f9',
     marginVertical: 12,
+  },
+  languageList: {
+    marginTop: 8,
+    paddingLeft: 44,
+    gap: 4,
+  },
+  languageOption: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 10,
+    paddingRight: 8,
   },
   version: {
     fontSize: 12,

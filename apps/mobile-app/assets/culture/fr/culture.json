@@ -1,0 +1,16 @@
+{
+  "id": "fr-culture",
+  "title": "Culture",
+  "steps": [
+    {
+      "type": "text",
+      "header": "Bienvenue",
+      "text": "Bienvenue dans la culture française !"
+    },
+    {
+      "type": "text",
+      "header": "Gastronomie",
+      "text": "La France est réputée pour sa gastronomie, comme le fromage et le pain."
+    }
+  ]
+}

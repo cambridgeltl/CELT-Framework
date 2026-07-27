@@ -1,7 +1,10 @@
 // Auto-import all dictionary files dynamically
 // Any .dict.json file in this folder will be automatically loaded
+// Language is determined by each file's own top-level "lang" field (defaults to "dz" if absent)
+// so adding a new language is just a matter of adding a file with lang: "<code>" — no code changes needed.
 
 export type DictionaryShape = {
+  lang?: string;
   entries: Array<{
     dz?: string;
     en?: string;
@@ -18,14 +21,9 @@ const dictContext = require.context('./', false, /\.dict\.json$/);
 const allDictionaries: Record<string, DictionaryShape> = {};
 
 dictContext.keys().forEach(key => {
-  // Extract language code from filename (e.g., "qu-words.dict.json" -> "qu", "anything.dict.json" -> "dz")
-  const filename = key.replace('./', '').replace('.dict.json', '');
-
-  // Determine language code: files starting with "qu" go to Quechua, everything else to Dzardzongke
-  const langCode = filename.startsWith('qu') ? 'qu' : 'dz';
-
   const dictData = dictContext(key) as DictionaryShape;
-  
+  const langCode = dictData.lang || 'dz';
+
   // Merge entries if language code already exists
   if (allDictionaries[langCode]) {
     allDictionaries[langCode].entries = [
@@ -33,13 +31,21 @@ dictContext.keys().forEach(key => {
       ...dictData.entries
     ];
   } else {
-    allDictionaries[langCode] = dictData;
+    allDictionaries[langCode] = { ...dictData, lang: langCode };
   }
 });
 
-// Export dictionaries by language code
-export const dzDictionary: DictionaryShape = allDictionaries['dz'] || { entries: [] };
-export const quDictionary: DictionaryShape = allDictionaries['qu'] || { entries: [] };
+export function getDictionaryByLanguage(lang: string): DictionaryShape {
+  return allDictionaries[lang] || { entries: [] };
+}
+
+export function getAvailableDictionaryLanguages(): string[] {
+  return Object.keys(allDictionaries);
+}
+
+// Backward-compatible named exports
+export const dzDictionary: DictionaryShape = getDictionaryByLanguage('dz');
+export const quDictionary: DictionaryShape = getDictionaryByLanguage('qu');
 
 // Export all dictionaries for advanced usage
 export const dictionaries = allDictionaries;

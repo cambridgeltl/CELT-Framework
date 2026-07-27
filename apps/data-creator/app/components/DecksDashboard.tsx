@@ -8,6 +8,7 @@ import { Card } from './ui/Card';
 import { Modal } from './ui/Modal';
 import { Badge } from './ui/Badge';
 import { Skeleton } from './ui/Skeleton';
+import { getLanguageDisplayName } from '../utils/language';
 
 const PlusIcon = () => (
   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -70,9 +71,14 @@ function DeckCard({ deck, onSelect, onEdit, onDelete }: DeckCardProps) {
               </p>
             </div>
           </div>
-          <Badge variant={deck.cardCount > 0 ? 'primary' : 'default'} size="sm">
-            {deck.cardCount} {deck.cardCount === 1 ? 'card' : 'cards'}
-          </Badge>
+          <div className="flex flex-col items-end gap-1">
+            {deck.lang && (
+              <Badge variant="default" size="sm">{getLanguageDisplayName(deck.lang)}</Badge>
+            )}
+            <Badge variant={deck.cardCount > 0 ? 'primary' : 'default'} size="sm">
+              {deck.cardCount} {deck.cardCount === 1 ? 'card' : 'cards'}
+            </Badge>
+          </div>
         </div>
 
         {/* Description */}

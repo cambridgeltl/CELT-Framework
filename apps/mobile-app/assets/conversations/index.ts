@@ -1,5 +1,7 @@
 // Auto-import all conversation files dynamically
-// Any .json file (except specific patterns) in this folder will be automatically loaded
+// Any .json file in this folder will be automatically loaded
+// Language is determined by each file's own top-level "lang" field (defaults to "dz" if absent)
+// so adding a new language is just a matter of adding a file with lang: "<code>" — no code changes needed.
 
 export interface Exchange {
   speaker: string;
@@ -21,6 +23,7 @@ export interface ConversationCategory {
 }
 
 export interface ConversationsData {
+  lang?: string;
   categories: ConversationCategory[];
 }
 
@@ -31,23 +34,9 @@ const conversationContext = require.context('./', false, /\.json$/);
 const allConversations: Record<string, ConversationsData> = {};
 
 conversationContext.keys().forEach(key => {
-  // Extract language code from filename (e.g., "conversations.json" -> "dz", "qu-conversations.json" -> "qu")
-  const filename = key.replace('./', '').replace('.json', '');
-  
-  // Determine language code
-  let langCode: string;
-  if (filename.startsWith('qu')) {
-    langCode = 'qu';
-  } else if (filename.includes('conversation')) {
-    // Default conversation files are for Dzardzongke
-    langCode = 'dz';
-  } else {
-    // For other files, use the filename itself as lang code
-    langCode = filename;
-  }
-  
   const convData = conversationContext(key) as ConversationsData;
-  
+  const langCode = convData.lang || 'dz';
+
   // Merge categories if language code already exists
   if (allConversations[langCode]) {
     allConversations[langCode].categories = [
@@ -55,13 +44,21 @@ conversationContext.keys().forEach(key => {
       ...convData.categories
     ];
   } else {
-    allConversations[langCode] = convData;
+    allConversations[langCode] = { ...convData, lang: langCode };
   }
 });
 
-// Export conversations by language code
-export const dzConversations: ConversationsData = allConversations['dz'] || { categories: [] };
-export const quConversations: ConversationsData = allConversations['qu'] || { categories: [] };
+export function getConversationsByLanguage(lang: string): ConversationsData {
+  return allConversations[lang] || { categories: [] };
+}
+
+export function getAvailableConversationLanguages(): string[] {
+  return Object.keys(allConversations);
+}
+
+// Backward-compatible named exports
+export const dzConversations: ConversationsData = getConversationsByLanguage('dz');
+export const quConversations: ConversationsData = getConversationsByLanguage('qu');
 
 // Export all conversations for advanced usage
 export const conversations = allConversations;

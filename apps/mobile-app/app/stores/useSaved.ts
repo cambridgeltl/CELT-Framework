@@ -8,7 +8,7 @@ export interface SavedItem {
   id: string; // unique id
   prompt: string; // English prompt
   answer: string; // target language answer
-  language: 'dz' | 'qu';
+  language: string;
   explanation: string; // rich text explanation
   notes?: string;
   source: SavedSource;

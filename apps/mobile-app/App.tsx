@@ -172,7 +172,6 @@ export default function App() {
       <View style={splashStyles.container}>
         <StatusBar style="dark" />
         <Text style={splashStyles.title}>Dzardzongke</Text>
-        <Text style={splashStyles.subtitle}>Learn • Practice • Master</Text>
       </View>
     );
   }
@@ -222,12 +221,5 @@ const splashStyles = StyleSheet.create({
     fontWeight: '800',
     color: '#6366f1',
     letterSpacing: -0.8,
-  },
-  subtitle: {
-    fontSize: 14,
-    color: '#64748b',
-    fontWeight: '500',
-    letterSpacing: 0.5,
-    marginTop: 8,
   },
 });

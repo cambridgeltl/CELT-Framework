@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { Dictionary, Entry } from '../models/Dictionary';
+import { getStoredLanguageCode } from '../utils/language';
 
 interface DictionaryContextValue {
   // Dictionary state
@@ -18,7 +19,7 @@ interface DictionaryContextValue {
   // Helpers
   getEntry: (dz: string) => Entry | undefined;
   getEntryCount: () => number;
-  toJSONString: () => string;
+  toJSONString: (lang?: string) => string;
   downloadJSON: (fileName: string) => void;
 }
 
@@ -31,6 +32,7 @@ export function DictionaryProvider({ children }: { children: React.ReactNode }) 
     if (!entry.isValid()) {
       return false;
     }
+    if (!entry.lang) entry.lang = getStoredLanguageCode();
 
     setDictionary(prev => {
       // Check if entry already exists
@@ -49,6 +51,7 @@ export function DictionaryProvider({ children }: { children: React.ReactNode }) 
     if (!entry.isValid()) {
       return false;
     }
+    if (!entry.lang) entry.lang = getStoredLanguageCode();
 
     setDictionary(prev => {
       const entries = prev.getAllEntries().filter(e => e.dz !== oldDz);
@@ -80,6 +83,7 @@ export function DictionaryProvider({ children }: { children: React.ReactNode }) 
       const entriesToAdd = newEntries.filter(entry => {
         // Check valid, not in existing entries, and not a duplicate within imported data
         if (entry.isValid() && !existingDzWords.has(entry.dz) && !seenDzWords.has(entry.dz)) {
+          if (!entry.lang) entry.lang = getStoredLanguageCode();
           seenDzWords.add(entry.dz);
           added++;
           return true;
@@ -100,8 +104,8 @@ export function DictionaryProvider({ children }: { children: React.ReactNode }) 
     return dictionary.getEntryCount();
   }, [dictionary]);
 
-  const toJSONString = useCallback((): string => {
-    return dictionary.toJSONString();
+  const toJSONString = useCallback((lang?: string): string => {
+    return dictionary.toJSONString(true, lang);
   }, [dictionary]);
 
   const downloadJSON = useCallback((fileName: string): void => {

@@ -227,7 +227,7 @@ const SetAppNameVisual = () => (
         <div className="text-gray-300 pl-4">
           <span className="text-[#7ee787]">&quot;appName&quot;</span>
           <span className="text-gray-400">: </span>
-          <span className="text-[#a5d6ff]">&quot;Learn Dzardzongke&quot;</span>
+          <span className="text-[#a5d6ff]">&quot;Learn Your Language&quot;</span>
         </div>
         <div className="text-gray-500 text-xs mb-1 mt-1">3</div>
         <div className="text-gray-300">
@@ -396,7 +396,7 @@ const DownloadApkVisual = () => (
         <div className="px-4 py-3 border-b border-[#30363d]">
           <div className="flex items-center gap-2 mb-1">
             <span className="px-2 py-0.5 bg-[#238636]/20 text-[#238636] text-[10px] rounded-full border border-[#238636]/30 font-medium">Latest</span>
-            <span className="text-white text-sm font-semibold">learn-dzardzongke build #1</span>
+            <span className="text-white text-sm font-semibold">learn-yourlanguage build #1</span>
           </div>
           <div className="flex items-center gap-2 text-xs text-gray-500">
             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -415,7 +415,7 @@ const DownloadApkVisual = () => (
               <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              <span className="text-blue-400 text-xs font-medium">learn-dzardzongke.apk</span>
+              <span className="text-blue-400 text-xs font-medium">learn-yourlanguage.apk</span>
             </div>
             <span className="text-gray-500 text-[10px]">~50 MB</span>
             <ClickHere position="top" text="Download!" />
@@ -455,7 +455,7 @@ const InstallOnPhoneVisual = () => (
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <p className="text-[10px] text-gray-800 font-medium mb-3">Learn Dzardzongke</p>
+          <p className="text-[10px] text-gray-800 font-medium mb-3">Learn Your Language</p>
           <div className="w-full space-y-1.5 px-1">
             <div className="h-2 bg-gray-200 rounded-full w-full" />
             <div className="h-2 bg-gray-200 rounded-full w-3/4" />

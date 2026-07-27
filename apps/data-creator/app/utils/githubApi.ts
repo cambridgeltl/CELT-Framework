@@ -125,7 +125,7 @@ export async function getFileSha(
 export async function uploadFile(
   config: GitHubConfig,
   file: GitHubFile,
-  commitMessage: string = 'Upload file via Dzardzongke app'
+  commitMessage: string = 'Upload file via Language Learning app'
 ): Promise<UploadResult> {
   try {
     // Get existing file SHA if it exists (for updates)
@@ -273,7 +273,7 @@ export async function listFiles(
 export async function deleteFile(
   config: GitHubConfig,
   path: string,
-  commitMessage: string = 'Delete file via Dzardzongke app'
+  commitMessage: string = 'Delete file via Language Learning app'
 ): Promise<UploadResult> {
   try {
     const sha = await getFileSha(config, path);

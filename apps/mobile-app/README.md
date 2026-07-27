@@ -204,20 +204,24 @@ All content lives inside `assets/`. The app auto-discovers files by folder and n
 
 ### 📁 Complete Asset Tree
 
+Decks, dictionary entries, and conversations each carry their own top-level `"lang"` field (e.g. `"lang": "de"`) — that's what buckets them by language, not the filename. Omit `"lang"` and content defaults to `"dz"`. Filenames just need to be unique within their folder; prefixing them with the language code (as below) is a convention for humans, not something the code parses.
+
 ```
 assets/
 │
 ├── 📂 decks/
-│   ├── animals-basic.json              # {deck-id}.json
+│   ├── animals-basic.json              # {deck-id}.json, no "lang" → defaults to dz
 │   ├── colors.json
 │   ├── food-basic.json
-│   └── qu-numbers.json                 # 2nd language → prefix with lang code
+│   └── de-numbers.json                 # "lang": "de" inside → German bucket
 │
 ├── 📂 dictionary/
-│   └── myLang.dict.json                # {name}.dict.json
+│   ├── myLang.dict.json                # {name}.dict.json, no "lang" → dz
+│   └── de.dict.json                    # "lang": "de" inside → German bucket
 │
 ├── 📂 conversations/
-│   └── conversations.json              # {name}.json  (all categories in one file)
+│   ├── conversations.json              # {name}.json  (all categories in one file)
+│   └── de-conversations.json           # "lang": "de" inside → German bucket
 │
 ├── 📂 culture/
 │   ├── dz/                             # One subfolder per language code
@@ -256,15 +260,15 @@ assets/
 
 ### 📋 Naming Rules at a Glance
 
-| Content | Folder | Pattern | Formats |
-|---------|--------|---------|---------|
-| Flashcard deck | `assets/decks/` | `{deck-id}.json` | JSON |
-| Dictionary | `assets/dictionary/` | `{name}.dict.json` | JSON |
-| Conversations | `assets/conversations/` | `{name}.json` | JSON |
-| Culture article | `assets/culture/{lang}/` | `deck-{number}.json` | JSON |
-| Dict. audio | `assets/audio/dictionary_words/` | `{word}.wav` | `.wav` `.mp3` `.m4a` `.aac` |
-| Conv. audio | `assets/audio/conversations/{id}/` | `{id}_{n}_{A|B}.wav` | `.wav` `.mp3` `.m4a` `.aac` |
-| Images | `assets/images/{category}/` | `{name}.png` | `.png` `.jpg` `.webp` |
+| Content | Folder | Pattern | Formats | Language via |
+|---------|--------|---------|---------|---------------|
+| Flashcard deck | `assets/decks/` | `{deck-id}.json` | JSON | `"lang"` field (default `"dz"`) |
+| Dictionary | `assets/dictionary/` | `{name}.dict.json` | JSON | `"lang"` field (default `"dz"`) |
+| Conversations | `assets/conversations/` | `{name}.json` | JSON | `"lang"` field (default `"dz"`) |
+| Culture article | `assets/culture/{lang}/` | `deck-{number}.json` | JSON | subfolder name |
+| Dict. audio | `assets/audio/dictionary_words/` | `{word}.wav` | `.wav` `.mp3` `.m4a` `.aac` | n/a (word-keyed) |
+| Conv. audio | `assets/audio/conversations/{id}/` | `{id}_{n}_{A|B}.wav` | `.wav` `.mp3` `.m4a` `.aac` | n/a (id-keyed) |
+| Images | `assets/images/{category}/` | `{name}.png` | `.png` `.jpg` `.webp` | n/a (filename-keyed) |
 
 ### 🔍 Dictionary Audio Lookup Order
 

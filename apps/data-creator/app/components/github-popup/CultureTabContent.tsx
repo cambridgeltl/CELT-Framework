@@ -7,6 +7,7 @@ import { useToast } from '../ui/Toast';
 import { useCulture } from '../../contexts/CultureContext';
 import { useImageStaging } from '../../contexts/ImageStagingContext';
 import { GitHubConfig, loadGitHubConfig, isConfigComplete, getFileSha, uploadFile, uploadBinaryFile } from '../../utils/githubApi';
+import { getStoredLanguageCode } from '../../utils/language';
 
 export default function CultureTabContent() {
   const { decks, exportDeck, removeDeck, clearAll, stats } = useCulture();
@@ -16,11 +17,13 @@ export default function CultureTabContent() {
   const [uploadingId, setUploadingId] = useState<string | null>(null);
   const [uploadingImages, setUploadingImages] = useState(false);
   const [config, setConfig] = useState<Partial<GitHubConfig>>({});
+  const [languageCode, setLanguageCode] = useState('dz');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     setConfig(loadGitHubConfig());
+    setLanguageCode(getStoredLanguageCode());
   }, []);
 
   const configured = mounted && isConfigComplete(config);
@@ -42,9 +45,10 @@ export default function CultureTabContent() {
     if (!content) { toast.error('Export failed'); return; }
     setUploadingId(deck.id);
     try {
-      const sha = await getFileSha(config as GitHubConfig, `assets/culture/dz/${deck.id}.json`);
+      const path = `assets/culture/${languageCode}/${deck.id}.json`;
+      const sha = await getFileSha(config as GitHubConfig, path);
       if (sha) toast.warning(`${deck.title} already exists on GitHub — updating.`);
-      const result = await uploadFile(config as GitHubConfig, { path: `assets/culture/dz/${deck.id}.json`, content }, `Update culture: ${deck.title}`);
+      const result = await uploadFile(config as GitHubConfig, { path, content }, `Update culture: ${deck.title}`);
       if (result.success) {
         toast.success(`Uploaded & removed: ${deck.title}`);
         removeDeck(deck.id);
@@ -53,7 +57,7 @@ export default function CultureTabContent() {
       }
     } catch (e) { toast.error(e instanceof Error ? e.message : 'Failed'); }
     setUploadingId(null);
-  }, [config, configured, exportDeck, toast]);
+  }, [config, configured, exportDeck, languageCode, toast]);
 
   const deleteDeck = useCallback((id: string) => {
     if (!confirm('Delete this culture deck?')) return;
@@ -116,7 +120,7 @@ export default function CultureTabContent() {
             )}
           </div>
           {configured && decks.length > 0 && (
-            <p className="text-xs text-[var(--color-text-muted)] mt-2">Path: <code className="text-[var(--color-primary)]">assets/culture/dz/[deck-id].json</code></p>
+            <p className="text-xs text-[var(--color-text-muted)] mt-2">Path: <code className="text-[var(--color-primary)]">assets/culture/{languageCode}/[deck-id].json</code></p>
           )}
           {decks.length > 0 && (
             <Button size="sm" variant="ghost" onClick={() => confirm('Clear all culture decks?') && clearAll()} className="mt-2">Clear All</Button>

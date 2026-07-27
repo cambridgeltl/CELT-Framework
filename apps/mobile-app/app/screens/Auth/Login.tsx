@@ -34,7 +34,6 @@ export default function Login({ navigation }: any) {
         {/* Branding */}
         <View style={styles.brandContainer}>
           <Text style={styles.appTitle}>Dzardzongke</Text>
-          <Text style={styles.appSubtitle}>Learn • Practice • Master</Text>
         </View>
 
         {/* Form card */}
@@ -135,13 +134,6 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#6366f1',
     letterSpacing: -0.8,
-  },
-  appSubtitle: {
-    fontSize: 14,
-    color: '#64748b',
-    fontWeight: '500',
-    letterSpacing: 0.5,
-    marginTop: 4,
   },
   card: {
     backgroundColor: '#ffffff',

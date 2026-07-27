@@ -1,0 +1,38 @@
+{
+  "id": "de-colors-basic",
+  "title": "Colours",
+  "description": "Learn common colour names in German",
+  "lang": "de",
+  "cards": [
+    {
+      "id": "de-color-white",
+      "front": "White",
+      "back": "weiß",
+      "hasAudio": false
+    },
+    {
+      "id": "de-color-black",
+      "front": "Black",
+      "back": "schwarz",
+      "hasAudio": false
+    },
+    {
+      "id": "de-color-red",
+      "front": "Red",
+      "back": "rot",
+      "hasAudio": false
+    },
+    {
+      "id": "de-color-blue",
+      "front": "Blue",
+      "back": "blau",
+      "hasAudio": false
+    },
+    {
+      "id": "de-color-green",
+      "front": "Green",
+      "back": "grün",
+      "hasAudio": false
+    }
+  ]
+}

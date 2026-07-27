@@ -10,8 +10,8 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "test": "echo \"No tests configured\"",
-    "export-content": "npx ts-node scripts/export-content.ts",
-    "map-audio": "npx ts-node --esm scripts/generate-audio-registry.ts",
+    "export-content": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"CommonJS\"}' node --env-file-if-exists=.env -r ts-node/register scripts/export-content.ts",
+    "map-audio": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"CommonJS\"}' node -r ts-node/register scripts/generate-audio-registry.ts",
     "vercel-build": "expo export"
   },
   "dependencies": {

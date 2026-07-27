@@ -20,9 +20,13 @@ export interface Category {
   title: string;
   description: string;
   conversations: Conversation[];
+  // Language code this category was authored under (e.g. "de"), tagged at
+  // creation time for local display only.
+  lang?: string;
 }
 
 export interface ConversationsData {
+  lang?: string;
   categories: Category[];
 }
 
@@ -34,10 +38,12 @@ export class ConversationDataManager {
     // Ensure data always has a valid structure, normalizing each category
     const rawCategories = data?.categories ?? [];
     this.data = {
+      ...(data?.lang ? { lang: data.lang } : {}),
       categories: rawCategories.map(cat => ({
         id: cat.id || '',
         title: cat.title || '',
         description: cat.description || '',
+        ...(cat.lang ? { lang: cat.lang } : {}),
         conversations: (cat.conversations ?? []).map(conv => ({
           id: conv.id || '',
           title: conv.title || '',
@@ -135,13 +141,14 @@ export class ConversationDataManager {
     return true;
   }
 
-  // Serialization
-  toJSON(): ConversationsData {
-    return this.data;
+  // Serialization. Pass a lang code to tag the data with the language it
+  // belongs to (e.g. "de") — omit for the default "dz".
+  toJSON(lang?: string): ConversationsData {
+    return lang ? { ...this.data, lang } : this.data;
   }
 
-  toJSONString(): string {
-    return JSON.stringify(this.data, null, 2);
+  toJSONString(lang?: string): string {
+    return JSON.stringify(this.toJSON(lang), null, 2);
   }
 
   static fromJSON(json: ConversationsData | null | undefined): ConversationDataManager {

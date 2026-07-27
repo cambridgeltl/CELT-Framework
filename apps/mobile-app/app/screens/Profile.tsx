@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Alert, Platform, View, Text, StyleSheet, FlatList } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSaved } from '../stores/useSaved';
+import { getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from '../components/AnimatedButton';
 
 const Profile: React.FC = () => {
@@ -60,7 +61,7 @@ const Profile: React.FC = () => {
               {/* Language badge */}
               <View style={styles.langBadge}>
                 <Text style={styles.langBadgeText}>
-                  {item.language === 'qu' ? 'Quechua' : 'Dzardzongke'}
+                  {getLanguageDisplayName(item.language)}
                 </Text>
               </View>
 

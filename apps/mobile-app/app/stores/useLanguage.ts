@@ -2,7 +2,9 @@ import { create } from 'zustand';
 import * as SecureStore from 'expo-secure-store';
 import { Platform } from 'react-native';
 
-export type LanguageCode = 'dz' | 'qu';
+// Any string works — new languages become available the moment content tagged
+// with that code exists (see contentRegistry.getAvailableLanguages()).
+export type LanguageCode = string;
 
 interface LanguageState {
   selectedLanguage: LanguageCode;

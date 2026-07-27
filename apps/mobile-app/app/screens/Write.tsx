@@ -8,6 +8,8 @@ import Animated, {
   ReduceMotion,
 } from 'react-native-reanimated';
 import { useProgress } from '../stores/useProgress';
+import { useLanguage } from '../stores/useLanguage';
+import { getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from '../components/AnimatedButton';
 import { useInputFeedback } from '../hooks/useAnimations';
 import { ProgressBar } from '../components/ProgressBar';
@@ -28,6 +30,7 @@ export const Write: React.FC<Props> = ({ navigation, route }) => {
   const [userInput, setUserInput] = useState('');
   const [showResult, setShowResult] = useState(false);
   const { setMastered } = useProgress();
+  const { selectedLanguage } = useLanguage();
 
   // Shared input feedback animations
   const { inputAnimatedStyle, resultAnimatedStyle, showCorrect, showIncorrect, reset: resetFeedback } = useInputFeedback();
@@ -111,7 +114,7 @@ export const Write: React.FC<Props> = ({ navigation, route }) => {
               style={styles.input}
               value={userInput}
               onChangeText={setUserInput}
-              placeholder="Type the Dzardzongke word..."
+              placeholder={`Type the ${getLanguageDisplayName(selectedLanguage)} word...`}
               placeholderTextColor="#999"
               onSubmitEditing={handleCheck}
               autoCapitalize="none"

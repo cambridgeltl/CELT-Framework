@@ -71,13 +71,12 @@ const CultureDynamic: React.FC = () => {
     setMultiChecked(false);
   }, [activeDeckIndex, stepIndex]);
 
-  if (selectedLanguage !== 'dz') {
+  if (contentDecks.length === 0) {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Culture</Text>
         <Text style={styles.meta}>
-          This section is currently available for Dzardzongke only. Quechua
-          coming soon.
+          No culture content is available for this language yet.
         </Text>
       </View>
     );

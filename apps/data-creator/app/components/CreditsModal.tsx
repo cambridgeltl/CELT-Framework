@@ -40,10 +40,10 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
     <Modal isOpen={isOpen} onClose={onClose} title="Credits" size="lg">
       <div className="space-y-1">
         <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          This app is a collaborative effort between Dzardzongke speakers and researchers from the University of Cambridge and the EPHE-PSL in Paris. We would like to thank XX for their generous funding to develop the first prototype of the app. The app will be accompanied by an introductory textbook to learn the Dzardzongke language.
+          This is a language-agnostic content-authoring framework, built from a prototype originally created for Dzardzongke. That prototype was a collaborative effort between Dzardzongke speakers and researchers from the University of Cambridge and the EPHE-PSL in Paris. We would like to thank XX for their generous funding to develop the first prototype of the app. The original app was accompanied by an introductory textbook to learn the Dzardzongke language.
         </p>
 
-        <SectionTitle>Dzardzongke speakers and collaborators</SectionTitle>
+        <SectionTitle>Original project: Dzardzongke speakers and collaborators</SectionTitle>
         <PersonList people={[
           'Palgen Bista',
           'Tshewang Gurung',

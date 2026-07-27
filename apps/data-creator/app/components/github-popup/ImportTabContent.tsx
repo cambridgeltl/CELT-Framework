@@ -9,7 +9,7 @@ import { useImageStaging } from '../../contexts/ImageStagingContext';
 import { useAudioStaging } from '../../contexts/AudioStagingContext';
 import { Entry } from '../../models/Dictionary';
 import MediaInstructions, { MediaCategory, isValidMediaFile } from './MediaInstructions';
-import { Deck, Card as FlashCard } from '../../models/Deck';
+import { Deck } from '../../models/Deck';
 import { getFilesFromDrop } from '../../utils/folderDrop';
 
 type ImportType = 'dictionary' | 'conversations' | 'culture' | 'decks';
@@ -167,16 +167,13 @@ const typeLabels: Record<ImportType, string> = {
   decks: 'Decks',
 };
 
-const DECKS_STORAGE_KEY = 'dzardzongke-decks';
+const DECKS_STORAGE_KEY = 'content-decks';
 
 function loadDeckFromStorage(id: string): Deck | null {
   try {
     const stored = localStorage.getItem(`${DECKS_STORAGE_KEY}-deck-${id}`);
     if (!stored) return null;
-    const parsed = JSON.parse(stored);
-    const cards = (parsed.cards || []).map((c: Record<string, unknown>) =>
-      new FlashCard(c.id as string, c.front as string, c.back as string, (c.notes as string) || '', (c.image as string) || ''));
-    return new Deck(parsed.id, parsed.title, parsed.description, cards);
+    return Deck.fromJSON(JSON.parse(stored));
   } catch { return null; }
 }
 

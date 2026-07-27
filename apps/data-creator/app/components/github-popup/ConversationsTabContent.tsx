@@ -8,6 +8,7 @@ import { useToast } from '../ui/Toast';
 import { useConversations } from '../../contexts/ConversationsContext';
 import { useAudioStaging } from '../../contexts/AudioStagingContext';
 import { GitHubConfig, loadGitHubConfig, isConfigComplete, getFileSha, uploadFile, uploadBinaryFile } from '../../utils/githubApi';
+import { getStoredLanguageCode } from '../../utils/language';
 
 export default function ConversationsTabContent() {
   const { categories, exportData, importData, clearAll, stats } = useConversations();
@@ -19,32 +20,35 @@ export default function ConversationsTabContent() {
   const [uploadingAudio, setUploadingAudio] = useState(false);
   const [existsInfo, setExistsInfo] = useState<string | null>(null);
   const [config, setConfig] = useState<Partial<GitHubConfig>>({});
+  const [languageCode, setLanguageCode] = useState('dz');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     setConfig(loadGitHubConfig());
+    setLanguageCode(getStoredLanguageCode());
   }, []);
 
   const configured = mounted && isConfigComplete(config);
   const audioFiles = stagedFiles.filter(a => a.targetFilename.includes('conversations/'));
+  const path = `assets/conversations/${languageCode}-conversations.json`;
 
   const download = useCallback(() => {
-    const blob = new Blob([exportData()], { type: 'application/json' });
+    const blob = new Blob([exportData(languageCode)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'conversations.json';
+    a.download = `${languageCode}-conversations.json`;
     a.click();
-  }, [exportData]);
+  }, [exportData, languageCode]);
 
   const upload = useCallback(async () => {
     if (!configured) { toast.error('Configure GitHub first'); return; }
     setUploading(true);
     setExistsInfo(null);
     try {
-      const sha = await getFileSha(config as GitHubConfig, 'assets/conversations/conversations.json');
-      if (sha) setExistsInfo('conversations.json already exists on GitHub and will be updated.');
-      const result = await uploadFile(config as GitHubConfig, { path: 'assets/conversations/conversations.json', content: exportData() }, 'Update conversations');
+      const sha = await getFileSha(config as GitHubConfig, path);
+      if (sha) setExistsInfo(`${path} already exists on GitHub and will be updated.`);
+      const result = await uploadFile(config as GitHubConfig, { path, content: exportData(languageCode) }, 'Update conversations');
       if (result.success) {
         toast.success('Uploaded & local data cleared!');
         clearAll();
@@ -53,7 +57,7 @@ export default function ConversationsTabContent() {
       }
     } catch (e) { toast.error(e instanceof Error ? e.message : 'Failed'); }
     setUploading(false);
-  }, [exportData, config, configured, toast]);
+  }, [exportData, languageCode, path, config, configured, toast]);
 
   const handleImport = useCallback(() => {
     if (!importText.trim()) { toast.warning('Paste JSON first'); return; }
@@ -93,7 +97,7 @@ export default function ConversationsTabContent() {
 
         <TabsContent value="export">
           <div className="space-y-2">
-            {configured && <p className="text-xs text-[var(--color-text-muted)]">Path: <code className="text-[var(--color-primary)]">assets/conversations/conversations.json</code></p>}
+            {configured && <p className="text-xs text-[var(--color-text-muted)]">Path: <code className="text-[var(--color-primary)]">{path}</code></p>}
             {existsInfo && <p className="text-xs text-[var(--color-warning)]">{existsInfo}</p>}
             <div className="flex flex-wrap gap-2">
               <Button size="sm" onClick={download} disabled={categories.length === 0}>Download</Button>

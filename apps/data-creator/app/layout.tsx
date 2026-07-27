@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Language Learning - Learn • Practice • Master',
+  title: 'Language Learning',
   description: 'Learn any language with flashcards, dictionary, quizzes, and more',
 };
 

@@ -1,0 +1,38 @@
+{
+  "id": "colors-basic",
+  "title": "Colors",
+  "description": "Basic colour names in French",
+  "lang": "fr",
+  "cards": [
+    {
+      "id": "1",
+      "front": "white",
+      "back": "blanc",
+      "hasAudio": false
+    },
+    {
+      "id": "2",
+      "front": "black",
+      "back": "noir",
+      "hasAudio": false
+    },
+    {
+      "id": "3",
+      "front": "red",
+      "back": "rouge",
+      "hasAudio": false
+    },
+    {
+      "id": "4",
+      "front": "blue",
+      "back": "bleu",
+      "hasAudio": false
+    },
+    {
+      "id": "5",
+      "front": "green",
+      "back": "vert",
+      "hasAudio": false
+    }
+  ]
+}

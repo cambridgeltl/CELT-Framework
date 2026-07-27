@@ -1,11 +1,15 @@
 // Entry class to represent a single dictionary entry
 export class Entry {
   // Entry properties
-  dz: string; // Dzardzongke word
+  dz: string; // Target-language word
   en: string; // English translation
-  example: string; // Example sentence in Dzardzongke
+  example: string; // Example sentence in the target language
   exampleEn: string; // Example sentence in English
   audio: string; // Audio filename
+  // Language code this entry was authored under (e.g. "de"), tagged at creation
+  // time for local display only — dictionary files are exported one-language-per-file,
+  // so this is not written back out via toJSON().
+  lang?: string;
 
   // Constructor to create a new entry instance
   constructor(
@@ -13,13 +17,15 @@ export class Entry {
     en: string,
     example: string = "",
     exampleEn: string = "",
-    audio: string = ""
+    audio: string = "",
+    lang: string = ""
   ) {
     this.dz = dz;
     this.en = en;
     this.example = example;
     this.exampleEn = exampleEn;
     this.audio = audio;
+    this.lang = lang;
   }
 
   // Method to validate if entry has required fields
@@ -45,7 +51,8 @@ export class Entry {
       json.en || "",
       json.example || "",
       json.exampleEn || "",
-      json.audio || ""
+      json.audio || "",
+      json.lang || ""
     );
   }
 }
@@ -109,16 +116,18 @@ export class Dictionary {
     this.entries = [];
   }
 
-  // Method to convert dictionary to JSON object
-  toJSON() {
+  // Method to convert dictionary to JSON object. Pass a lang code to tag the
+  // dictionary with the language it belongs to (e.g. "de") — omit for the default "dz".
+  toJSON(lang?: string) {
     return {
+      ...(lang ? { lang } : {}),
       entries: this.entries.map((entry) => entry.toJSON()),
     };
   }
 
   // Method to get JSON string with formatting
-  toJSONString(pretty: boolean = true): string {
-    return JSON.stringify(this.toJSON(), null, pretty ? 2 : 0);
+  toJSONString(pretty: boolean = true, lang?: string): string {
+    return JSON.stringify(this.toJSON(lang), null, pretty ? 2 : 0);
   }
 
   // Static method to create Dictionary from JSON object

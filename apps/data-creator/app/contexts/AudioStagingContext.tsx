@@ -5,7 +5,7 @@ import React, { createContext, useContext, useState, useCallback } from 'react';
 // Staged audio file awaiting verification and upload
 export interface StagedAudio {
   id: string;
-  wordId: string;           // The Dzardzongke word (used for filename)
+  wordId: string;           // The target-language word (used for filename)
   wordDisplay: string;      // Display version of the word
   originalFilename: string; // Original filename (if uploaded)
   targetFilename: string;   // Auto-generated filename based on word

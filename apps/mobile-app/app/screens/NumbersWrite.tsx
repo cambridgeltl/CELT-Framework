@@ -17,6 +17,7 @@ import type { RootStackParamList } from '../navigation/types';
 import type { Card } from '../types/deck';
 import { useProgress } from '../stores/useProgress';
 import { useLanguage } from '../stores/useLanguage';
+import { getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from '../components/AnimatedButton';
 import { useInputFeedback } from '../hooks/useAnimations';
 import { ProgressBar } from '../components/ProgressBar';
@@ -118,7 +119,7 @@ const NumbersWrite: React.FC = () => {
 
       <Animated.View style={[styles.cardContainer, cardAnimatedStyle]}>
         <Text style={styles.prompt}>
-          {selectedLanguage === 'qu' ? 'Write the Quechua word for:' : 'Write the Dzardzongke word for:'}
+          {`Write the ${getLanguageDisplayName(selectedLanguage)} word for:`}
         </Text>
         <Animated.Text style={[styles.number, numberAnimatedStyle]}>
           {currentCard.front}

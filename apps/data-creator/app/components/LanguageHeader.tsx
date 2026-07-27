@@ -2,30 +2,38 @@
 
 import { useState, useEffect } from 'react';
 import { getStoredLanguageName } from './GitHubTokenSlideshow';
+import { getStoredLanguageCode, getLanguageDisplayName } from '../utils/language';
 
 export default function LanguageHeader() {
   const [languageName, setLanguageName] = useState('');
+  const [languageCode, setLanguageCode] = useState('');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const stored = getStoredLanguageName();
     setLanguageName(stored !== 'Your Language' ? stored : '');
+    setLanguageCode(getStoredLanguageCode());
 
     // Listen for storage changes (in case language is updated in slideshow)
     const handleStorageChange = () => {
       const updated = getStoredLanguageName();
       setLanguageName(updated !== 'Your Language' ? updated : '');
+      setLanguageCode(getStoredLanguageCode());
     };
 
     window.addEventListener('storage', handleStorageChange);
 
-    // Also poll for changes (for same-tab updates)
+    // Also poll for changes (for same-tab updates, e.g. the settings panel)
     const interval = setInterval(() => {
       const updated = getStoredLanguageName();
       setLanguageName(prev => {
         const newName = updated !== 'Your Language' ? updated : '';
         return prev !== newName ? newName : prev;
+      });
+      setLanguageCode(prev => {
+        const updatedCode = getStoredLanguageCode();
+        return prev !== updatedCode ? updatedCode : prev;
       });
     }, 1000);
 
@@ -49,12 +57,19 @@ export default function LanguageHeader() {
 
   return (
     <div>
-      <h1 className="text-5xl font-bold text-[var(--color-primary)] mb-2">
-        {displayName}
-      </h1>
-      <p className="text-lg text-[var(--color-primary)] opacity-80">
-        Learn <span className="mx-1">•</span> Practice <span className="mx-1">•</span> Master
-      </p>
+      <div className="flex items-center gap-3 mb-2">
+        <h1 className="text-5xl font-bold text-[var(--color-primary)]">
+          {displayName}
+        </h1>
+        {languageCode && (
+          <span
+            className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[var(--color-primary-light)] text-[var(--color-primary)] whitespace-nowrap"
+            title="New content you author now is tagged with this language"
+          >
+            Authoring: {getLanguageDisplayName(languageCode)}
+          </span>
+        )}
+      </div>
     </div>
   );
 }

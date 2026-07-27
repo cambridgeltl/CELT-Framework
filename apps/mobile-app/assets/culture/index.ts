@@ -84,3 +84,7 @@ export const cultureDecks = allCultureDecks;
 export function getCultureDecksByLanguage(langCode: string): CultureDeck[] {
   return allCultureDecks[langCode] || [];
 }
+
+export function getAvailableCultureLanguages(): string[] {
+  return Object.keys(allCultureDecks);
+}

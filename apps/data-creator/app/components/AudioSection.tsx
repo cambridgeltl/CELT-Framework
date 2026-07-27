@@ -7,7 +7,7 @@ import AudioRecorder from './AudioRecorder';
 import { useAudioStaging, generateDictionaryAudioPath } from '../contexts/AudioStagingContext';
 
 interface AudioSectionProps {
-  wordId: string;        // The Dzardzongke word (used for staging key and filename)
+  wordId: string;        // The target-language word (used for staging key and filename)
   wordDisplay: string;   // Display version of the word
   englishMeaning: string; // English meaning (used for validation)
   disabled?: boolean;
@@ -130,7 +130,7 @@ export default function AudioSection({
         </label>
         <div className="p-4 border-2 border-dashed border-[var(--color-border)] rounded-lg text-center">
           <p className="text-sm text-[var(--color-text-muted)]">
-            Enter Dzardzongke word and English translation first to add audio
+            Enter the target-language word and English translation first to add audio
           </p>
         </div>
       </div>

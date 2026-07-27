@@ -16,6 +16,8 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useLanguage } from '../stores/useLanguage';
+import { getLanguageDisplayName } from '../services/contentRegistry';
 
 interface AppDrawerProps {
   isOpen: boolean;
@@ -52,6 +54,7 @@ const AppDrawer: React.FC<AppDrawerProps> = ({
   children,
 }) => {
   const insets = useSafeAreaInsets();
+  const { selectedLanguage } = useLanguage();
   const translateX = useSharedValue(-DRAWER_WIDTH);
   const startedInEdge = useSharedValue(false);
   const hasPeeked = useRef(false);
@@ -136,7 +139,7 @@ const AppDrawer: React.FC<AppDrawerProps> = ({
       <Animated.View
         style={[styles.drawer, drawerStyle, { paddingTop: insets.top + 16, width: DRAWER_WIDTH }]}
       >
-        <Text style={styles.drawerTitle}>Dzardzongke</Text>
+        <Text style={styles.drawerTitle}>{getLanguageDisplayName(selectedLanguage)}</Text>
         <View style={styles.divider} />
         <View pointerEvents={isOpen ? 'auto' : 'none'}>
           {tabs.map((tab) => {

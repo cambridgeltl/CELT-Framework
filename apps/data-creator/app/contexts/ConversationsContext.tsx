@@ -13,6 +13,7 @@ import {
   createExchange,
   generateId,
 } from '../models/Conversation';
+import { getStoredLanguageCode } from '../utils/language';
 
 interface ConversationsContextValue {
   // Data
@@ -35,7 +36,7 @@ interface ConversationsContextValue {
 
   // Import/Export
   importData: (json: string) => { success: boolean; message: string };
-  exportData: () => string;
+  exportData: (lang?: string) => string;
   clearAll: () => void;
 
   // Stats
@@ -46,7 +47,7 @@ interface ConversationsContextValue {
   };
 }
 
-const STORAGE_KEY = 'dzardzongke-conversations';
+const STORAGE_KEY = 'content-conversations';
 
 const ConversationsContext = createContext<ConversationsContextValue | undefined>(undefined);
 
@@ -83,7 +84,7 @@ export function ConversationsProvider({ children }: { children: React.ReactNode 
 
   // Category operations
   const addCategory = useCallback((id: string, title: string, description: string): Category | null => {
-    const category = createCategory(id, title, description);
+    const category = { ...createCategory(id, title, description), lang: getStoredLanguageCode() };
 
     const newManager = new ConversationDataManager(JSON.parse(JSON.stringify(manager.data)));
     if (newManager.addCategory(category)) {
@@ -228,8 +229,8 @@ export function ConversationsProvider({ children }: { children: React.ReactNode 
     }
   }, [manager, saveData]);
 
-  const exportData = useCallback((): string => {
-    return manager.toJSONString();
+  const exportData = useCallback((lang?: string): string => {
+    return manager.toJSONString(lang);
   }, [manager]);
 
   const clearAll = useCallback(() => {

@@ -1,11 +1,25 @@
 import type { Deck } from '../types/deck';
 
-import { dzConversations, quConversations, type ConversationsData } from '../../assets/conversations';
-import { dzCultureDecks, quCultureDecks, type CultureDeck } from '../../assets/culture';
-import { dzDecks, quDecks } from '../../assets/decks';
-import { dzDictionary, quDictionary, type DictionaryShape } from '../../assets/dictionary';
+import {
+  getAvailableConversationLanguages,
+  getConversationsByLanguage,
+  type ConversationsData,
+} from '../../assets/conversations';
+import {
+  getAvailableCultureLanguages,
+  getCultureDecksByLanguage,
+  type CultureDeck,
+} from '../../assets/culture';
+import { getAvailableDeckLanguages, getDecksByLanguage } from '../../assets/decks';
+import {
+  getAvailableDictionaryLanguages,
+  getDictionaryByLanguage,
+  type DictionaryShape,
+} from '../../assets/dictionary';
 
-export type LanguageCode = 'dz' | 'qu';
+// Any string works as a language code — new languages appear automatically the moment
+// content tagged with that code exists (see getAvailableLanguages()).
+export type LanguageCode = string;
 
 export type { ConversationsData, DictionaryShape, CultureDeck };
 
@@ -16,20 +30,48 @@ type ContentBundle = {
   culture: CultureDeck[];
 };
 
-export const contentRegistry: Record<LanguageCode, ContentBundle> = {
-  dz: {
-    decks: dzDecks,
-    dictionary: dzDictionary,
-    conversations: dzConversations,
-    culture: dzCultureDecks,
+// Discover every language code that has at least one piece of content, across all content types.
+function discoverLanguages(): string[] {
+  const codes = new Set<string>([
+    ...getAvailableDeckLanguages(),
+    ...getAvailableDictionaryLanguages(),
+    ...getAvailableConversationLanguages(),
+    ...getAvailableCultureLanguages(),
+  ]);
+  // Keep 'dz' first for stable default ordering, then the rest alphabetically.
+  return ['dz', ...Array.from(codes).filter((c) => c !== 'dz').sort()].filter((c) => codes.has(c) || c === 'dz');
+}
+
+export function getAvailableLanguages(): LanguageCode[] {
+  return discoverLanguages();
+}
+
+function buildBundle(lang: LanguageCode): ContentBundle {
+  return {
+    decks: getDecksByLanguage(lang),
+    dictionary: getDictionaryByLanguage(lang),
+    conversations: getConversationsByLanguage(lang),
+    culture: getCultureDecksByLanguage(lang),
+  };
+}
+
+export const contentRegistry: Record<LanguageCode, ContentBundle> = discoverLanguages().reduce(
+  (registry, lang) => {
+    registry[lang] = buildBundle(lang);
+    return registry;
   },
-  qu: {
-    decks: quDecks,
-    dictionary: quDictionary,
-    conversations: quConversations,
-    culture: quCultureDecks,
-  },
-};
+  {} as Record<LanguageCode, ContentBundle>
+);
+
+// Display names for language codes, sourced from assets/languages.json — the export
+// script (LANG_NAME) and the data-creator's "Language name" setting both write to this
+// file, so a new language's name shows up automatically without any code changes.
+// Unknown codes (not yet registered there) fall back to the uppercased code.
+const languageNames: Record<string, string> = require('../../assets/languages.json');
+
+export function getLanguageDisplayName(lang: LanguageCode): string {
+  return languageNames[lang] || lang.toUpperCase();
+}
 
 export const nsDeckId = (lang: LanguageCode, deckId: string) => `${lang}:${deckId}`;
 
@@ -74,15 +116,15 @@ const baseQuizImageMap: Record<string, any> = {
   ten: reactLogo,
 };
 
-const quizImageMap: Record<LanguageCode, { byPrompt: Record<string, any> }> = {
-  dz: { byPrompt: baseQuizImageMap },
-  qu: { byPrompt: baseQuizImageMap },
-};
+// Per-language overrides can be added here if a language needs different quiz images;
+// any language without an explicit entry falls back to the shared base map.
+const quizImageMapOverrides: Partial<Record<LanguageCode, { byPrompt: Record<string, any> }>> = {};
 
 export function getQuizImageForPrompt(lang: LanguageCode, prompt?: string) {
   if (!prompt) return undefined;
   const key = String(prompt).toLowerCase().trim();
-  return quizImageMap[lang]?.byPrompt[key];
+  const byPrompt = quizImageMapOverrides[lang]?.byPrompt ?? baseQuizImageMap;
+  return byPrompt[key];
 }
 
 

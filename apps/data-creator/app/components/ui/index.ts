@@ -1,5 +1,5 @@
 // UI Component Library
-// Reusable components for the Dzardzongke language learning app
+// Reusable components for the language learning app
 
 export { Button } from './Button';
 export type { ButtonVariant, ButtonSize } from './Button';

@@ -15,6 +15,12 @@ import {
   loadGitHubConfig,
   isConfigComplete,
 } from '../utils/githubApi';
+import {
+  getStoredLanguageCode,
+  setStoredLanguageCode,
+  getStoredLanguageDisplayName,
+  setStoredLanguageDisplayName,
+} from '../utils/language';
 
 const GitHubIcon = () => (
   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -55,6 +61,8 @@ export default function GitHubPopup() {
   const [showCredits, setShowCredits] = useState(false);
   const [config, setConfig] = useState<Partial<GitHubConfig>>({});
   const [rememberSettings, setRememberSettings] = useState(true);
+  const [languageCode, setLanguageCode] = useState('dz');
+  const [languageName, setLanguageName] = useState('');
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -62,6 +70,8 @@ export default function GitHubPopup() {
     if (savedConfig.owner || savedConfig.repo || savedConfig.token) {
       setConfig(savedConfig);
     }
+    setLanguageCode(getStoredLanguageCode());
+    setLanguageName(getStoredLanguageDisplayName());
     // Note: Auto-show onboarding is handled by Providers.tsx at the root level
   }, []);
 
@@ -236,6 +246,31 @@ export default function GitHubPopup() {
                     placeholder="ghp_xxxx"
                     leftIcon={<LockIcon />}
                   />
+                  <div className="grid grid-cols-2 gap-3">
+                    <Input
+                      label="Language code"
+                      value={languageCode}
+                      onChange={(e) => {
+                        const value = (e.target as HTMLInputElement).value;
+                        setLanguageCode(value);
+                        setStoredLanguageCode(value);
+                      }}
+                      placeholder="dz"
+                    />
+                    <Input
+                      label="Language name"
+                      value={languageName}
+                      onChange={(e) => {
+                        const value = (e.target as HTMLInputElement).value;
+                        setLanguageName(value);
+                        setStoredLanguageDisplayName(value);
+                      }}
+                      placeholder="French"
+                    />
+                  </div>
+                  <p className="text-xs text-[var(--color-text-muted)] -mt-2">
+                    Short code for the language you&apos;re authoring (e.g. &quot;dz&quot;, &quot;de&quot;) — tags exports and determines upload paths. The name is pushed to <code className="text-[var(--color-primary)]">assets/languages.json</code> on upload, so the app shows &quot;French&quot; instead of just &quot;FR&quot;.
+                  </p>
                   <label className="flex items-center gap-2 cursor-pointer group">
                     <input
                       type="checkbox"

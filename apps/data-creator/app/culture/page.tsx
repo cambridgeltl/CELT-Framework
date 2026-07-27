@@ -18,6 +18,7 @@ import { Input } from '../components/ui/Input';
 import { Card } from '../components/ui/Card';
 import { Modal } from '../components/ui/Modal';
 import CultureImageSection from '../components/CultureImageSection';
+import { getLanguageDisplayName } from '../utils/language';
 
 // Icons
 const BackIcon = () => (
@@ -583,9 +584,16 @@ export default function CulturePage() {
                         <BookIcon />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-[var(--color-text)]">
-                          {deck.title}
-                        </h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-semibold text-[var(--color-text)]">
+                            {deck.title}
+                          </h3>
+                          {deck.lang && (
+                            <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[var(--color-primary-light)] text-[var(--color-primary)]">
+                              {getLanguageDisplayName(deck.lang)}
+                            </span>
+                          )}
+                        </div>
                         <p className="text-sm text-[var(--color-text-muted)]">
                           ID: {deck.id} | {deck.steps.length} step{deck.steps.length !== 1 ? 's' : ''}
                         </p>
@@ -667,7 +675,7 @@ export default function CulturePage() {
               label="Title *"
               value={deckForm.title}
               onChange={(e) => handleTitleChange((e.target as HTMLInputElement).value)}
-              placeholder="Dzardzongke: Language & Region"
+              placeholder="Your Language: Culture & Region"
             />
             <Input
               label="ID *"

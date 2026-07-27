@@ -7,16 +7,18 @@ import { Input } from '../components/ui/Input';
 import { Card } from '../components/ui/Card';
 import { Modal } from '../components/ui/Modal';
 import { Select } from '../components/ui/Select';
+import { Badge } from '../components/ui/Badge';
 import AudioSection from '../components/AudioSection';
 import AudioReviewDashboard from '../components/AudioReviewDashboard';
 import { useAudioStaging } from '../contexts/AudioStagingContext';
 import { useDictionary } from '../contexts/DictionaryContext';
+import { getLanguageDisplayName } from '../utils/language';
 
 type SortOption = 'dz-asc' | 'dz-desc' | 'en-asc' | 'en-desc' | 'recent';
 
 const sortOptions = [
-  { value: 'dz-asc', label: 'Dzardzongke (A-Z)' },
-  { value: 'dz-desc', label: 'Dzardzongke (Z-A)' },
+  { value: 'dz-asc', label: 'Target Word (A-Z)' },
+  { value: 'dz-desc', label: 'Target Word (Z-A)' },
   { value: 'en-asc', label: 'English (A-Z)' },
   { value: 'en-desc', label: 'English (Z-A)' },
   { value: 'recent', label: 'Recently Added' },
@@ -170,7 +172,7 @@ export default function DictionaryPage() {
     );
 
     if (!newEntry.isValid()) {
-      showMessage('error', 'Please fill in Dzardzongke word and English translation');
+      showMessage('error', 'Please fill in the target word and English translation');
       return;
     }
 
@@ -204,7 +206,7 @@ export default function DictionaryPage() {
     );
 
     if (!updatedEntry.isValid()) {
-      showMessage('error', 'Please fill in Dzardzongke word and English translation');
+      showMessage('error', 'Please fill in the target word and English translation');
       return;
     }
 
@@ -378,15 +380,20 @@ export default function DictionaryPage() {
                       </p>
                     </div>
 
-                    {/* Audio indicator */}
-                    {hasAudio && (
-                      <div className="flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800 shadow-sm">
-                        <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
-                        </svg>
-                        <span className="text-xs font-medium">Audio</span>
-                      </div>
-                    )}
+                    {/* Language + audio indicators */}
+                    <div className="flex-shrink-0 flex flex-col items-end gap-1.5">
+                      {entry.lang && (
+                        <Badge variant="default" size="sm">{getLanguageDisplayName(entry.lang)}</Badge>
+                      )}
+                      {hasAudio && (
+                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800 shadow-sm">
+                          <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                          </svg>
+                          <span className="text-xs font-medium">Audio</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   {/* Examples */}
@@ -458,10 +465,10 @@ export default function DictionaryPage() {
       >
         <div className="space-y-4">
           <Input
-            label="Dzardzongke Word *"
+            label="Target Word *"
             value={formData.dz}
             onChange={(e) => handleInputChange('dz', (e.target as HTMLInputElement).value)}
-            placeholder="Enter the Dzardzongke word"
+            placeholder="Enter the target-language word"
           />
 
           <Input
@@ -472,12 +479,12 @@ export default function DictionaryPage() {
           />
 
           <Input
-            label="Example Sentence (Dzardzongke)"
+            label="Example Sentence (target language)"
             multiline
             rows={2}
             value={formData.example}
             onChange={(e) => handleInputChange('example', (e.target as HTMLTextAreaElement).value)}
-            placeholder="Example sentence in Dzardzongke..."
+            placeholder="Example sentence in the target language..."
           />
 
           <Input

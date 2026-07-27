@@ -25,7 +25,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
 import { audioService } from '../services/AudioService';
-import { contentRegistry } from '../services/contentRegistry';
+import { contentRegistry, getLanguageDisplayName } from '../services/contentRegistry';
 import { useLanguage } from '../stores/useLanguage';
 import AnimatedButton from '../components/AnimatedButton';
 import { SPRING_CONFIG } from '../hooks/useAnimations';
@@ -299,7 +299,7 @@ export const ConversationPractice: React.FC = () => {
               color="#007AFF"
             />
             <Text style={styles.controlText}>
-              {viewMode === 'both' ? 'English only' : viewMode === 'english' ? 'Dzardzongke' : 'Show Both'}
+              {viewMode === 'both' ? 'English only' : viewMode === 'english' ? getLanguageDisplayName(selectedLanguage) : 'Show Both'}
             </Text>
           </AnimatedButton>
 

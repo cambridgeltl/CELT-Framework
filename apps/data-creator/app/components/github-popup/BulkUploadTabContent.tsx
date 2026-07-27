@@ -15,6 +15,7 @@ import {
 import { useDecks } from '../../contexts/DecksContext';
 import MediaInstructions, { MediaCategory, isValidMediaFile, getTargetPath } from './MediaInstructions';
 import { getFilesFromDrop } from '../../utils/folderDrop';
+import { getStoredLanguageCode } from '../../utils/language';
 
 type DataType = 'dictionary' | 'conversations' | 'culture' | 'decks';
 
@@ -198,8 +199,9 @@ const typeColors: Record<DataType, string> = {
   decks: 'bg-amber-500',
 };
 
-// Normalize data to the correct JSON structure for upload
-function normalizeForUpload(data: unknown, type: DataType): { content: string; items: unknown[] } {
+// Normalize data to the correct JSON structure for upload. `lang` tags
+// dictionary/conversations payloads that don't already declare their own language.
+function normalizeForUpload(data: unknown, type: DataType, lang: string): { content: string; items: unknown[] } {
   const obj = data as Record<string, unknown>;
 
   switch (type) {
@@ -209,7 +211,7 @@ function normalizeForUpload(data: unknown, type: DataType): { content: string; i
       else if (obj.dictionary) entries = obj.dictionary as unknown[];
       else if (Array.isArray(data)) entries = data;
       else entries = [data];
-      const normalized = { entries };
+      const normalized = { lang: (obj.lang as string) || lang, entries };
       return { content: JSON.stringify(normalized, null, 2), items: entries };
     }
     case 'conversations': {
@@ -223,7 +225,7 @@ function normalizeForUpload(data: unknown, type: DataType): { content: string; i
       } else {
         categories = [data];
       }
-      const normalized = { categories };
+      const normalized = { lang: (obj.lang as string) || lang, categories };
       return { content: JSON.stringify(normalized, null, 2), items: categories };
     }
     case 'culture': {
@@ -287,6 +289,7 @@ export default function BulkUploadTabContent() {
   const [steps, setSteps] = useState<UploadStep[]>([]);
   const [parseError, setParseError] = useState<string | null>(null);
   const [config, setConfig] = useState<Partial<{ owner: string; repo: string; token: string }>>({});
+  const [languageCode, setLanguageCode] = useState('dz');
   const [mounted, setMounted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { decks: deckMetas } = useDecks();
@@ -298,6 +301,7 @@ export default function BulkUploadTabContent() {
   useEffect(() => {
     setMounted(true);
     setConfig(loadGitHubConfig());
+    setLanguageCode(getStoredLanguageCode());
   }, []);
 
   const configured = mounted && isConfigComplete(config);
@@ -481,13 +485,13 @@ export default function BulkUploadTabContent() {
       updateStep(stepId, { status: 'uploading' });
 
       try {
-        const { content, items } = normalizeForUpload(file.data, file.type);
+        const { content, items } = normalizeForUpload(file.data, file.type, languageCode);
 
         switch (file.type) {
           case 'dictionary': {
             const r = await uploadJsonWithMerge(
               cfg,
-              'assets/dictionary/dictionary.dict.json',
+              `assets/dictionary/${languageCode}.dict.json`,
               content,
               'dictionary',
               `Bulk upload dictionary from ${file.fileName}`
@@ -507,7 +511,7 @@ export default function BulkUploadTabContent() {
           case 'conversations': {
             const r = await uploadJsonWithMerge(
               cfg,
-              'assets/conversations/conversations.json',
+              `assets/conversations/${languageCode}-conversations.json`,
               content,
               'conversations',
               `Bulk upload conversations from ${file.fileName}`
@@ -534,7 +538,7 @@ export default function BulkUploadTabContent() {
               const deckTitle = (deck.title as string) || 'Untitled';
               const r = await uploadFile(
                 cfg,
-                { path: `assets/culture/dz/${deckId}.json`, content: JSON.stringify(deck, null, 2) },
+                { path: `assets/culture/${languageCode}/${deckId}.json`, content: JSON.stringify(deck, null, 2) },
                 `Bulk upload culture: ${deckTitle}`
               );
               if (r.success) {
@@ -561,9 +565,10 @@ export default function BulkUploadTabContent() {
             for (const deck of decks) {
               const deckId = (deck.id as string) || `deck-${Date.now()}`;
               const deckTitle = (deck.title as string) || 'Untitled';
+              const taggedDeck = { ...deck, lang: (deck.lang as string) || languageCode };
               const r = await uploadFile(
                 cfg,
-                { path: `assets/decks/${deckId}.json`, content: JSON.stringify(deck, null, 2) },
+                { path: `assets/decks/${deckId}.json`, content: JSON.stringify(taggedDeck, null, 2) },
                 `Bulk upload deck: ${deckTitle}`
               );
               if (r.success) {

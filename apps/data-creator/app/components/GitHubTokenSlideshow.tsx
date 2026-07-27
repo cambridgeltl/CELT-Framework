@@ -13,7 +13,7 @@ interface GitHubTokenSlideshowProps {
 // Storage keys
 const LANGUAGE_NAME_KEY = 'languageLearningApp_languageName';
 const ONBOARDING_COMPLETE_KEY = 'languageLearningApp_onboardingComplete';
-const THEME_STORAGE_KEY = 'dzardzongke-theme';
+const THEME_STORAGE_KEY = 'app-theme';
 
 // Helper functions for localStorage
 export const getStoredLanguageName = (): string => {

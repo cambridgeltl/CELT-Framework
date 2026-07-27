@@ -7,19 +7,17 @@ import { Input } from '../ui/Input';
 import { useToast } from '../ui/Toast';
 import { useDecks } from '../../contexts/DecksContext';
 import { useImageStaging } from '../../contexts/ImageStagingContext';
-import { Deck, Card as FlashCard } from '../../models/Deck';
+import { Deck } from '../../models/Deck';
 import { GitHubConfig, loadGitHubConfig, isConfigComplete, getFileSha, uploadFile, uploadBinaryFile } from '../../utils/githubApi';
+import { getStoredLanguageCode } from '../../utils/language';
 
-const STORAGE_KEY = 'dzardzongke-decks';
+const STORAGE_KEY = 'content-decks';
 
 function loadDeckFromStorage(id: string): Deck | null {
   try {
     const stored = localStorage.getItem(`${STORAGE_KEY}-deck-${id}`);
     if (!stored) return null;
-    const parsed = JSON.parse(stored);
-    const cards = (parsed.cards || []).map((c: Record<string, unknown>) =>
-      new FlashCard(c.id as string, c.front as string, c.back as string, (c.notes as string) || '', (c.image as string) || ''));
-    return new Deck(parsed.id, parsed.title, parsed.description, cards);
+    return Deck.fromJSON(JSON.parse(stored));
   } catch { return null; }
 }
 
@@ -33,12 +31,14 @@ export default function DecksTabContent() {
   const [uploadingImages, setUploadingImages] = useState(false);
   const [allDecks, setAllDecks] = useState<Deck[]>([]);
   const [config, setConfig] = useState<Partial<GitHubConfig>>({});
+  const [languageCode, setLanguageCode] = useState('dz');
   const [mounted, setMounted] = useState(false);
 
   // Load from localStorage after mount to avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
     setConfig(loadGitHubConfig());
+    setLanguageCode(getStoredLanguageCode());
     const loadedDecks = deckMetas.map(m => loadDeckFromStorage(m.id)).filter((d): d is Deck => d !== null);
     setAllDecks(loadedDecks);
   }, [deckMetas]);
@@ -47,12 +47,12 @@ export default function DecksTabContent() {
   const images = stagedFiles.filter(i => !i.targetFilename.includes('culture') && !i.cardId.startsWith('culture-'));
 
   const downloadDeck = useCallback((deck: Deck) => {
-    const blob = new Blob([deck.toJSONString()], { type: 'application/json' });
+    const blob = new Blob([deck.toJSONString(true, languageCode)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = `${deck.id}.json`;
     a.click();
-  }, []);
+  }, [languageCode]);
 
   const uploadDeck = useCallback(async (deck: Deck) => {
     if (!configured) { toast.error('Configure GitHub first'); return; }
@@ -60,7 +60,7 @@ export default function DecksTabContent() {
     try {
       const sha = await getFileSha(config as GitHubConfig, `assets/decks/${deck.id}.json`);
       if (sha) toast.warning(`${deck.title} already exists on GitHub — updating.`);
-      const result = await uploadFile(config as GitHubConfig, { path: `assets/decks/${deck.id}.json`, content: deck.toJSONString() }, `Update deck: ${deck.title}`);
+      const result = await uploadFile(config as GitHubConfig, { path: `assets/decks/${deck.id}.json`, content: deck.toJSONString(true, languageCode) }, `Update deck: ${deck.title}`);
       if (result.success) {
         toast.success(`Uploaded & removed: ${deck.title}`);
         localStorage.removeItem(`${STORAGE_KEY}-deck-${deck.id}`);
@@ -70,7 +70,7 @@ export default function DecksTabContent() {
       }
     } catch (e) { toast.error(e instanceof Error ? e.message : 'Failed'); }
     setUploadingId(null);
-  }, [config, configured, toast]);
+  }, [config, configured, languageCode, toast]);
 
   const handleImport = useCallback(() => {
     if (!importText.trim()) { toast.warning('Paste JSON first'); return; }

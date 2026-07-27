@@ -7,6 +7,7 @@ import {
   CultureDataManager,
   createCultureDeck,
 } from '../models/Culture';
+import { getStoredLanguageCode } from '../utils/language';
 
 interface CultureContextValue {
   // Data
@@ -38,7 +39,7 @@ interface CultureContextValue {
   };
 }
 
-const STORAGE_KEY = 'dzardzongke-culture';
+const STORAGE_KEY = 'content-culture';
 
 const CultureContext = createContext<CultureContextValue | undefined>(undefined);
 
@@ -73,7 +74,7 @@ export function CultureProvider({ children }: { children: React.ReactNode }) {
 
   // Deck operations
   const addDeck = useCallback((id: string, title: string): CultureDeck | null => {
-    const deck = createCultureDeck(id, title, []);
+    const deck = { ...createCultureDeck(id, title, []), lang: getStoredLanguageCode() };
     const newManager = manager.clone();
     if (newManager.addDeck(deck)) {
       saveData(newManager);

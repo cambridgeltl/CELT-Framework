@@ -10,17 +10,19 @@ import { useCulture } from '../../contexts/CultureContext';
 import { useDecks } from '../../contexts/DecksContext';
 import { useAudioStaging } from '../../contexts/AudioStagingContext';
 import { useImageStaging } from '../../contexts/ImageStagingContext';
-import { Deck, Card as FlashCard } from '../../models/Deck';
+import { Deck } from '../../models/Deck';
 import {
   GitHubConfig,
   loadGitHubConfig,
   isConfigComplete,
   getFileSha,
+  getFileContent,
   uploadFile,
   uploadJsonWithMerge,
   uploadBinaryFile,
   MergeStats,
 } from '../../utils/githubApi';
+import { getStoredLanguageCode, getStoredLanguageDisplayName, getLanguageDisplayName } from '../../utils/language';
 
 type StepStatus = 'pending' | 'checking' | 'uploading' | 'done' | 'error' | 'skipped';
 
@@ -35,16 +37,13 @@ interface UploadStep {
   skippedCount?: number;  // Number of skipped duplicates
 }
 
-const DECKS_STORAGE_KEY = 'dzardzongke-decks';
+const DECKS_STORAGE_KEY = 'content-decks';
 
 function loadDeckFromStorage(id: string): Deck | null {
   try {
     const stored = localStorage.getItem(`${DECKS_STORAGE_KEY}-deck-${id}`);
     if (!stored) return null;
-    const parsed = JSON.parse(stored);
-    const cards = (parsed.cards || []).map((c: Record<string, unknown>) =>
-      new FlashCard(c.id as string, c.front as string, c.back as string, (c.notes as string) || '', (c.image as string) || ''));
-    return new Deck(parsed.id, parsed.title, parsed.description, cards);
+    return Deck.fromJSON(JSON.parse(stored));
   } catch { return null; }
 }
 
@@ -97,6 +96,8 @@ export default function UploadAllTabContent() {
   const [allDecks, setAllDecks] = useState<Deck[]>([]);
   const [mounted, setMounted] = useState(false);
   const [config, setConfig] = useState<Partial<{owner: string; repo: string; token: string}>>({});
+  const [languageCode, setLanguageCode] = useState('dz');
+  const [languageName, setLanguageName] = useState('');
 
   // Load decks and config from localStorage after mount to avoid hydration mismatch
   useEffect(() => {
@@ -104,6 +105,8 @@ export default function UploadAllTabContent() {
     const loadedDecks = deckMetas.map(m => loadDeckFromStorage(m.id)).filter((d): d is Deck => d !== null);
     setAllDecks(loadedDecks);
     setConfig(loadGitHubConfig());
+    setLanguageCode(getStoredLanguageCode());
+    setLanguageName(getStoredLanguageDisplayName());
   }, [deckMetas]);
 
   const configured = mounted && isConfigComplete(config);
@@ -124,6 +127,18 @@ export default function UploadAllTabContent() {
     count += cultureImages.length + deckImages.length;
     return count;
   }, [dictCount, categories, cultureDecks, allDecks, dictAudio, convAudio, cultureImages, deckImages]);
+
+  // Warn (rather than silently mis-tag) if locally-authored content was tagged
+  // with a different language than the one currently selected for export.
+  const mismatchedLangCount = useMemo(() => {
+    const otherLang = (itemLang?: string) => !!itemLang && itemLang !== languageCode;
+    return (
+      entries.filter(e => otherLang(e.lang)).length +
+      categories.filter(c => otherLang(c.lang)).length +
+      cultureDecks.filter(d => otherLang(d.lang)).length +
+      allDecks.filter(d => otherLang(d.lang)).length
+    );
+  }, [entries, categories, cultureDecks, allDecks, languageCode]);
 
   const hasData = totalItems > 0;
 
@@ -178,6 +193,11 @@ export default function UploadAllTabContent() {
       newSteps.push({ id: 'deck-img', label: 'Deck images', count: deckImages.length, status: 'pending' });
       totalSteps++;
     }
+    const hasLanguageName = languageName.trim().length > 0;
+    if (hasLanguageName) {
+      newSteps.push({ id: 'lang-registry', label: 'Language name', count: 1, status: 'pending' });
+      totalSteps++;
+    }
 
     setSteps(newSteps);
     const advance = () => { stepsDone++; setProgress(Math.round((stepsDone / totalSteps) * 100)); };
@@ -209,9 +229,10 @@ export default function UploadAllTabContent() {
 
     // 1. Dictionary JSON (merge with existing)
     if (dictCount > 0) {
+      const dictPath = `assets/dictionary/${languageCode}.dict.json`;
       await checkAndUpload('dict', async () => {
         try {
-          const r = await uploadJsonWithMerge(cfg, 'assets/dictionary/dictionary.dict.json', dictToJSON(), 'dictionary', 'Merge dictionary entries');
+          const r = await uploadJsonWithMerge(cfg, dictPath, dictToJSON(languageCode), 'dictionary', 'Merge dictionary entries');
           if (r.success) {
             const stats = r.mergeStats;
             if (stats && stats.totalSkipped > 0) {
@@ -229,15 +250,16 @@ export default function UploadAllTabContent() {
             errors.push(`Dictionary: ${r.error}`);
           }
         } catch (e) { updateStep('dict', { status: 'error', error: String(e) }); errors.push(`Dictionary: ${e}`); }
-      }, ['assets/dictionary/dictionary.dict.json']);
+      }, [dictPath]);
       advance();
     }
 
     // 2. Conversations JSON (merge with existing)
     if (categories.length > 0) {
+      const convPath = `assets/conversations/${languageCode}-conversations.json`;
       await checkAndUpload('conv', async () => {
         try {
-          const r = await uploadJsonWithMerge(cfg, 'assets/conversations/conversations.json', convExport(), 'conversations', 'Merge conversations');
+          const r = await uploadJsonWithMerge(cfg, convPath, convExport(languageCode), 'conversations', 'Merge conversations');
           if (r.success) {
             const stats = r.mergeStats;
             if (stats && stats.totalSkipped > 0) {
@@ -255,20 +277,20 @@ export default function UploadAllTabContent() {
             errors.push(`Conversations: ${r.error}`);
           }
         } catch (e) { updateStep('conv', { status: 'error', error: String(e) }); errors.push(`Conversations: ${e}`); }
-      }, ['assets/conversations/conversations.json']);
+      }, [convPath]);
       advance();
     }
 
     // 3. Culture decks
     if (cultureDecks.length > 0) {
-      const culturePaths = cultureDecks.map(d => `assets/culture/dz/${d.id}.json`);
+      const culturePaths = cultureDecks.map(d => `assets/culture/${languageCode}/${d.id}.json`);
       await checkAndUpload('culture', async () => {
         let cultureOk = true;
         for (const deck of cultureDecks) {
           const content = cultureExportDeck(deck.id);
           if (!content) continue;
           try {
-            const r = await uploadFile(cfg, { path: `assets/culture/dz/${deck.id}.json`, content }, `Update culture: ${deck.title}`);
+            const r = await uploadFile(cfg, { path: `assets/culture/${languageCode}/${deck.id}.json`, content }, `Update culture: ${deck.title}`);
             if (!r.success) { cultureOk = false; errors.push(`Culture ${deck.title}: ${r.error}`); }
           } catch (e) { cultureOk = false; errors.push(`Culture ${deck.title}: ${e}`); }
         }
@@ -284,12 +306,35 @@ export default function UploadAllTabContent() {
         let decksOk = true;
         for (const deck of allDecks) {
           try {
-            const r = await uploadFile(cfg, { path: `assets/decks/${deck.id}.json`, content: deck.toJSONString() }, `Update deck: ${deck.title}`);
+            const r = await uploadFile(cfg, { path: `assets/decks/${deck.id}.json`, content: deck.toJSONString(true, languageCode) }, `Update deck: ${deck.title}`);
             if (!r.success) { decksOk = false; errors.push(`Deck ${deck.title}: ${r.error}`); }
           } catch (e) { decksOk = false; errors.push(`Deck ${deck.title}: ${e}`); }
         }
         updateStep('decks', { status: decksOk ? 'done' : 'error' });
       }, deckPaths);
+      advance();
+    }
+
+    // 5. Language display name (registers e.g. "fr" -> "French" so the app shows the
+    // real name instead of the bare code — merges with whatever's already registered)
+    if (hasLanguageName) {
+      const registryPath = 'assets/languages.json';
+      await checkAndUpload('lang-registry', async () => {
+        try {
+          const existing = await getFileContent(cfg, registryPath);
+          let registry: Record<string, string> = {};
+          if (existing) {
+            try { registry = JSON.parse(existing.content); } catch { registry = {}; }
+          }
+          registry[languageCode] = languageName.trim();
+          const r = await uploadFile(cfg, { path: registryPath, content: JSON.stringify(registry, null, 2) }, `Register language name: ${languageCode} -> ${languageName.trim()}`);
+          updateStep('lang-registry', { status: r.success ? 'done' : 'error', error: r.success ? undefined : r.error });
+          if (!r.success) errors.push(`Language name: ${r.error}`);
+        } catch (e) {
+          updateStep('lang-registry', { status: 'error', error: String(e) });
+          errors.push(`Language name: ${e}`);
+        }
+      }, [registryPath]);
       advance();
     }
 
@@ -443,7 +488,7 @@ export default function UploadAllTabContent() {
     setIsUploading(false);
     setIsDone(true);
   }, [
-    configured, hasData, config, dictCount, dictToJSON, clearEntries,
+    configured, hasData, config, languageCode, languageName, dictCount, dictToJSON, clearEntries,
     categories, convExport, convClearAll, convStats,
     cultureDecks, cultureExportDeck, cultureClearAll,
     allDecks, deleteDeck,
@@ -453,6 +498,13 @@ export default function UploadAllTabContent() {
 
   return (
     <div className="space-y-4">
+      {/* Mixed-language warning */}
+      {mismatchedLangCount > 0 && (
+        <div className="rounded-lg border border-[var(--color-warning)]/40 bg-[var(--color-warning)]/10 px-3 py-2 text-xs text-[var(--color-warning)]">
+          {mismatchedLangCount} local item{mismatchedLangCount !== 1 ? 's are' : ' is'} tagged for a different language than the current setting (<strong>{getLanguageDisplayName(languageCode)}</strong>). They&apos;ll still upload, but tagged/pathed as {getLanguageDisplayName(languageCode)} — switch the Language code in settings first if that&apos;s not what you want.
+        </div>
+      )}
+
       {/* Data summary */}
       <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] overflow-hidden">
         <div className="px-4 py-3 border-b border-[var(--color-border)]">

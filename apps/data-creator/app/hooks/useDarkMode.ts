@@ -11,7 +11,7 @@ interface UseDarkModeReturn {
   toggleTheme: () => void;
 }
 
-const STORAGE_KEY = 'dzardzongke-theme';
+const STORAGE_KEY = 'app-theme';
 
 export function useDarkMode(): UseDarkModeReturn {
   const [theme, setThemeState] = useState<Theme>('light');

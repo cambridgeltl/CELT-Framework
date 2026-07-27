@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { Deck, Card as FlashCard } from '../models/Deck';
+import { getStoredLanguageCode } from '../utils/language';
 
 // Deck metadata for the dashboard
 export interface DeckMeta {
@@ -11,6 +12,8 @@ export interface DeckMeta {
   cardCount: number;
   createdAt: string;
   updatedAt: string;
+  // Language code this deck was tagged with at creation time (e.g. "de").
+  lang?: string;
 }
 
 interface DecksContextValue {
@@ -40,7 +43,7 @@ interface DecksContextValue {
   importDecks: (decksData: unknown[]) => number;
 }
 
-const STORAGE_KEY = 'dzardzongke-decks';
+const STORAGE_KEY = 'content-decks';
 
 const DecksContext = createContext<DecksContextValue | undefined>(undefined);
 
@@ -127,23 +130,13 @@ export function DecksProvider({ children }: { children: React.ReactNode }) {
       const stored = localStorage.getItem(deckKey);
 
       if (stored) {
-        const parsed = JSON.parse(stored);
-        const cards = (parsed.cards || []).map((c: Record<string, unknown>) =>
-          new FlashCard(
-            c.id as string,
-            c.front as string,
-            c.back as string,
-            c.notes as string || '',
-            c.image as string || ''
-          )
-        );
-        return new Deck(parsed.id, parsed.title, parsed.description, cards);
+        return Deck.fromJSON(JSON.parse(stored));
       }
 
       // If no saved data, create empty deck from metadata
       const meta = decks.find(d => d.id === id);
       if (meta) {
-        return new Deck(meta.id, meta.title, meta.description, []);
+        return new Deck(meta.id, meta.title, meta.description, [], meta.lang || '');
       }
 
       return null;
@@ -157,6 +150,7 @@ export function DecksProvider({ children }: { children: React.ReactNode }) {
   const createDeck = useCallback((title: string, description: string = ''): DeckMeta => {
     const id = generateId(title);
     const now = new Date().toISOString();
+    const lang = getStoredLanguageCode();
 
     const newDeckMeta: DeckMeta = {
       id,
@@ -165,10 +159,11 @@ export function DecksProvider({ children }: { children: React.ReactNode }) {
       cardCount: 0,
       createdAt: now,
       updatedAt: now,
+      lang,
     };
 
     // Save empty deck
-    const newDeck = new Deck(id, title, description, []);
+    const newDeck = new Deck(id, title, description, [], lang);
     const deckKey = `${STORAGE_KEY}-deck-${id}`;
     localStorage.setItem(deckKey, newDeck.toJSONString());
 
@@ -326,6 +321,7 @@ export function DecksProvider({ children }: { children: React.ReactNode }) {
           cardCount: deck.getCardCount(),
           createdAt: now,
           updatedAt: now,
+          lang: deck.lang || getStoredLanguageCode(),
         };
 
         // Save deck data

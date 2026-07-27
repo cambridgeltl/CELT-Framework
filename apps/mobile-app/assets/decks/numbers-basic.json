@@ -1,0 +1,84 @@
+{
+  "id": "numbers-basic",
+  "title": "Numbers",
+  "description": "Learn to count in Dzardzongke",
+  "cards": [
+    {
+      "id": "number-1",
+      "front": "1",
+      "back": "cik",
+      "notes": "Example: kyi karu cik (one white dog)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-2",
+      "front": "2",
+      "back": "nyí",
+      "notes": "Example: balwa seru nyí (two yellow frogs)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-3",
+      "front": "3",
+      "back": "sum",
+      "notes": "Example: khorak nakpu sum (three black birds)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-4",
+      "front": "4",
+      "back": "zhi",
+      "notes": "Example: ruebal jongkhu zhi (four green turtles)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-5",
+      "front": "5",
+      "back": "ngá",
+      "notes": "Example: trip múkpu ngá (five brown monkeys)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-6",
+      "front": "6",
+      "back": "druk",
+      "notes": "Example: aze kalak nakpu druk (six black foxes)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-7",
+      "front": "7",
+      "back": "duen",
+      "notes": "Example: ja junga duen (seven white birds)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-8",
+      "front": "8",
+      "back": "gye",
+      "notes": "Example: nyá ngóenpo gye (eight blue fish)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-9",
+      "front": "9",
+      "back": "gu",
+      "notes": "Example: phempalak che gu (nine red butterflies)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-10",
+      "front": "10",
+      "back": "cu",
+      "notes": "Example: phawang thaldok cu (ten white bats)",
+      "hasAudio": false
+    },
+    {
+      "id": "number-celebration",
+      "front": "🎉 Excellent! 🎉",
+      "back": "You've learned to count to 10 in Dzardzongke!",
+      "notes": "Congratulations on mastering the numbers 1-10!",
+      "hasAudio": false
+    }
+  ]
+}

@@ -16,7 +16,7 @@ import Animated, {
   ReduceMotion,
 } from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
-import { contentRegistry, getQuizImageForPrompt } from '../services/contentRegistry';
+import { contentRegistry, getQuizImageForPrompt, getLanguageDisplayName } from '../services/contentRegistry';
 import { useLanguage } from '../stores/useLanguage';
 import { useSaved } from '../stores/useSaved';
 import AnimatedButton from '../components/AnimatedButton';
@@ -242,7 +242,7 @@ export const MultipleChoice: React.FC = () => {
   }
 
   const isCorrect = options.find(o => o.text === selected)?.isCorrect === true;
-  const targetLabel = selectedLanguage === 'qu' ? 'Quechua' : 'Dzardzongke';
+  const targetLabel = getLanguageDisplayName(selectedLanguage);
   const currentKey = `${currentItem.prompt}=>${currentItem.answer}`;
   const isSaved = savedKeys.has(currentKey);
 
@@ -324,7 +324,7 @@ export const MultipleChoice: React.FC = () => {
               <>
                 <Text style={[styles.feedback, styles.wrongText]}>Not quite.</Text>
                 <Text style={styles.explanationTitle}>Answer</Text>
-                <Text style={styles.explanation}>{selectedLanguage === 'qu' ? 'Quechua' : 'Dzardzongke'}: {currentItem.answer}</Text>
+                <Text style={styles.explanation}>{getLanguageDisplayName(selectedLanguage)}: {currentItem.answer}</Text>
                 <Text style={styles.explanation}>English: {currentItem.prompt}</Text>
                 {currentItem.notes && <Text style={styles.notes}>Notes: {currentItem.notes}</Text>}
               </>

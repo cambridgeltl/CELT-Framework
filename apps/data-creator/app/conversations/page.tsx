@@ -10,6 +10,7 @@ import { Card } from '../components/ui/Card';
 import { Modal } from '../components/ui/Modal';
 import ConversationAudioSection from '../components/ConversationAudioSection';
 import { loadGitHubConfig, isConfigComplete } from '../utils/githubApi';
+import { getLanguageDisplayName } from '../utils/language';
 
 // Icons
 const BackIcon = () => (
@@ -325,7 +326,7 @@ export default function ConversationsPage() {
 
   const handleSaveExchange = () => {
     if (!exchangeForm.english.trim() || !exchangeForm.dzardzongke.trim() || !currentCategory || !currentConversation) {
-      showMessage('error', 'Please enter both English and Dzardzongke text');
+      showMessage('error', 'Please enter both English and target-language text');
       return;
     }
 
@@ -536,9 +537,16 @@ export default function ConversationsPage() {
                         <ChatIcon />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-[var(--color-text)]">
-                          {category.title}
-                        </h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-semibold text-[var(--color-text)]">
+                            {category.title}
+                          </h3>
+                          {category.lang && (
+                            <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[var(--color-primary-light)] text-[var(--color-primary)]">
+                              {getLanguageDisplayName(category.lang)}
+                            </span>
+                          )}
+                        </div>
                         <p className="text-sm text-[var(--color-text-muted)] truncate">
                           {category.description}
                         </p>
@@ -684,7 +692,7 @@ export default function ConversationsPage() {
                           {exchange.english}
                         </p>
 
-                        {/* Dzardzongke translation */}
+                        {/* Target-language translation */}
                         <p 
                           className="mt-2 text-sm font-medium"
                           style={{
@@ -877,12 +885,12 @@ export default function ConversationsPage() {
             />
 
             <Input
-              label="Dzardzongke *"
+              label="Target Language *"
               multiline
               rows={2}
               value={exchangeForm.dzardzongke}
               onChange={(e) => setExchangeForm({ ...exchangeForm, dzardzongke: (e.target as HTMLTextAreaElement).value })}
-              placeholder="Dangsang yoe te? / Denchak yoe te? / Kham zanga yoe te?"
+              placeholder="The translation in your target language..."
             />
 
             {/* Audio Section */}

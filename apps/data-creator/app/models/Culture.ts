@@ -48,6 +48,11 @@ export interface CultureDeck {
   id: string;
   title: string;
   steps: Step[];
+  // Language code this deck was authored under (e.g. "de"), tagged at creation
+  // time for local display only — culture decks are exported into a per-language
+  // folder (assets/culture/{lang}/), not tagged inside the JSON, so this is
+  // stripped before export (see deckToJSON).
+  lang?: string;
 }
 
 // Helper functions
@@ -109,7 +114,8 @@ export function isDeckValid(deck: CultureDeck): boolean {
 
 // Convert deck to JSON string
 export function deckToJSON(deck: CultureDeck, pretty: boolean = true): string {
-  return JSON.stringify(deck, null, pretty ? 2 : 0);
+  const { lang, ...exportable } = deck;
+  return JSON.stringify(exportable, null, pretty ? 2 : 0);
 }
 
 // Parse deck from JSON

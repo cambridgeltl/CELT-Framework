@@ -1,0 +1,23 @@
+{
+  "lang": "fr",
+  "entries": [
+    {
+      "dz": "blanc",
+      "en": "white",
+      "example": "La neige est blanche.",
+      "exampleEn": "The snow is white."
+    },
+    {
+      "dz": "noir",
+      "en": "black",
+      "example": "Le chat est noir.",
+      "exampleEn": "The cat is black."
+    },
+    {
+      "dz": "rouge",
+      "en": "red",
+      "example": "La pomme est rouge.",
+      "exampleEn": "The apple is red."
+    }
+  ]
+}

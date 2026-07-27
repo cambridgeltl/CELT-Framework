@@ -6,6 +6,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
 import { useAuth } from '../stores/useAuth';
+import { useLanguage } from '../stores/useLanguage';
+import { getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from './AnimatedButton';
 
 type MenuItemConfig = {
@@ -22,6 +24,7 @@ const ModernTopNavigation: React.FC = () => {
   const navigation = useNavigation();
   const [menuVisible, setMenuVisible] = useState(false);
   const { logout } = useAuth();
+  const { selectedLanguage } = useLanguage();
 
   const openMenu = useCallback(() => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -81,10 +84,7 @@ const ModernTopNavigation: React.FC = () => {
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <View style={styles.header}>
         <View style={styles.titleContainer}>
-          <Text style={styles.appTitle}>Dzardzongke</Text>
-          <View style={styles.subtitleContainer}>
-            <Text style={styles.subtitle}>Learn • Practice • Master</Text>
-          </View>
+          <Text style={styles.appTitle}>{getLanguageDisplayName(selectedLanguage)}</Text>
         </View>
 
         {/* Three dots menu trigger */}
@@ -176,16 +176,6 @@ const styles = StyleSheet.create({
     color: '#6366f1',
     letterSpacing: -0.8,
     marginBottom: 2,
-  },
-  subtitleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  subtitle: {
-    fontSize: 14,
-    color: '#64748b',
-    fontWeight: '500',
-    letterSpacing: 0.5,
   },
   menuButton: {
     width: 40,

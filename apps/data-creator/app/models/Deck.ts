@@ -57,18 +57,22 @@ export class Deck {
   title: string;
   description: string;
   cards: Card[];
+  // Language code this deck was authored under (e.g. "de"), tagged at creation time.
+  lang: string;
 
   // Constructor to create a new deck instance
   constructor(
     id: string = "",
     title: string = "",
     description: string = "",
-    cards: Card[] = []
+    cards: Card[] = [],
+    lang: string = ""
   ) {
     this.id = id;
     this.title = title;
     this.description = description;
     this.cards = cards;
+    this.lang = lang;
   }
 
   // Method to add a card to the deck
@@ -124,19 +128,22 @@ export class Deck {
     this.cards = [];
   }
 
-  // Method to convert deck to JSON object
-  toJSON() {
+  // Method to convert deck to JSON object. Pass a lang code to override the
+  // deck's own stored language (e.g. "de") — defaults to whatever it was tagged with.
+  toJSON(lang?: string) {
+    const effectiveLang = lang || this.lang;
     return {
       id: this.id,
       title: this.title,
       description: this.description,
       cards: this.cards.map((card) => card.toJSON()),
+      ...(effectiveLang ? { lang: effectiveLang } : {}),
     };
   }
 
   // Method to get JSON string with formatting
-  toJSONString(pretty: boolean = true): string {
-    return JSON.stringify(this.toJSON(), null, pretty ? 2 : 0);
+  toJSONString(pretty: boolean = true, lang?: string): string {
+    return JSON.stringify(this.toJSON(lang), null, pretty ? 2 : 0);
   }
 
   // Static method to create Deck from JSON object
@@ -148,7 +155,8 @@ export class Deck {
       json.id || "",
       json.title || "",
       json.description || "",
-      cards
+      cards,
+      json.lang || ""
     );
   }
 
