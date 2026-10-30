@@ -72,13 +72,6 @@
       "back": "cu",
       "notes": "Example: phawang thaldok cu (ten white bats)",
       "hasAudio": false
-    },
-    {
-      "id": "number-celebration",
-      "front": "🎉 Excellent! 🎉",
-      "back": "You've learned to count to 10 in Dzardzongke!",
-      "notes": "Congratulations on mastering the numbers 1-10!",
-      "hasAudio": false
     }
   ]
 }

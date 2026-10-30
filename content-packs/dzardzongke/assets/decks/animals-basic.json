@@ -82,14 +82,6 @@
       "notes": "Ten white bats\n\nphawang = bat\nthaldok = white (another word for white, different from karu/junga)\ncu = ten (number)\n\nNote: Dzardzongke has different words for white: karu, junga, and thaldok.",
       "image": "bats.png",
       "hasAudio": false
-    },
-    {
-      "id": "animal-celebration",
-      "front": "🎉 Wonderful! 🎉",
-      "back": "You've completed the animals deck!",
-      "notes": "Congratulations on learning all the animal names in Dzardzongke!\n\nYou've learned:\n- Animal names: kyi (dog), balwa (frog), khorak/ja (bird), ruebal (turtle), trip (monkey), aze (fox), nyá (fish), phempalak (butterfly), phawang (bat)\n- Colors: karu/junga/thaldok (white), seru (yellow), nakpu (black), jongkhu (green), múkpu (brown), ngóenpo (blue), che (red)\n- Numbers: cik (one), nyí (two), sum (three), zhi (four), ngá (five), druk (six), duen (seven), gye (eight), gu (nine), cu (ten)",
-      "image": "",
-      "hasAudio": false
     }
   ]
 }
