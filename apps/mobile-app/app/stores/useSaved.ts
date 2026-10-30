@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import * as SecureStore from '../../lib/utils/secureStore';
 import { useAuth } from './useAuth';
+import { track } from '../analytics/analytics';
 
 export type SavedSource = 'deck' | 'dictionary';
 
@@ -51,6 +52,7 @@ export const useSaved = create<SavedState>((set, get) => ({
     const id = Math.random().toString(36).slice(2);
     const createdAt = new Date().toISOString();
     const newItem: SavedItem = { id, createdAt, ...item };
+    track('word_saved', { word: item.answer, prompt: item.prompt, saved: true, source: String(item.source ?? 'unknown') });
     const next = [...get().items, newItem];
     set({ items: next });
     const payload = JSON.stringify(next);
@@ -59,6 +61,10 @@ export const useSaved = create<SavedState>((set, get) => ({
   },
 
   removeItem: async (id: string) => {
+    const removed = get().items.find(i => i.id === id);
+    if (removed) {
+      track('word_saved', { word: removed.answer, prompt: removed.prompt, saved: false, source: String(removed.source ?? 'unknown') });
+    }
     const next = get().items.filter(i => i.id !== id);
     set({ items: next });
     const payload = JSON.stringify(next);

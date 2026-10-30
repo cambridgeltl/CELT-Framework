@@ -16,6 +16,7 @@ import * as Haptics from 'expo-haptics';
 import type { RootStackParamList } from '../navigation/types';
 import type { Card } from '../types/deck';
 import { useProgress } from '../stores/useProgress';
+import { useDeckTracking } from '../analytics';
 import { useLanguage } from '../stores/useLanguage';
 import { getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from '../components/AnimatedButton';
@@ -39,6 +40,10 @@ const NumbersWrite: React.FC = () => {
   const [correctCount, setCorrectCount] = useState(0);
 
   const { setMastered, setLearning, startSession, endSession } = useProgress();
+  const tracking = useDeckTracking(deckId, 'numbers', cards.length);
+  React.useEffect(() => {
+    tracking.cardShown();
+  }, [currentCardIndex, tracking]);
   const currentCard = cards[currentCardIndex];
 
   // Shared input feedback animations
@@ -57,6 +62,10 @@ const NumbersWrite: React.FC = () => {
     const isAnswerCorrect = userInput.toLowerCase().trim() === currentCard.back.toLowerCase().trim();
     setIsCorrect(isAnswerCorrect);
     setShowResult(true);
+    tracking.cardAnswered(currentCard.id, isAnswerCorrect ? 'correct' : 'incorrect', {
+      response: userInput,
+      expected: currentCard.back,
+    });
 
     if (isAnswerCorrect) {
       showCorrect();
@@ -86,6 +95,7 @@ const NumbersWrite: React.FC = () => {
       setShowResult(false);
       setShowAnswer(false);
     } else {
+      tracking.deckCompleted();
       endSession();
       // Alert.alert is a no-op on web, so go to the shared Congrats screen instead
       navigation.navigate('Congrats', {

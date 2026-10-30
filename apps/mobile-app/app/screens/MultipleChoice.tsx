@@ -1,5 +1,5 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useRef } from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Animated, {
   useSharedValue,
@@ -22,6 +22,7 @@ import { useSaved } from '../stores/useSaved';
 import AnimatedButton from '../components/AnimatedButton';
 import { triggerShake } from '../hooks/useAnimations';
 import type { Card, Deck } from '../types/deck';
+import { track } from '../analytics';
 
 type QuizOption = {
   text: string;
@@ -103,6 +104,10 @@ export const MultipleChoice: React.FC = () => {
   const { saveItem, items, loadSaved } = useSaved();
   const [savedKeys, setSavedKeys] = useState<Set<string>>(new Set());
   const [questionKey, setQuestionKey] = useState(0);
+  const questionShownAt = useRef(Date.now());
+  useEffect(() => {
+    questionShownAt.current = Date.now();
+  }, [questionKey]);
 
   // Animation values for options
   const optionScales = [
@@ -184,6 +189,17 @@ export const MultipleChoice: React.FC = () => {
     if (showResult) return;
     setSelected(opt.text);
     setShowResult(true);
+    if (currentItem) {
+      track('quiz_answered', {
+        prompt: currentItem.prompt,
+        chosen: opt.text,
+        expected: currentItem.answer,
+        correct: opt.isCorrect,
+        response_ms: Date.now() - questionShownAt.current,
+        option_count: options.length,
+        has_image: !!currentImage,
+      });
+    }
 
     if (opt.isCorrect) {
       // Success animation

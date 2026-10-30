@@ -18,6 +18,7 @@ import AnimatedButton from '../components/AnimatedButton';
 import { contentRegistry } from '../services/contentRegistry';
 import { useLanguage } from '../stores/useLanguage';
 import { useSaved } from '../stores/useSaved';
+import { track } from '../analytics';
 
 const AnimatedView = Animated.View;
 
@@ -116,9 +117,23 @@ const Dictionary: React.FC = () => {
     [dictionary.entries, lowerEntries, fuse]
   );
 
+  // Log settled searches only (not every keystroke): the query and how many entries matched.
+  const logSearch = useMemo(
+    () =>
+      debounce((text: string) => {
+        const q = text.trim().toLowerCase();
+        if (!q) return;
+        const exact = lowerEntries.filter(e => e._enLower.includes(q) || e._dzLower.includes(q)).length;
+        track('dictionary_search', { query: text.trim(), result_count: exact > 0 ? exact : fuse.search(text).length });
+      }, 1200),
+    [lowerEntries, fuse]
+  );
+  useEffect(() => () => logSearch.flush(), [logSearch]);
+
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     debouncedSearch(query);
+    logSearch(query);
   };
 
   const renderItem = useCallback(({ item, index }: { item: any; index: number }) => {

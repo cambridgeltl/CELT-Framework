@@ -23,6 +23,7 @@ import * as Haptics from 'expo-haptics';
 import type { RootStackParamList } from '../navigation/types';
 import AnimatedButton from '../components/AnimatedButton';
 import { useProgress } from '../stores/useProgress';
+import { useDeckTracking } from '../analytics';
 import { getDeckImage } from '../../assets/images';
 
 const { width: SW, height: SH } = Dimensions.get('window');
@@ -128,12 +129,14 @@ const Study: React.FC = () => {
     startSession,
     endSession,
   } = useProgress();
+  const tracking = useDeckTracking(deckId, 'study', cards.length);
   const card = cards[idx];
   const theme = CARD_THEMES[idx % CARD_THEMES.length];
   const img = card.image ? getDeckImage(deckId, card.image) : undefined;
 
   // Reset image ratio when switching cards
   useEffect(() => { setImgRatio(0.667); }, [idx]);
+  useEffect(() => { tracking.cardShown(); }, [idx, tracking]);
 
   // Card dimensions: image cards adapt to image aspect ratio, text cards use default
   let cardW: number;
@@ -176,7 +179,8 @@ const Study: React.FC = () => {
       reduceMotion: RM,
     });
     setFlipped(f => !f);
-  }, [flipped]);
+    tracking.cardFlipped(card.id, flipped ? 'front' : 'back');
+  }, [flipped, card, tracking]);
 
   /* ── Fly card out ── */
   const flyOut = useCallback(
@@ -254,12 +258,14 @@ const Study: React.FC = () => {
   const gotIt = useCallback(async () => {
     if (animating.current) return;
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    tracking.cardAnswered(card.id, 'got_it');
     await setMastered(deckId, card.id, true);
     setStreak(s => s + 1);
 
     const m = countByStatus(deckId, 'mastered');
     if (m === cards.length) {
       flyOut('right', () => {
+        tracking.deckCompleted();
         endSession();
         nav.navigate('Congrats', {
           deckTitle,
@@ -276,6 +282,7 @@ const Study: React.FC = () => {
       });
     } else {
       flyOut('right', () => {
+        tracking.deckCompleted();
         endSession();
         nav.goBack();
       });
@@ -292,12 +299,14 @@ const Study: React.FC = () => {
     nav,
     flyOut,
     next,
+    tracking,
   ]);
 
   /* ── Repeat ── */
   const repeat = useCallback(() => {
     if (animating.current) return;
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+    tracking.cardAnswered(card.id, 'repeat');
     setMastered(deckId, card.id, false);
     setLearning(deckId, card.id, true);
     setStreak(0);
@@ -309,6 +318,7 @@ const Study: React.FC = () => {
       });
     } else {
       flyOut('left', () => {
+        tracking.deckCompleted();
         endSession();
         nav.goBack();
       });
@@ -324,6 +334,7 @@ const Study: React.FC = () => {
     nav,
     flyOut,
     next,
+    tracking,
   ]);
 
   /* ── Pan gesture ── */

@@ -21,6 +21,7 @@ import type {
   CultureStep,
 } from '../content/types';
 import { useLanguage } from '../stores/useLanguage';
+import { track } from '../analytics';
 
 // Use require.context-based culture image registry
 // Images are auto-loaded from assets/images/culture/ folder
@@ -95,6 +96,16 @@ const CultureDynamic: React.FC = () => {
     return 'Next';
   }, [currentStep, singleChecked, multiChecked, isLastDeck, isLastInDeck]);
 
+  useEffect(() => {
+    if (!currentDeck || contentDecks.length === 0) return;
+    track('culture_step_viewed', {
+      deck_id: currentDeck.id,
+      step_index: currentDeck.id === 'map' ? 0 : stepIndex,
+      step_type: currentDeck.id === 'map' ? 'map' : currentStep?.type ?? 'unknown',
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- log once per deck/step change
+  }, [currentDeck?.id, stepIndex, contentDecks.length]);
+
   // Early return must come after all hooks (rules of hooks).
   if (contentDecks.length === 0) {
     return (
@@ -111,10 +122,14 @@ const CultureDynamic: React.FC = () => {
     if (!currentStep) return;
     if (currentStep.type === 'quiz-single' && !singleChecked) {
       setSingleChecked(true);
+      const chosen = currentStep.options.find((o) => o.label === singleSelected);
+      track('culture_quiz_answered', { deck_id: currentDeck?.id ?? '', step_index: stepIndex, correct: !!chosen?.correct });
       return;
     }
     if (currentStep.type === 'quiz-multi' && !multiChecked) {
       setMultiChecked(true);
+      const allRight = currentStep.options.every((o) => o.correct === multiSelected.has(o.label));
+      track('culture_quiz_answered', { deck_id: currentDeck?.id ?? '', step_index: stepIndex, correct: allRight });
       return;
     }
     // advance

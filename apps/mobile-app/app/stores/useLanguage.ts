@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import * as SecureStore from 'expo-secure-store';
 import { Platform } from 'react-native';
+import { track } from '../analytics/analytics';
 
 // Any string works — new languages become available the moment content tagged
 // with that code exists (see contentRegistry.getAvailableLanguages()).
@@ -42,6 +43,8 @@ export const useLanguage = create<LanguageState>((set, get) => ({
   },
 
   setLanguage: async (lang: LanguageCode) => {
+    const previous = get().hasChosenLanguage ? get().selectedLanguage : null;
+    if (previous !== lang) track('language_selected', { language: lang, previous });
     set({ selectedLanguage: lang, hasChosenLanguage: true });
     const data = JSON.stringify({ selectedLanguage: lang, hasChosenLanguage: true });
     if (Platform.OS === 'web') {

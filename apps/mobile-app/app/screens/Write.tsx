@@ -8,6 +8,7 @@ import Animated, {
   ReduceMotion,
 } from 'react-native-reanimated';
 import { useProgress } from '../stores/useProgress';
+import { useDeckTracking } from '../analytics';
 import { useLanguage } from '../stores/useLanguage';
 import { getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from '../components/AnimatedButton';
@@ -30,6 +31,10 @@ export const Write: React.FC<Props> = ({ navigation, route }) => {
   const [userInput, setUserInput] = useState('');
   const [showResult, setShowResult] = useState(false);
   const { setMastered } = useProgress();
+  const tracking = useDeckTracking(deckId, 'write', cards.length);
+  useEffect(() => {
+    tracking.cardShown();
+  }, [currentCardIndex, tracking]);
   const { selectedLanguage } = useLanguage();
 
   // Shared input feedback animations
@@ -57,6 +62,10 @@ export const Write: React.FC<Props> = ({ navigation, route }) => {
 
   const handleCheck = () => {
     setShowResult(true);
+    tracking.cardAnswered(currentCard.id, isCorrect ? 'correct' : 'incorrect', {
+      response: userInput,
+      expected: cleanBackText,
+    });
 
     if (isCorrect) {
       showCorrect();
@@ -79,6 +88,7 @@ export const Write: React.FC<Props> = ({ navigation, route }) => {
       setUserInput('');
       setShowResult(false);
     } else {
+      tracking.deckCompleted();
       navigation.goBack();
     }
   };

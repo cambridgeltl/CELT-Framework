@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, type NavigationState, type PartialState } from '@react-navigation/native';
 import {
   createStackNavigator,
   type StackNavigationOptions,
@@ -37,6 +37,7 @@ import { Write } from './app/screens/Write';
 import { useAuth } from './app/stores/useAuth';
 import { useLanguage } from './app/stores/useLanguage';
 import { APP_NAME } from './app/config/appName';
+import * as analytics from './app/analytics';
 
 const DeckStackNav = createStackNavigator();
 const ConvoStackNav = createStackNavigator();
@@ -108,9 +109,30 @@ function ConversationsStack() {
   );
 }
 
+// Name of the innermost focused route, e.g. "Study" inside the deck stack.
+function focusedRouteName(state: NavigationState | PartialState<NavigationState> | undefined): string | null {
+  if (!state || state.index === undefined || !state.routes) return null;
+  const route = state.routes[state.index];
+  return focusedRouteName(route.state as NavigationState | undefined) ?? route.name;
+}
+
+// Tabs that host their own stack report the stack's screens instead (via onStateChange).
+const TAB_SCREEN_NAMES: Record<string, string> = {
+  DeckStack: 'Decks',
+  Stats: 'Progress',
+  Dictionary: 'Dictionary',
+  Conversations: 'Categories',
+  MultipleChoice: 'Quiz',
+  Culture: 'Culture',
+};
+
 function MainTabs() {
   const [currentTab, setCurrentTab] = useState('DeckStack');
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    analytics.trackScreen(TAB_SCREEN_NAMES[currentTab] ?? currentTab);
+  }, [currentTab]);
 
   const renderCurrentScreen = () => {
     switch (currentTab) {
@@ -154,7 +176,20 @@ function MainTabs() {
 export default function App() {
   const { loadLanguage, hasChosenLanguage } = useLanguage();
   const { currentUser, hydrate, loadUserStores } = useAuth();
+  const selectedLanguage = useLanguage((s) => s.selectedLanguage);
   const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    analytics.startAnalytics();
+  }, []);
+
+  useEffect(() => {
+    void analytics.setUser(currentUser);
+  }, [currentUser]);
+
+  useEffect(() => {
+    analytics.setLanguage(selectedLanguage);
+  }, [selectedLanguage]);
 
   useEffect(() => {
     async function bootstrap() {
@@ -179,35 +214,43 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <StatusBar style="dark" />
-        <PaperProvider theme={theme}>
-          <KeyboardConfig>
-            <NavigationContainer>
-              <RootStack.Navigator screenOptions={{ ...screenOptions, headerShown: false, cardStyle: { flex: 1 } }}>
-                {!currentUser ? (
-                  <>
-                    <RootStack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-                    <RootStack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
-                  </>
-                ) : !hasChosenLanguage ? (
-                  <RootStack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
-                ) : (
-                  <>
-                    <RootStack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
-                    <RootStack.Screen name="Settings" component={Settings} options={{ headerShown: true, headerTitle: 'Settings' }} />
-                    <RootStack.Screen name="Account" component={Account} options={{ headerShown: true, headerTitle: 'Account' }} />
-                    <RootStack.Screen name="Profile" component={Profile} options={{ headerShown: true, headerTitle: 'Saved' }} />
-                    <RootStack.Screen name="Credits" component={Credits} options={{ headerShown: true, headerTitle: 'Credits' }} />
-                  </>
-                )}
-              </RootStack.Navigator>
-            </NavigationContainer>
-          </KeyboardConfig>
-        </PaperProvider>
-      </GestureHandlerRootView>
-    </SafeAreaProvider>
+    <analytics.AnalyticsErrorBoundary>
+      <SafeAreaProvider>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <StatusBar style="dark" />
+          <PaperProvider theme={theme}>
+            <KeyboardConfig>
+              <NavigationContainer
+                onStateChange={(state) => {
+                  const name = focusedRouteName(state);
+                  // "Main" hosts the drawer tabs, which MainTabs reports itself.
+                  if (name && name !== 'Main') analytics.trackScreen(name);
+                }}
+              >
+                <RootStack.Navigator screenOptions={{ ...screenOptions, headerShown: false, cardStyle: { flex: 1 } }}>
+                  {!currentUser ? (
+                    <>
+                      <RootStack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+                      <RootStack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
+                    </>
+                  ) : !hasChosenLanguage ? (
+                    <RootStack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
+                  ) : (
+                    <>
+                      <RootStack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
+                      <RootStack.Screen name="Settings" component={Settings} options={{ headerShown: true, headerTitle: 'Settings' }} />
+                      <RootStack.Screen name="Account" component={Account} options={{ headerShown: true, headerTitle: 'Account' }} />
+                      <RootStack.Screen name="Profile" component={Profile} options={{ headerShown: true, headerTitle: 'Saved' }} />
+                      <RootStack.Screen name="Credits" component={Credits} options={{ headerShown: true, headerTitle: 'Credits' }} />
+                    </>
+                  )}
+                </RootStack.Navigator>
+              </NavigationContainer>
+            </KeyboardConfig>
+          </PaperProvider>
+        </GestureHandlerRootView>
+      </SafeAreaProvider>
+    </analytics.AnalyticsErrorBoundary>
   );
 }
 

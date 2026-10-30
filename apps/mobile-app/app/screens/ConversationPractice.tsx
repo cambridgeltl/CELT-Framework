@@ -30,6 +30,7 @@ import { useLanguage } from '../stores/useLanguage';
 import AnimatedButton from '../components/AnimatedButton';
 import { SPRING_CONFIG } from '../hooks/useAnimations';
 import { ProgressBar } from '../components/ProgressBar';
+import { track } from '../analytics';
 
 type ConversationPracticeRouteProp = RouteProp<{
   params: {
@@ -63,6 +64,11 @@ export const ConversationPractice: React.FC = () => {
   const speakingRingOpacity = useSharedValue(0);
 
   const scrollViewRef = useRef<ScrollView>(null);
+  const openedAt = useRef(Date.now());
+
+  useEffect(() => {
+    track('conversation_opened', { category_id: categoryId, conversation_id: conversationId });
+  }, [categoryId, conversationId]);
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
@@ -149,6 +155,11 @@ export const ConversationPractice: React.FC = () => {
       setCurrentExchangeIndex(currentExchangeIndex + 1);
     } else {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      track('conversation_completed', {
+        conversation_id: conversationId,
+        line_count: exchanges.length,
+        duration_ms: Date.now() - openedAt.current,
+      });
       navigation.goBack();
     }
   };
@@ -162,12 +173,15 @@ export const ConversationPractice: React.FC = () => {
 
   const cycleViewMode = () => {
     Haptics.selectionAsync();
-    setViewMode(prev => (prev === 'both' ? 'english' : prev === 'english' ? 'dz' : 'both'));
+    const next = viewMode === 'both' ? 'english' : viewMode === 'english' ? 'dz' : 'both';
+    setViewMode(next);
+    track('conversation_view_mode', { conversation_id: conversationId, mode: next === 'dz' ? 'target' : next });
   };
 
   const handleReplay = (idx: number, speaker: string) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     const exchangeNumber = idx + 1;
+    track('conversation_audio_played', { conversation_id: conversationId, line_index: idx });
     if (__DEV__) console.log('🎵 Playing conversation audio:', conversationId, exchangeNumber, speaker);
     audioService.playConversationAudio(conversationId, exchangeNumber, speaker).catch((error) => {
       if (__DEV__) console.error('❌ Failed to play audio:', error);

@@ -15,6 +15,7 @@ import Animated, {
 import * as Haptics from 'expo-haptics';
 import { hasDictionaryAudio } from '../../assets/audio';
 import { audioService } from '../services/AudioService';
+import { track } from '../analytics';
 import AnimatedButton from './AnimatedButton';
 import { SPRING_CONFIG } from '../hooks/useAnimations';
 
@@ -77,6 +78,7 @@ export const DictEntryCard: React.FC<Props> = ({ entry }) => {
         false
       );
 
+      track('dictionary_audio_played', { word: entry.dz });
       if (entry.audio) {
         await audioService.playAudio(entry.audio);
       } else {

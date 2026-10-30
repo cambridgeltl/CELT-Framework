@@ -5,6 +5,8 @@ import { useNavigation } from '@react-navigation/native';
 import { useLanguage } from '../stores/useLanguage';
 import { getAvailableLanguages, getLanguageDisplayName } from '../services/contentRegistry';
 import AnimatedButton from '../components/AnimatedButton';
+import { ResearchSettings } from '../components/ResearchSettings';
+import Constants from 'expo-constants';
 
 const Settings: React.FC = () => {
   const navigation = useNavigation<any>();
@@ -78,8 +80,10 @@ const Settings: React.FC = () => {
         )}
       </View>
 
+      <ResearchSettings />
+
       {/* App version */}
-      <Text style={styles.version}>App v1.0.0</Text>
+      <Text style={styles.version}>App v{Constants.expoConfig?.version ?? '1.0.0'}</Text>
     </ScrollView>
   );
 };
