@@ -6,7 +6,10 @@
 export interface Exchange {
   speaker: string;
   english: string;
+  /** Target-language line. Internal field name kept for backwards compatibility. */
   dzardzongke: string;
+  /** Language-neutral alias for `dzardzongke` (preferred in new content files). */
+  target?: string;
 }
 
 export interface Conversation {
@@ -34,8 +37,19 @@ const conversationContext = require.context('./', false, /\.json$/);
 const allConversations: Record<string, ConversationsData> = {};
 
 conversationContext.keys().forEach(key => {
-  const convData = conversationContext(key) as ConversationsData;
-  const langCode = convData.lang || 'dz';
+  const raw = conversationContext(key) as ConversationsData;
+  const langCode = raw.lang || 'dz';
+  // Accept the language-neutral "target" field and normalise it to the internal "dzardzongke" field.
+  const convData: ConversationsData = {
+    ...raw,
+    categories: (raw.categories || []).map((cat) => ({
+      ...cat,
+      conversations: (cat.conversations || []).map((cv) => ({
+        ...cv,
+        exchanges: (cv.exchanges || []).map((ex) => ({ ...ex, dzardzongke: ex.dzardzongke ?? ex.target ?? '' })),
+      })),
+    })),
+  };
 
   // Merge categories if language code already exists
   if (allConversations[langCode]) {

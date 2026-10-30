@@ -35,6 +35,7 @@ import Study from './app/screens/Study';
 import { Write } from './app/screens/Write';
 import { useAuth } from './app/stores/useAuth';
 import { useLanguage } from './app/stores/useLanguage';
+import { APP_NAME } from './app/config/appName';
 
 const DeckStackNav = createStackNavigator();
 const ConvoStackNav = createStackNavigator();
@@ -171,7 +172,7 @@ export default function App() {
     return (
       <View style={splashStyles.container}>
         <StatusBar style="dark" />
-        <Text style={splashStyles.title}>Dzardzongke</Text>
+        <Text style={splashStyles.title}>{APP_NAME}</Text>
       </View>
     );
   }

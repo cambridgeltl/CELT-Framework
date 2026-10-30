@@ -70,7 +70,7 @@ A8: food-basic       | B8: Food           | C8: Basic food names  | D8: beginner
 
 ### **Column Headers (Row 1):**
 ```
-A1: dz | B1: en | C1: example | D1: exampleEn | E1: audio | F1: difficulty
+A1: word | B1: en | C1: example | D1: exampleEn | E1: audio | F1: difficulty
 ```
 
 ### **Sample Data (Starting Row 2):**
@@ -88,7 +88,7 @@ A8: ཤ་མ        | B8: meat      | C8: ཤ་མ་ཆུང་ངུ་    
 
 | Column | Purpose | Example | Rules |
 |--------|---------|---------|-------|
-| **dz** | Dzardzongke word | `བྱ་` | The word being defined |
+| **word** | Dzardzongke word | `བྱ་` | The word being defined |
 | **en** | English translation | `bird` | English meaning |
 | **example** | Dzardzongke example | `བྱ་མོ་ཆུང་ངུ་` | Sentence using the word |
 | **exampleEn** | English example | `small bird` | English translation of example |

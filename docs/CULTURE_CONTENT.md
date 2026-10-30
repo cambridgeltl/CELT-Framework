@@ -49,7 +49,7 @@ This creates a new tab in the Culture screen.
 
 ## Interactive Map (StoryMapJS)
 
-The Culture screen can embed a StoryMapJS link under an "Interactive Map" tab. To set or change it, edit the `storyMapUrl` constant in `app/screens/CultureDynamic.tsx`. Renders as an `<iframe>` on web and a `WebView` on iOS/Android — use a public HTTPS URL, or ensure access if private.
+The Culture screen can embed a StoryMapJS link under an "Interactive Map" tab. Maps are set per language in `apps/mobile-app/assets/culture/maps.json` (`{ "<lang>": "https://…" }`); languages without an entry get no map tab. Renders as an `<iframe>` on web and a `WebView` on iOS/Android — use a public HTTPS URL, or ensure access if private.
 
 ## Example: text + image + quiz
 

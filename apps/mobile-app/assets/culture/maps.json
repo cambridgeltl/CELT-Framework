@@ -1,0 +1,4 @@
+{
+  "_comment": "Optional interactive map (e.g. a StoryMapJS URL) per language code. Languages without an entry get no map tab.",
+  "dz": "https://uploads.knightlab.com/storymapjs/dadb49b390f413e3dae57604e019397c/dzardzongke/index.html"
+}

@@ -88,3 +88,13 @@ export function getCultureDecksByLanguage(langCode: string): CultureDeck[] {
 export function getAvailableCultureLanguages(): string[] {
   return Object.keys(allCultureDecks);
 }
+
+// Optional per-language interactive map (assets/culture/maps.json). Root-level JSON files are
+// not culture decks, so the loader above skips them.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const cultureMaps = require('./maps.json') as Record<string, string>;
+
+export function getCultureMapUrl(lang: string): string | undefined {
+  const url = cultureMaps[lang];
+  return typeof url === 'string' && url.startsWith('http') ? url : undefined;
+}

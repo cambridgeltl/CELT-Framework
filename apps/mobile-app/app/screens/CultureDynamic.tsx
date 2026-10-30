@@ -11,6 +11,7 @@ import {
   View,
 } from 'react-native';
 import WebView from 'react-native-webview';
+import { getCultureMapUrl } from '../../assets/culture';
 import { cultureRegistry } from '../../assets/images';
 import { loadCulture } from '../content/loadCulture';
 import type {
@@ -28,18 +29,17 @@ const imageMap = cultureRegistry;
 const CultureDynamic: React.FC = () => {
   const { selectedLanguage } = useLanguage();
   const contentDecks: CultureDeck[] = loadCulture(selectedLanguage);
+  const storyMapUrl = getCultureMapUrl(selectedLanguage);
   const uiDecks: CultureDeck[] = useMemo(
     () => [
       ...contentDecks,
-      { id: 'map', title: 'Interactive Map', steps: [] as any },
+      ...(storyMapUrl ? [{ id: 'map', title: 'Interactive Map', steps: [] as CultureDeck['steps'] }] : []),
     ],
-    [contentDecks]
+    [contentDecks, storyMapUrl]
   );
   const [activeDeckIndex, setActiveDeckIndex] = useState(0);
   const [stepIndex, setStepIndex] = useState(0);
 
-  const storyMapUrl =
-    'https://uploads.knightlab.com/storymapjs/dadb49b390f413e3dae57604e019397c/dzardzongke/index.html';
 
   // quiz state
   const [singleSelected, setSingleSelected] = useState<string | null>(null);
@@ -286,7 +286,7 @@ const CultureDynamic: React.FC = () => {
         ))}
       </View>
 
-      {currentDeck?.id === 'map' ? (
+      {currentDeck?.id === 'map' && storyMapUrl ? (
         <View style={styles.card}>
           {Platform.OS === 'web' ? (
             // @ts-ignore iframe is valid on web build

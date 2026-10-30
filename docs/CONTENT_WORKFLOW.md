@@ -79,6 +79,7 @@ Use the [ready-made template spreadsheet](https://docs.google.com/spreadsheets/d
 | *(target-language word)* | bird | *(example sentence)* | small bird | bird.mp3 | beginner |
 
 - `word` is whatever you're teaching; `en` is the English gloss (or swap for your reference language).
+- In the exported JSON the word is stored as `dz` for backwards compatibility; the app also accepts `word`. Conversation files likewise accept `target` as well as the older `dzardzongke` key.
 - Add/remove rows to add/remove entries; edit any cell to update a translation.
 
 ### Culture tab

@@ -10,6 +10,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAuth } from '../../stores/useAuth';
+import { APP_NAME } from '../../config/appName';
 
 export default function Login({ navigation }: any) {
   const { login, loading } = useAuth();
@@ -33,7 +34,7 @@ export default function Login({ navigation }: any) {
       <View style={styles.container}>
         {/* Branding */}
         <View style={styles.brandContainer}>
-          <Text style={styles.appTitle}>Dzardzongke</Text>
+          <Text style={styles.appTitle}>{APP_NAME}</Text>
         </View>
 
         {/* Form card */}

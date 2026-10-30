@@ -6,7 +6,10 @@
 export type DictionaryShape = {
   lang?: string;
   entries: Array<{
+    /** Target-language word. Internal field name kept for backwards compatibility. */
     dz?: string;
+    /** Language-neutral alias for `dz` (preferred in new content files). */
+    word?: string;
     en?: string;
     example?: string;
     exampleEn?: string;
@@ -21,8 +24,13 @@ const dictContext = require.context('./', false, /\.dict\.json$/);
 const allDictionaries: Record<string, DictionaryShape> = {};
 
 dictContext.keys().forEach(key => {
-  const dictData = dictContext(key) as DictionaryShape;
-  const langCode = dictData.lang || 'dz';
+  const raw = dictContext(key) as DictionaryShape;
+  const langCode = raw.lang || 'dz';
+  // Accept the language-neutral "word" field and normalise it to the internal "dz" field.
+  const dictData: DictionaryShape = {
+    ...raw,
+    entries: (raw.entries || []).map((e) => ({ ...e, dz: e.dz ?? e.word })),
+  };
 
   // Merge entries if language code already exists
   if (allDictionaries[langCode]) {
