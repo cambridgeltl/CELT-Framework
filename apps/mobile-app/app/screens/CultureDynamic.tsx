@@ -71,16 +71,11 @@ const CultureDynamic: React.FC = () => {
     setMultiChecked(false);
   }, [activeDeckIndex, stepIndex]);
 
-  if (contentDecks.length === 0) {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>Culture</Text>
-        <Text style={styles.meta}>
-          No culture content is available for this language yet.
-        </Text>
-      </View>
-    );
-  }
+  useEffect(() => {
+    // Switching language changes the deck list; start from the first deck again.
+    setActiveDeckIndex(0);
+    setStepIndex(0);
+  }, [selectedLanguage]);
 
   const currentDeck = uiDecks[activeDeckIndex];
   const steps = currentDeck?.steps ?? [];
@@ -99,6 +94,18 @@ const CultureDynamic: React.FC = () => {
     if (isLastDeck && isLastInDeck) return 'Finish';
     return 'Next';
   }, [currentStep, singleChecked, multiChecked, isLastDeck, isLastInDeck]);
+
+  // Early return must come after all hooks (rules of hooks).
+  if (contentDecks.length === 0) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>Culture</Text>
+        <Text style={styles.meta}>
+          No culture content is available for this language yet.
+        </Text>
+      </View>
+    );
+  }
 
   const handleNext = () => {
     if (!currentStep) return;

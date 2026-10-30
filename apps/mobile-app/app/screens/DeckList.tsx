@@ -32,7 +32,7 @@ const RING_STROKE = 5;
 const RING_RADIUS = (RING_SIZE - RING_STROKE) / 2;
 const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
 
-const ProgressRing = React.memo(({ progress }: { progress: number }) => {
+const ProgressRing = React.memo(function ProgressRing({ progress }: { progress: number }) {
   const animatedProgress = useSharedValue(0);
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const ProgressRing = React.memo(({ progress }: { progress: number }) => {
 // ─── Deck Card ───────────────────────────────────────────────────────────────
 
 const DeckCard = React.memo(
-  ({
+  function DeckCard({
     deck,
     index,
     selectedLanguage,
@@ -91,7 +91,7 @@ const DeckCard = React.memo(
     deck: Deck;
     index: number;
     selectedLanguage: string;
-  }) => {
+  }) {
     const navigation = useNavigation<StackNavigationProp<any>>();
 
     const namespacedId = nsDeckId(selectedLanguage as any, deck.id);

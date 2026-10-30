@@ -173,7 +173,7 @@ export const Congrats: React.FC = () => {
 
         {/* Subtitle */}
         <Animated.Text style={[styles.subtitle, subtitleAnimatedStyle]}>
-          You've mastered all cards in{'\n'}
+          {masteredCards >= totalCards ? 'You\u2019ve mastered all cards in' : 'You finished'}{'\n'}
           <Text style={styles.deckName}>{deckTitle}</Text>
         </Animated.Text>
 
