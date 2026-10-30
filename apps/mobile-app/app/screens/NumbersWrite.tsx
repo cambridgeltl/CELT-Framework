@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import type { RouteProp } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
@@ -28,7 +28,7 @@ type NumbersWriteScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 const NumbersWrite: React.FC = () => {
   const route = useRoute<NumbersWriteScreenRouteProp>();
   const navigation = useNavigation<NumbersWriteScreenNavigationProp>();
-  const { deckId, cards } = route.params;
+  const { deckId, cards, deckTitle } = route.params;
   const { selectedLanguage } = useLanguage();
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -36,6 +36,7 @@ const NumbersWrite: React.FC = () => {
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
 
   const { setMastered, setLearning, startSession, endSession } = useProgress();
   const currentCard = cards[currentCardIndex];
@@ -64,6 +65,7 @@ const NumbersWrite: React.FC = () => {
         withSpring(1, { damping: 15, stiffness: 150, reduceMotion: ReduceMotion.System })
       );
       setMastered(deckId, currentCard.id, true);
+      setCorrectCount(c => c + 1);
     } else {
       showIncorrect();
       setLearning(deckId, currentCard.id, true);
@@ -85,11 +87,12 @@ const NumbersWrite: React.FC = () => {
       setShowAnswer(false);
     } else {
       endSession();
-      Alert.alert(
-        "Congratulations!",
-        "You've completed the numbers deck!",
-        [{ text: "OK", onPress: () => navigation.navigate('DeckList') }]
-      );
+      // Alert.alert is a no-op on web, so go to the shared Congrats screen instead
+      navigation.navigate('Congrats', {
+        deckTitle,
+        totalCards: cards.length,
+        masteredCards: correctCount,
+      });
     }
   };
 

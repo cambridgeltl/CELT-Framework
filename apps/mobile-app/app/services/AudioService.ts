@@ -1,4 +1,4 @@
-import { Audio } from 'expo-av';
+import { Audio, InterruptionModeAndroid, InterruptionModeIOS } from 'expo-av';
 import { Platform } from 'react-native';
 import {
   audioMap,
@@ -25,11 +25,11 @@ class AudioService {
 
     // Only add platform-specific settings on native platforms
     if (Platform.OS === 'ios') {
-      audioMode.interruptionModeIOS = Audio.INTERRUPTION_MODE_IOS_DO_NOT_MIX;
+      audioMode.interruptionModeIOS = InterruptionModeIOS.DoNotMix;
     } else if (Platform.OS === 'android') {
       audioMode.shouldDuckAndroid = true;
       audioMode.playThroughEarpieceAndroid = false;
-      audioMode.interruptionModeAndroid = Audio.INTERRUPTION_MODE_ANDROID_DO_NOT_MIX;
+      audioMode.interruptionModeAndroid = InterruptionModeAndroid.DoNotMix;
     }
     // Web platform: no additional settings needed
 
