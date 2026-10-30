@@ -1,5 +1,5 @@
 import React, { ReactNode, useCallback } from 'react';
-import { StyleSheet, ViewStyle, TextStyle, Pressable, LayoutChangeEvent } from 'react-native';
+import { StyleSheet, StyleProp, ViewStyle, TextStyle, Pressable, LayoutChangeEvent } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -16,7 +16,7 @@ interface AnimatedButtonProps {
   onPress?: () => void;
   onLongPress?: () => void;
   onLayout?: (event: LayoutChangeEvent) => void;
-  style?: ViewStyle | ViewStyle[];
+  style?: StyleProp<ViewStyle>;
   textStyle?: TextStyle;
   disabled?: boolean;
   hapticFeedback?: 'light' | 'medium' | 'heavy' | 'none';

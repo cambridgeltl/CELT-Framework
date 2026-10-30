@@ -1,5 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import type { StackNavigationProp } from '@react-navigation/stack';
 import React, { useState, useCallback } from 'react';
 import { Alert, Modal, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -21,7 +22,7 @@ type MenuItemConfig = {
 
 const ModernTopNavigation: React.FC = () => {
   const insets = useSafeAreaInsets();
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<Record<string, object | undefined>>>();
   const [menuVisible, setMenuVisible] = useState(false);
   const { logout } = useAuth();
   const { selectedLanguage } = useLanguage();

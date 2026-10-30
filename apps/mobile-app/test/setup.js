@@ -2,9 +2,11 @@
 require('react-native-gesture-handler/jestSetup');
 jest.mock('react-native-gesture-handler', () => {
   const React = require('react');
-  const { View } = require('react-native');
+  const { View, FlatList, ScrollView } = require('react-native');
   return {
     GestureHandlerRootView: ({ children }) => <View>{children}</View>,
+    FlatList,
+    ScrollView,
     Swipeable: View,
     DrawerLayout: View,
     PanGestureHandler: View,
@@ -36,6 +38,16 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
+// Mock expo-av (no native audio module under Jest)
+jest.mock('expo-av', () => ({
+  Audio: {
+    setAudioModeAsync: jest.fn(async () => {}),
+    Sound: { createAsync: jest.fn(async () => ({ sound: { playAsync: jest.fn(), unloadAsync: jest.fn(), setOnPlaybackStatusUpdate: jest.fn() } })) },
+  },
+  InterruptionModeIOS: { DoNotMix: 1 },
+  InterruptionModeAndroid: { DoNotMix: 1 },
+}));
+
 // Mock SecureStore
 jest.mock('expo-secure-store', () => ({
   getItemAsync: jest.fn(),
@@ -59,5 +71,4 @@ expect.extend({
   },
 });
 
-// Import testing-library extensions after Jest is ready
-require('@testing-library/jest-native/extend-expect');
+// Testing Library v13 registers its Jest matchers automatically on import.

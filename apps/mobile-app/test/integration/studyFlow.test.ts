@@ -29,8 +29,9 @@ describe('Study Flow', () => {
     expect(progress).toBe(1);
     
     // Verify SecureStore was called
+    // Progress is stored per user, e.g. "flashcard_progress:user:guest"
     expect(SecureStore.setItemAsync).toHaveBeenCalledWith(
-      'flashcard_progress',
+      expect.stringMatching(/^flashcard_progress/),
       expect.any(String)
     );
   });

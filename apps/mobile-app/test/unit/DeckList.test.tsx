@@ -23,9 +23,9 @@ describe('DeckList', () => {
       </NavigationContainer>
     );
     
-    // Check all deck titles are displayed (current assets)
-    expect(screen.getByText('Basic Animals')).toBeTruthy();
-    expect(screen.getByText('Basic Colors')).toBeTruthy();
-    expect(screen.getByText('Numbers (1-10)')).toBeTruthy();
+    // Default language (dz) decks from assets/decks
+    expect(screen.getByText('Animals')).toBeTruthy();
+    expect(screen.getByText('Colours')).toBeTruthy();
+    expect(screen.getByText('Numbers')).toBeTruthy();
   });
 });

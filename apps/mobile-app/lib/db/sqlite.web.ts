@@ -47,11 +47,11 @@ class MemoryDB {
   async getFirstAsync<T = any>(sql: string, params: any[]): Promise<T | undefined> {
     if (sql.includes('FROM users')) {
       const [username] = params;
-      return this.users.find(u => u.username === username);
+      return this.users.find(u => u.username === username) as T | undefined;
     }
     if (sql.includes('FROM stats')) {
       const [username, key] = params;
-      return this.stats.find(s => s.username === username && s.key === key);
+      return this.stats.find(s => s.username === username && s.key === key) as T | undefined;
     }
   }
 }

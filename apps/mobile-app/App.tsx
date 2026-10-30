@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import {
   createStackNavigator,
+  type StackNavigationOptions,
   CardStyleInterpolators,
   TransitionPresets,
 } from '@react-navigation/stack';
@@ -42,7 +43,7 @@ const ConvoStackNav = createStackNavigator();
 const RootStack = createStackNavigator();
 
 // Custom screen options with smooth transitions
-const screenOptions = {
+const screenOptions: StackNavigationOptions = {
   headerShown: true,
   gestureEnabled: true,
   cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
