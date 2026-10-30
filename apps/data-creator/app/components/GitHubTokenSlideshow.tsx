@@ -405,7 +405,7 @@ const GitHubStep7Visual = () => (
         <span className="text-[#238636] text-sm font-medium">Token created!</span>
       </div>
       <div className="bg-amber-500/10 border border-amber-500/30 rounded p-2 mb-3">
-        <p className="text-amber-400 text-xs font-medium">Copy now - you won't see it again!</p>
+        <p className="text-amber-400 text-xs font-medium">Copy now - you won&apos;t see it again!</p>
       </div>
       <div className="relative flex items-center gap-2 bg-[#161b22] rounded p-2 border-2 border-[#238636]">
         <code className="flex-1 text-[#238636] font-mono text-xs">ghp_xK7yB9mN2pQ4rT6wE8uI0oA3sD5fG7hJ</code>

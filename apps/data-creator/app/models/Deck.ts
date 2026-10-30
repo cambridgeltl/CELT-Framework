@@ -39,6 +39,7 @@ export class Card {
   }
 
   // Static method to create Card from JSON object
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- parses untyped JSON from files/GitHub
   static fromJSON(json: any): Card {
     return new Card(
       json.id,
@@ -147,8 +148,9 @@ export class Deck {
   }
 
   // Static method to create Deck from JSON object
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- parses untyped JSON from files/GitHub
   static fromJSON(json: any): Deck {
-    const cards = (json.cards || []).map((cardJson: any) =>
+    const cards = (json.cards || []).map((cardJson: Record<string, unknown>) =>
       Card.fromJSON(cardJson)
     );
     return new Deck(

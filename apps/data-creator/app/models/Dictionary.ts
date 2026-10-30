@@ -45,9 +45,10 @@ export class Entry {
   }
 
   // Static method to create Entry from JSON object
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- parses untyped JSON from files/GitHub
   static fromJSON(json: any): Entry {
     return new Entry(
-      json.dz || "",
+      json.word || json.dz || "",
       json.en || "",
       json.example || "",
       json.exampleEn || "",
@@ -131,8 +132,9 @@ export class Dictionary {
   }
 
   // Static method to create Dictionary from JSON object
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- parses untyped JSON from files/GitHub
   static fromJSON(json: any): Dictionary {
-    const entries = (json.entries || []).map((entryJson: any) =>
+    const entries = (json.entries || []).map((entryJson: Record<string, unknown>) =>
       Entry.fromJSON(entryJson)
     );
     return new Dictionary(entries);

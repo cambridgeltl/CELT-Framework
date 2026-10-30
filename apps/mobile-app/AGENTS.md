@@ -1,6 +1,6 @@
-# Dzardzongke Flashcard App
+# CELT mobile app
 
-A mobile flashcard application for learning the endangered Dzardzongke language.
+Language-agnostic, offline-first learning app (flashcards, dictionary, conversations, quizzes, culture). All language content lives in `assets/` and is discovered by language code; Dzardzongke is the reference language.
 
 ## Project Context
 

@@ -14,7 +14,7 @@ interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {
   action?: React.ReactNode;
 }
 
-interface CardBodyProps extends HTMLAttributes<HTMLDivElement> {}
+type CardBodyProps = HTMLAttributes<HTMLDivElement>;
 
 interface CardFooterProps extends HTMLAttributes<HTMLDivElement> {
   align?: 'left' | 'center' | 'right' | 'between';

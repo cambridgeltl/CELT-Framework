@@ -23,7 +23,7 @@ interface ModalHeaderProps extends HTMLAttributes<HTMLDivElement> {
   showCloseButton?: boolean;
 }
 
-interface ModalBodyProps extends HTMLAttributes<HTMLDivElement> {}
+type ModalBodyProps = HTMLAttributes<HTMLDivElement>;
 
 interface ModalFooterProps extends HTMLAttributes<HTMLDivElement> {
   align?: 'left' | 'center' | 'right' | 'between';
